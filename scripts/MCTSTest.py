@@ -1,6 +1,5 @@
 import gym
-import MCTSRecursive
-import MCTS
+import src.MCTS as MCTS
 import matplotlib.pyplot as plt
 import numpy as np
 

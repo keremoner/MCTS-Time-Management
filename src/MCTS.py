@@ -85,8 +85,7 @@ class mcts_agent:
         max_val = -np.inf
         best_child = None
         for child in node.children:
-            uct_val = child.Q / node.children_N[child.action] + cp * np.sqrt(
-                np.log(node.N) / node.children_N[child.action])
+            uct_val = child.Q / node.children_N[child.action] + cp * np.sqrt(np.log(node.N) / node.children_N[child.action])
             if uct_val >= max_val:
                 max_val = uct_val
                 best_child = child
