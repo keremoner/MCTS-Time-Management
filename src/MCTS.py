@@ -19,10 +19,10 @@ class Node:
 
 
 class mcts_agent:
-    def __init__(self, state, env, cp=1 / np.sqrt(2), simulations=100, discount_factor=0.997, render=False):
+    def __init__(self, state, env, temperature=1 / np.sqrt(2), simulations=100, discount_factor=0.997, render=False):
         self.state = state
         self.env = env
-        self.cp = cp
+        self.temperature = temperature
         self.simulations = simulations
         self.render = render
         self.action_space = np.array(list(range(env.action_space.n)))
@@ -34,6 +34,9 @@ class mcts_agent:
         if self.render:
             self.env.render()
         return terminal, reward
+
+    def select_action(self, state):
+        return self.mcts_search(state)
 
     def mcts_search(self, state):
         root = Node(state, None, None, False, 0, self.action_space)
@@ -62,7 +65,7 @@ class mcts_agent:
             if len(node.unexplored) > 0:
                 return self.__expand(node)
             else:
-                node = self.__bestChild(node, self.cp)
+                node = self.__bestChild(node, self.temperature)
                 next_state, _, terminal, _ = self.search_env.step(node.action)
         return node
 
@@ -81,11 +84,11 @@ class mcts_agent:
 
         return new_node
 
-    def __bestChild(self, node, cp):
+    def __bestChild(self, node, temperature):
         max_val = -np.inf
         best_child = None
         for child in node.children:
-            uct_val = child.Q / node.children_N[child.action] + cp * np.sqrt(np.log(node.N) / node.children_N[child.action])
+            uct_val = child.Q / node.children_N[child.action] + temperature * np.sqrt(np.log(node.N) / node.children_N[child.action])
             if uct_val >= max_val:
                 max_val = uct_val
                 best_child = child
@@ -118,6 +121,12 @@ class mcts_agent:
             node.Q += reward
             i += 1
             node = node.parent
+    
+    def set_temperature(self, temperature):
+        self.temperature = temperature
+    
+    def set_simulations(self, simulations):
+        self.simulations = simulations
 
 
 if __name__ == '__main__':
@@ -125,7 +134,7 @@ if __name__ == '__main__':
     # env = gym.make("CartPole-v1")
     root_state = env.reset()
     root_state, _, _, _ = env.step(1)
-    agent = mcts_agent(root_state, env, cp=1, simulations=8, discount_factor=0.997)
+    agent = mcts_agent(root_state, env, temperature=1, simulations=8, discount_factor=0.997)
     reward = 0
     terminal = False
 
