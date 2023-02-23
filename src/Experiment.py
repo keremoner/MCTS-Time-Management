@@ -1,12 +1,10 @@
 from abc import ABC, abstractmethod
 import matplotlib.pyplot as plt
+import numpy as np
 
 class TrialResult:
     def __init__(self, **kwargs):
         self.kwargs = kwargs
-        plt.legend()
-        plt.xlabel("Number of Simulations")
-        plt.ylabel("Mean Cumulative Reward")
     
     def get_temperature(self):
         return self.kwargs['temperature']
@@ -20,11 +18,11 @@ class TrialResult:
     def get_mean_reward(self):
         return np.mean(self.kwargs['rewards'])
     
-    def get_total(self):
-        return self.kwargs['total']
+    def get_trial(self):
+        return self.kwargs['trial']
     
     def get_error(self):
-        return np.std(self.kwargs['rewards']) / np.sqrt(self.kwargs['trial'])
+        return np.std(self.get_rewards()) / np.sqrt(self.get_trial())
 
 class Experiment:
     def __init__(self, env, agent, **kwargs):
@@ -45,26 +43,27 @@ class Experiment:
                 print("Simulation = ", simulation, "\tMean Cumulative Reward = ", mean_rewards[len(mean_rewards) - 1], "\tError = ", errors[len(errors) - 1])
             print("Temperature = ", temperature, " Results = ", mean_rewards)
             plt.errorbar(self.kwargs['simulations'], mean_rewards, yerr=errors, label=str(temperature))
+        plt.legend()
+        plt.xlabel("Number of Simulations")
+        plt.ylabel("Mean Cumulative Reward")
+        plt.savefig("../results/" + self.kwargs['experiment_name'] + ".png")
 
     def run_trial(self, temperature, simulation):
         rewards = []
-        self.agent.set_temp(temperature)
+        self.agent.set_temperature(temperature)
         self.agent.set_simulations(simulation)
         for i in range(self.kwargs['trial']):
             cumulative_reward = 0
-            root = self.env.reset()
-            action = self.agent.select_action(root)
+            self.env.reset()
+            action = self.agent.select_action(self.env)
             next_state, reward, done, _ = self.env.step(action)
             cumulative_reward += reward
             while not done:
-                action = self.agent.select_action(next_state)
+                action = self.agent.select_action(self.env)
                 next_state, reward, done, _ = self.env.step(action)
-                cumulative_reward += new_reward
+                cumulative_reward += reward
             rewards.append(cumulative_reward)
-        return TrialResult(temperature=temp, simulation=simulation, rewards=rewards, total=self.kwargs['trial'])
+        return TrialResult(temperature=temperature, simulation=simulation, rewards=rewards, trial=self.kwargs['trial'])
 
     def show_results(self):
-        plt.show()
-    
-    def save_results(self):
-        plt.savefig(self.kwargs['name'])
+        plt.show(block=False)

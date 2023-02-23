@@ -2,15 +2,13 @@ import gym
 import copy
 from abc import ABC, abstractmethod
 
-
 class StatelessGym:
     @staticmethod
     def make(env_name, **kwargs):
         if env_name == 'CartPole-v1':
             return CustomCartPole(**kwargs)
         else:
-            return CustomBaseEnv(gym.make(env_name, **kwargs))
-
+            return CustomBaseEnv(env_name, **kwargs)
 
 class CustomAbstractEnv(ABC):
     def __init__(self, env):
@@ -36,8 +34,12 @@ class CustomAbstractEnv(ABC):
     def close(self):
         return self.env.close()
 
+    def get_action_space(self):
+        return self.env.action_space
 
 class CustomBaseEnv(CustomAbstractEnv):
+    def __init__(self, env_name, **kwargs):
+        super().__init__(gym.make(env_name, **kwargs))
 
     def get_state(self):
         return copy.deepcopy(self.env)
@@ -55,28 +57,3 @@ class CustomCartPole(CustomAbstractEnv):
 
     def set_state(self, state):
         self.env.env.env.state = state
-
-
-if __name__ == '__main__':
-    #env = StatelessGym.make('CartPole-v1')
-    env = StatelessGym.make('FrozenLake-v1', desc=None, map_name="4x4", is_slippery=False)
-    env.reset()
-    next_state, _, _, _ = env.step(2)
-    print(next_state)
-    next_state, _, _, _ = env.step(2)
-    print(next_state)
-    first_state = env.get_state()
-    print("first_state: ", first_state)
-
-    for i in range(1):
-        env.reset()
-        print("env.state: ")
-        env.render()
-        env.set_state(first_state)
-        print("env.state after set: ")
-        env.render()
-        done = False
-        while not done:
-            next_state, reward, done, _ = env.step(2)
-            print(next_state)
-        print("--------------------------------------------------------")
