@@ -1,6 +1,11 @@
 from abc import ABC, abstractmethod
 import matplotlib.pyplot as plt
 import numpy as np
+import os
+
+def file_dir(relative_path):
+    absolute_path = os.path.dirname(__file__)
+    return os.path.join(absolute_path, relative_path)
 
 class TrialResult:
     def __init__(self, **kwargs):
@@ -31,7 +36,7 @@ class Experiment:
         self.kwargs = kwargs
         self.results = []
 
-    def run(self):
+    def run(self, write=False):
         for temperature in self.kwargs['temperatures']:
             errors = []
             mean_rewards = []
@@ -46,7 +51,9 @@ class Experiment:
         plt.legend()
         plt.xlabel("Number of Simulations")
         plt.ylabel("Mean Cumulative Reward")
-        plt.savefig("../results/" + self.kwargs['experiment_name'] + ".png")
+        if write:
+            plt.savefig(file_dir("./../results/" + self.kwargs['experiment_name'] + ".png"))
+
 
     def run_trial(self, temperature, simulation):
         rewards = []
@@ -66,4 +73,4 @@ class Experiment:
         return TrialResult(temperature=temperature, simulation=simulation, rewards=rewards, trial=self.kwargs['trial'])
 
     def show_results(self):
-        plt.show(block=False)
+        plt.show()
