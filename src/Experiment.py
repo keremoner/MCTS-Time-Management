@@ -36,6 +36,7 @@ class Experiment:
         self.kwargs = kwargs
         self.results = []
 
+    #TODO: Change it to allow a non-printing option
     def run(self, write=False):
         for temperature in self.kwargs['temperatures']:
             errors = []

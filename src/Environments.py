@@ -56,4 +56,5 @@ class CustomCartPole(CustomAbstractEnv):
         return copy.deepcopy(self.env.state)
 
     def set_state(self, state):
+        self.env.reset()
         self.env.env.env.state = state
