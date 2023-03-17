@@ -45,7 +45,7 @@ class CustomBaseEnv(CustomAbstractEnv):
         return copy.deepcopy(self.env)
 
     def set_state(self, state):
-        self.env = state
+        self.env = copy.deepcopy(state)
 
 
 class CustomCartPole(CustomAbstractEnv):
