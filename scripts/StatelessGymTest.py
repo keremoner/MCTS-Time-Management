@@ -40,7 +40,7 @@ for temperature in TEMPERATURES:
             end_time = time.time()
             total_time += end_time - start_time
         times.append(total_time / TRIAL)
-        intervals.append(np.std(rewards) / np.sqrt(TRIAL))
+        intervals.append(np.std(times) / np.sqrt(TRIAL))
         mean_rewards.append(np.mean(rewards))
 
 print("Time taken: ", times)
