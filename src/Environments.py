@@ -7,6 +7,10 @@ class StatelessGym:
     def make(env_name, **kwargs):
         if env_name == 'CartPole-v1':
             return CustomCartPole(**kwargs)
+        elif env_name == 'Acrobot-v1':
+            return CustomAcrobot(**kwargs)
+        elif env_name == 'MountainCar-v0':
+            return CustomMountainCar(**kwargs)
         else:
             return CustomBaseEnv(env_name, **kwargs)
 
@@ -53,8 +57,40 @@ class CustomCartPole(CustomAbstractEnv):
         super().__init__(gym.make('CartPole-v1', **kwargs))
 
     def get_state(self):
-        return copy.deepcopy(self.env.state)
+        return (copy.deepcopy(self.env.env.env.state), self.env._elapsed_steps, self.env.env.env.steps_beyond_done, self.env.env._has_reset)
 
     def set_state(self, state):
-        self.env.reset()
-        self.env.env.env.state = state
+        #self.env.reset()
+        actual_state, elapsed_steps, steps_beyond_done, has_reset = state
+        self.env.env.env.state = actual_state
+        self.env._elapsed_steps = elapsed_steps
+        self.env.env.env.steps_beyond_done = steps_beyond_done
+        self.env.env._has_reset = has_reset
+        
+class CustomAcrobot(CustomAbstractEnv):
+    def __init__(self, **kwargs):
+        super().__init__(gym.make('Acrobot-v1', **kwargs))
+
+    def get_state(self):
+        return (copy.deepcopy(self.env.env.env.state), self.env._elapsed_steps, self.env.env._has_reset)
+
+    def set_state(self, state):
+        #self.env.reset()
+        actual_state, elapsed_steps, has_reset = state
+        self.env.env.env.state = actual_state
+        self.env._elapsed_steps = elapsed_steps
+        self.env.env._has_reset = has_reset
+
+class CustomMountainCar(CustomAbstractEnv):
+    def __init__(self, **kwargs):
+        super().__init__(gym.make('MountainCar-v0', **kwargs))
+
+    def get_state(self):
+        return (copy.deepcopy(self.env.env.env.state), self.env._elapsed_steps, self.env.env._has_reset)
+
+    def set_state(self, state):
+        #self.env.reset()
+        actual_state, elapsed_steps, has_reset = state
+        self.env.env.env.state = actual_state
+        self.env._elapsed_steps = elapsed_steps
+        self.env.env._has_reset = has_reset
