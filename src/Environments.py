@@ -40,7 +40,10 @@ class CustomAbstractEnv(ABC):
 
     def get_action_space(self):
         return self.env.action_space
-
+    
+    def __str__(self):
+        return self.env.spec.id
+    
 class CustomBaseEnv(CustomAbstractEnv):
     def __init__(self, env_name, **kwargs):
         super().__init__(gym.make(env_name, **kwargs))
