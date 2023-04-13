@@ -17,11 +17,12 @@ class Node:
         self.isExplored = False
 
 class mcts_agent:
-    def __init__(self, temperature=1 / np.sqrt(2), simulations=100, discount_factor=0.997, render=False):
+    def __init__(self, temperature=1 / np.sqrt(2), simulations=100, discount_factor=0.997, render=False, horizon=-1):
         self.temperature = temperature
         self.simulations = simulations
         self.render = render
         self.discount_factor = discount_factor
+        self.horizon = horizon
         self.action_space = None
         self.copy_env = None
 
@@ -29,12 +30,16 @@ class mcts_agent:
         return self.mcts_search(env)
 
     def mcts_search(self, env):
-        self.copy_env = copy.deepcopy(env)
         self.action_space = np.array(list(range(env.get_action_space().n)))
+        
+        self.copy_env = copy.deepcopy(env)
         root_state =  self.copy_env.get_state()
         root = Node(None, None, False, 0, self.action_space)
         root.isExplored = True
+        
         for i in range(self.simulations):
+            
+            self.depth = 0
             # Starting the search  from the root state
             self.copy_env.set_state(root_state)
             # Applying the tree policy
@@ -50,6 +55,11 @@ class mcts_agent:
     def __treePolicy(self, node):
         terminal = None
         while not node.isTerminal:
+            if self.depth == self.horizon:
+                break
+            
+            self.depth += 1
+            
             if len(node.unexplored) > 0:
                 return self.__expand(node)
             else:
@@ -84,16 +94,20 @@ class mcts_agent:
 
     def __default_policy(self, node):
         terminal = node.isTerminal
-        aggregate_reward = 0
+        aggregate_reward = 0.0
         # Apply the default policy until reaching a terminal state
         i = 0
+        
         if terminal:
             return 0.0
         while not terminal:
+            if self.depth == self.horizon:
+                break
             rand_action = random.randint(0, len(self.action_space) - 1)
             new_state, reward, terminal, info = self.copy_env.step(rand_action)
             aggregate_reward += reward * self.discount_factor ** i
             i += 1
+            self.depth += 1
         return aggregate_reward
 
     def __backup(self, node, reward):
@@ -115,3 +129,9 @@ class mcts_agent:
     
     def set_simulations(self, simulations):
         self.simulations = simulations
+    
+    def set_horizon(self, horizon):
+        self.horizon = horizon
+        
+    def __str__(self):
+        return "Discount Factor = " + str(self.discount_factor) + ", Horizon = " + (str(self.horizon) if self.horizon != -1 else "Infinite")
