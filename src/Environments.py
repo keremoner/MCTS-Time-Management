@@ -2,15 +2,17 @@ import gym
 import copy
 from abc import ABC, abstractmethod
 
-
 class StatelessGym:
     @staticmethod
     def make(env_name, **kwargs):
         if env_name == 'CartPole-v1':
             return CustomCartPole(**kwargs)
+        elif env_name == 'Acrobot-v1':
+            return CustomAcrobot(**kwargs)
+        elif env_name == 'MountainCar-v0':
+            return CustomMountainCar(**kwargs)
         else:
-            return CustomBaseEnv(gym.make(env_name, **kwargs))
-
+            return CustomBaseEnv(env_name, **kwargs)
 
 class CustomAbstractEnv(ABC):
     def __init__(self, env):
@@ -36,14 +38,21 @@ class CustomAbstractEnv(ABC):
     def close(self):
         return self.env.close()
 
-
+    def get_action_space(self):
+        return self.env.action_space
+    
+    def __str__(self):
+        return self.env.spec.id
+    
 class CustomBaseEnv(CustomAbstractEnv):
+    def __init__(self, env_name, **kwargs):
+        super().__init__(gym.make(env_name, **kwargs))
 
     def get_state(self):
         return copy.deepcopy(self.env)
 
     def set_state(self, state):
-        self.env = state
+        self.env = copy.deepcopy(state)
 
 
 class CustomCartPole(CustomAbstractEnv):
@@ -51,32 +60,40 @@ class CustomCartPole(CustomAbstractEnv):
         super().__init__(gym.make('CartPole-v1', **kwargs))
 
     def get_state(self):
-        return copy.deepcopy(self.env.state)
+        return (copy.deepcopy(self.env.env.env.state), self.env._elapsed_steps, self.env.env.env.steps_beyond_done, self.env.env._has_reset)
 
     def set_state(self, state):
-        self.env.env.env.state = state
+        #self.env.reset()
+        actual_state, elapsed_steps, steps_beyond_done, has_reset = state
+        self.env.env.env.state = actual_state
+        self.env._elapsed_steps = elapsed_steps
+        self.env.env.env.steps_beyond_done = steps_beyond_done
+        self.env.env._has_reset = has_reset
+        
+class CustomAcrobot(CustomAbstractEnv):
+    def __init__(self, **kwargs):
+        super().__init__(gym.make('Acrobot-v1', **kwargs))
 
+    def get_state(self):
+        return (copy.deepcopy(self.env.env.env.state), self.env._elapsed_steps, self.env.env._has_reset)
 
-if __name__ == '__main__':
-    #env = StatelessGym.make('CartPole-v1')
-    env = StatelessGym.make('FrozenLake-v1', desc=None, map_name="4x4", is_slippery=False)
-    env.reset()
-    next_state, _, _, _ = env.step(2)
-    print(next_state)
-    next_state, _, _, _ = env.step(2)
-    print(next_state)
-    first_state = env.get_state()
-    print("first_state: ", first_state)
+    def set_state(self, state):
+        #self.env.reset()
+        actual_state, elapsed_steps, has_reset = state
+        self.env.env.env.state = actual_state
+        self.env._elapsed_steps = elapsed_steps
+        self.env.env._has_reset = has_reset
 
-    for i in range(1):
-        env.reset()
-        print("env.state: ")
-        env.render()
-        env.set_state(first_state)
-        print("env.state after set: ")
-        env.render()
-        done = False
-        while not done:
-            next_state, reward, done, _ = env.step(2)
-            print(next_state)
-        print("--------------------------------------------------------")
+class CustomMountainCar(CustomAbstractEnv):
+    def __init__(self, **kwargs):
+        super().__init__(gym.make('MountainCar-v0', **kwargs))
+
+    def get_state(self):
+        return (copy.deepcopy(self.env.env.env.state), self.env._elapsed_steps, self.env.env._has_reset)
+
+    def set_state(self, state):
+        #self.env.reset()
+        actual_state, elapsed_steps, has_reset = state
+        self.env.env.env.state = actual_state
+        self.env._elapsed_steps = elapsed_steps
+        self.env.env._has_reset = has_reset
