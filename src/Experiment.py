@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 import subprocess
+import yaml
 
 def file_dir(relative_path):
     absolute_path = os.path.dirname(__file__)
@@ -61,6 +62,8 @@ class Experiment:
             self.save_results()
             
     def save_results(self):
+        data = {}
+        data["results"] = []
         git_hash = subprocess.check_output(['git', 'rev-parse', 'HEAD']).strip().decode('ascii')
         string = "Experiment Name: " + self.kwargs['experiment_name'] + " (" + git_hash + ")" + "\n"
         string += "Environment: " + str(self.env) + "\n" 
@@ -74,8 +77,21 @@ class Experiment:
             temp_result = [result for result in self.results if result.get_temperature() == temperature]
             for result in temp_result:
                 string += "\t" + str(result) + "\n"
+            data_temp_result = [result.get_rewards() for result in self.results if result.get_temperature() == temperature]
+            data["results"].append(data_temp_result)
+        
+        data["experiment_name"] = self.kwargs['experiment_name']
+        data["environment"] = str(self.env)
+        data["agent"] = str(self.agent)
+        data["temperatures"] = self.kwargs['temperatures']
+        data["simulations"] = self.kwargs['simulations']
+        data["trial"] = self.kwargs['trial']
+        
         with open(file_dir("./../results/" + self.kwargs['experiment_name'] + ".txt"), "w") as f:
             f.write(string)
+        
+        with open(file_dir("./../results/" + self.kwargs['experiment_name'] + '.yaml'), 'w') as file:
+            yaml.dump(data, file)
 
     def run_trial(self, temperature, simulation):
         rewards = []
