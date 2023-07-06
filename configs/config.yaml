@@ -1,0 +1,11 @@
+temperatures:
+  - 250
+  - 500
+simulations:
+  - 2
+  - 4
+trial: 10
+environment: 'CartPole-v1'
+experiment_name: 'Cartpole_Base_MCTS'
+horizon: 100
+save: true
