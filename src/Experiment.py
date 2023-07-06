@@ -4,6 +4,8 @@ import numpy as np
 import os
 import subprocess
 import yaml
+import random
+import csv
 
 def file_dir(relative_path):
     absolute_path = os.path.dirname(__file__)
@@ -112,3 +114,41 @@ class Experiment:
     
     def show_results(self):
         plt.show()
+
+class RandomExperiment():
+    def __init__(self, env, agent, **kwargs):
+        self.env = env
+        self.agent = agent
+        self.kwargs = kwargs
+        self.results = []
+        
+    def run(self):
+        simulation = random.randint(self.kwargs['simulations'][0], self.kwargs['simulations'][1])
+        temperature = self.kwargs['temperature']
+        self.agent.set_temperature(temperature)
+        self.agent.set_simulations(simulation)
+        e_return = 0
+        self.env.reset()
+        action = self.agent.select_action(self.env)
+        next_state, reward, done, _ = self.env.step(action)
+        e_return += reward
+        while not done:
+            action = self.agent.select_action(self.env)
+            next_state, reward, done, _ = self.env.step(action)
+            e_return += reward
+        return [temperature, simulation, e_return]
+        
+    def create_dataset(self, n, file_name):
+        dataset = []
+        dataset.append(["Temperature", "Simulations", "Return"])
+        for i in range(n):
+            dataset.append(self.run())
+        
+        with open(file_dir("./../datasets/" + file_name + ".csv"), "w", newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerows(dataset)
+        return dataset
+
+        
+        
+    
