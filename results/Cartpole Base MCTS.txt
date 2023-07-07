@@ -1,13 +1,10 @@
-Experiment Name: Cartpole Base MCTS (c59c7b825dc029fc522a0029862b2dc2f397b703)
+Experiment Name: Cartpole Base MCTS (1ddd5862b1b2a91c1f448f95a3dd9b781c4b51aa)
 Environment: CartPole-v1
-Agent: Discount Factor = 0.997, Horizon = 100
-Temperatures: [250, 500]
+Agent: Discount Factor = 0.997, Horizon = 30
+Temperatures: [1]
 Simulations: [2, 4]
-Trials: 2
+Trials: 10
 ----------------------------------------
-Temperature: 250
-	Simulation = 2	Mean Reward = 258.0	Error = 17.677669529663685
-	Simulation = 4	Mean Reward = 265.5	Error = 61.16473657263636
-Temperature: 500
-	Simulation = 2	Mean Reward = 326.0	Error = 23.33452377915607
-	Simulation = 4	Mean Reward = 197.0	Error = 7.7781745930520225
+Temperature: 1
+	Simulation = 2	Mean Reward = 292.5	Error = 38.40188797442126
+	Simulation = 4	Mean Reward = 322.2	Error = 34.759113912756746
