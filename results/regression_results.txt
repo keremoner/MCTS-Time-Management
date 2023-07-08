@@ -1,0 +1,29 @@
+sim=1-100 temp=1 size=10k size_per_sim=100
+Linear Regression MSE: 13632.129844795954
+Decision Tree Regression MSE: 12674.20866208901
+Random Forest Regression MSE: 12689.602914601133
+
+Linear Regression Explained Variance: 0.004973535977646715
+Tree Regression Explained Variance: 0.07491517837300832
+Random Forest Regression Explained Variance: 0.07380342815486762
+
+
+
+sim=1-100 temp=500 size=10k size_per_sim=100
+Linear Regression MSE: 10560.197874132193
+Decision Tree Regression MSE: 5817.310184622241
+Random Forest Regression MSE: 5820.029728558687
+
+Linear Regression Explained Variance: 0.05041619624048077
+Tree Regression Explained Variance: 0.47720085450515703
+Random Forest Regression Explained Variance: 0.4769132534986843
+
+sim=1-16 temp=500 size=50k size_per_sim=3125
+
+Linear Regression MSE: 14376.31730856634
+Decision Tree Regression MSE: 10365.45142165257
+Random Forest Regression MSE: 10365.6111137043
+
+Linear Regression Explained Variance: 0.27978216693031954
+Tree Regression Explained Variance: 0.4807394583633652
+Random Forest Regression Explained Variance: 0.4807287340865771
