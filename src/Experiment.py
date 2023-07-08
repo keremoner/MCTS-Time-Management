@@ -128,20 +128,33 @@ class RandomExperiment():
         self.agent.set_temperature(temperature)
         self.agent.set_simulations(simulation)
         e_return = 0
+        dis_e_return = 0
+        discount_factor = self.agent.discount_factor
         initial_state = self.env.reset()
         action = self.agent.select_action(self.env)
         next_state, reward, done, _ = self.env.step(action)
         e_return += reward
+        dis_e_return += reward
         while not done:
             action = self.agent.select_action(self.env)
             next_state, reward, done, _ = self.env.step(action)
-            e_return += reward
-        return [temperature] + initial_state.tolist() + [simulation, e_return]
+            e_return += reward         
+            dis_e_return += reward * discount_factor
+            discount_factor *= self.agent.discount_factor
+            
+        if self.env.env.spec.id == "CartPole-v1":
+            return [temperature] + initial_state.tolist() + [simulation, e_return, dis_e_return]
+        else:
+            return [temperature, simulation, e_return, dis_e_return]
 
         
     def create_dataset(self, n, file_name):
         dataset = []
-        dataset.append(["Temperature", "Cart Position", "Cart Velocity", "Pole Angle", "Pole Angular Velocity", "Simulations", "Return"])
+        if self.env.env.spec.id == "CartPole-v1":
+            dataset.append(["Temperature", "Cart Position", "Cart Velocity", "Pole Angle", "Pole Angular Velocity", "Simulations", "Return", "Discounted Return"])
+        else:
+            dataset.append(["Temperature", "Simulations", "Return", "Discounted Return"])
+        
         for i in range(n):
             dataset.append(self.run())
         
