@@ -128,7 +128,7 @@ class RandomExperiment():
         self.agent.set_temperature(temperature)
         self.agent.set_simulations(simulation)
         e_return = 0
-        self.env.reset()
+        initial_state = self.env.reset()
         action = self.agent.select_action(self.env)
         next_state, reward, done, _ = self.env.step(action)
         e_return += reward
@@ -136,11 +136,12 @@ class RandomExperiment():
             action = self.agent.select_action(self.env)
             next_state, reward, done, _ = self.env.step(action)
             e_return += reward
-        return [temperature, simulation, e_return]
+        return [temperature] + initial_state.tolist() + [simulation, e_return]
+
         
     def create_dataset(self, n, file_name):
         dataset = []
-        dataset.append(["Temperature", "Simulations", "Return"])
+        dataset.append(["Temperature", "Cart Position", "Cart Velocity", "Pole Angle", "Pole Angular Velocity", "Simulations", "Return"])
         for i in range(n):
             dataset.append(self.run())
         
