@@ -37,8 +37,8 @@ if __name__ == "__main__":
         TEMPERATURES = config['temperatures']
         SIMULATIONS = config['simulations']
         TRIAL = config['trial']
-        if config['environment'] == 'FrozenLake-v0':
-            env = StatelessGym.make("FrozenLake-v0", desc=None, map_name="4x4", is_slippery=False)
+        if config['environment'] == 'FrozenLake-v1':
+            env = StatelessGym.make("FrozenLake-v1", desc=None, map_name="4x4", is_slippery=False)
         else:
             env = StatelessGym.make(config['environment'])
         horizon =  config['horizon']
