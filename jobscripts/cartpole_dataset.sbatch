@@ -7,10 +7,10 @@
 #SBATCH --partition=general
 
 # The default Quality of Service is the 'short' QoS (maximum run time: 4 hours)
-#SBATCH --qos=short
+#SBATCH --qos=medium
 
 # The default run (wall-clock) time is 1 minute
-#SBATCH --time=60
+#SBATCH --time=400
 
 # The default number of parallel tasks per job is 1
 #SBATCH --ntasks=10
@@ -44,9 +44,9 @@ conda activate MCTS-Time-Management
 #srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 100 --temperature 1 --simulations 1,16 --environment CartPole-v1 --dataset-name 4Cluster_1-16_100-Cartpole --horizon -1 &
 for ((i=1; i<=10; i++)); do
    
-    dataset_name="states_Cluster_${i}_1600_s1_16-t500-CartPole-v1" 
+    dataset_name="states_Cluster_${i}_10000_s1_100-t1-CartPole-v1" 
 
-    srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 1600 --temperature 500 --simulations 1,16 --environment CartPole-v1 --dataset-name "${dataset_name}" --horizon -1 &
+    srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 10000 --temperature 1 --simulations 1,100 --environment CartPole-v1 --dataset-name "${dataset_name}" --horizon -1 &
 done
 
 wait
