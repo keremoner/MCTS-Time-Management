@@ -1,0 +1,14 @@
+09.07.2023
+
++ Check if datasets are created correctly, push them
++ Create simulation vs return (and discounted) for both cartpole and frozenlake
++ Create histograms
++ Do regression for both
+	+ For cartpole divide it into simulation and simulation + initial_state
++ Look into regression models
+	+ Draw learning curves
+	+ Can we use quadratic regression for cartpole with initial state?
+	+ Can we do discriminant analysis or PCA
+	+ What are the hyper-parameters for regression models
++ Get 500 returns for a certain simulation. Scatter plot the pole angle vs pole angular velocity
++ Try to draw a 3d plot for pole angle x pole angular velocity x return at a certain simulation

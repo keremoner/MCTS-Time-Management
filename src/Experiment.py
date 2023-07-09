@@ -155,12 +155,14 @@ class RandomExperiment():
         else:
             dataset.append(["Temperature", "Simulations", "Return", "Discounted Return"])
         
-        for i in range(n):
-            dataset.append(self.run())
         
         with open(file_dir("./../datasets/" + file_name + ".csv"), "w", newline='') as csvfile:
             writer = csv.writer(csvfile)
-            writer.writerows(dataset)
+            for i in range(1, n + 1):
+                dataset.append(self.run())
+                if i % (n // 10) == 0:
+                    print("%s: %d/%d" % (file_name, i, n))
+                    writer.writerows(dataset)
         return dataset
 
         

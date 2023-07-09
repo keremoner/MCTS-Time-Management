@@ -27,3 +27,56 @@ Random Forest Regression MSE: 10365.6111137043
 Linear Regression Explained Variance: 0.27978216693031954
 Tree Regression Explained Variance: 0.4807394583633652
 Random Forest Regression Explained Variance: 0.4807287340865771
+
+sim=1-16 temp=500 size=17700 size_per_sim=177
+Model: LinearRegression
+Mean Squared Error: 14506.827523476371
+R^2 Score: 0.27738000407642427
+Explained Variance Score: 0.27757611263084636
+
+Model: SVR
+Mean Squared Error: 14159.690349446995
+R^2 Score: 0.2946717422511618
+Explained Variance Score: 0.3068868977782727
+
+Model: DecisionTreeRegressor
+Mean Squared Error: 21588.106214689265
+R^2 Score: -0.07535553170471165
+Explained Variance Score: -0.07527969206473273
+
+Model: RandomForestRegressor
+Mean Squared Error: 11340.295261186442
+R^2 Score: 0.4351125976958653
+Explained Variance Score: 0.43515062213005784
+
+Model: GradientBoostingRegressor
+Mean Squared Error: 10531.96993195582
+R^2 Score: 0.47537722793071757
+Explained Variance Score: 0.4754033733254178
+
+features = ['Simulations']
+
+Model: LinearRegression
+Mean Squared Error: 14592.71093311549
+R^2 Score: 0.27310194472658444
+Explained Variance Score: 0.2732603444393451
+
+Model: SVR
+Mean Squared Error: 13274.529687223492
+R^2 Score: 0.3387637253599798
+Explained Variance Score: 0.3558255390014403
+
+Model: DecisionTreeRegressor
+Mean Squared Error: 10516.873949835663
+R^2 Score: 0.47612919513515817
+Explained Variance Score: 0.47614301298866935
+
+Model: RandomForestRegressor
+Mean Squared Error: 10518.080656414113
+R^2 Score: 0.4760690861760223
+Explained Variance Score: 0.4760852939249265
+
+Model: GradientBoostingRegressor
+Mean Squared Error: 10516.91985460554
+R^2 Score: 0.4761269085080809
+Explained Variance Score: 0.4761403986060506
