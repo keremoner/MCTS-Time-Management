@@ -28,7 +28,7 @@ Linear Regression Explained Variance: 0.27978216693031954
 Tree Regression Explained Variance: 0.4807394583633652
 Random Forest Regression Explained Variance: 0.4807287340865771
 
-sim=1-16 temp=500 size=17700 size_per_sim=177
+sim=1-16 temp=500 size=17700 size_per_sim=1106
 Model: LinearRegression
 Mean Squared Error: 14506.827523476371
 R^2 Score: 0.27738000407642427

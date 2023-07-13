@@ -1,0 +1,125 @@
+Env: Cartpole
+Size: 5000
+Sim: 1-100
+Temp: 500
+
+Features: Simulations
+
+Model: LinearRegression
+Mean Squared Error: 10398.547098197134
+R^2 Score: 0.045365721347795596
+
+Model: SVR
+Mean Squared Error: 8607.279310899068
+R^2 Score: 0.20981231334300765
+
+Model: DecisionTreeRegressor
+Mean Squared Error: 5845.776341034153
+R^2 Score: 0.46333094154540067
+
+Model: RandomForestRegressor
+Mean Squared Error: 5853.01255645813
+R^2 Score: 0.46266662380695067
+
+Model: GradientBoostingRegressor
+Mean Squared Error: 5839.195887213824
+R^2 Score: 0.46393505736337526
+
+Features: 'Simulations', 'Cart Position', 'Cart Velocity', 'Pole Angle', 'Pole Angular Velocity'
+Model: LinearRegression
+Mean Squared Error: 9432.685645070907
+R^2 Score: 0.13403622914815816
+
+Model: SVR
+Mean Squared Error: 8975.261812004506
+R^2 Score: 0.17602983333093647
+
+Model: DecisionTreeRegressor
+Mean Squared Error: 10722.759
+R^2 Score: 0.015601582946027981
+
+Model: RandomForestRegressor
+Mean Squared Error: 5587.510378499999
+R^2 Score: 0.48704094050159674
+
+Model: GradientBoostingRegressor
+Mean Squared Error: 5222.649105211528
+R^2 Score: 0.5205368774959345
+
+
+Env: Cartpole
+Size: 3112
+Sim: 1-100
+Temp: 1
+
+Features: Simulations
+
+Model: LinearRegression
+Mean Squared Error: 13670.56346319464
+R^2 Score: 0.006161550097523505
+
+Model: SVR
+Mean Squared Error: 14105.93850758374
+R^2 Score: -0.02548984894003814
+
+Model: DecisionTreeRegressor
+Mean Squared Error: 13220.480561848883
+R^2 Score: 0.03888219794831416
+
+Model: RandomForestRegressor
+Mean Squared Error: 13202.698450710397
+R^2 Score: 0.04017494245130748
+
+Model: GradientBoostingRegressor
+Mean Squared Error: 12878.917574131816
+R^2 Score: 0.06371353947792369
+
+features = ['Simulations', 'Cart Position', 'Cart Velocity', 'Pole Angle', 'Pole Angular Velocity']
+
+Model: LinearRegression
+Mean Squared Error: 13526.375408046339
+R^2 Score: 0.016643900266106293
+
+Model: SVR
+Mean Squared Error: 14167.53421149996
+R^2 Score: -0.02996780473648819
+
+Model: DecisionTreeRegressor
+Mean Squared Error: 24294.072231139646
+R^2 Score: -0.7661585898063916
+
+Model: RandomForestRegressor
+Mean Squared Error: 13331.933570304975
+R^2 Score: 0.03077965810354566
+
+Model: GradientBoostingRegressor
+Mean Squared Error: 12907.010807702498
+R^2 Score: 0.06167118505853164
+
+-----------------------------------------------------------------------------------
+
+Env: FrozenLake-v1
+Size: 100k
+Sim: 1-100
+Temp: 1
+
+Model: LinearRegression
+Mean Squared Error: 0.08648327823632607
+R^2 Score: 0.337249770223932
+
+Model: SVR
+Mean Squared Error: 0.05237325911631672
+R^2 Score: 0.5986462328750988
+
+Model: DecisionTreeRegressor
+Mean Squared Error: 0.04648545000622639
+R^2 Score: 0.6437664794726768
+
+Model: RandomForestRegressor
+Mean Squared Error: 0.04648833390222167
+R^2 Score: 0.6437443792150028
+
+Model: GradientBoostingRegressor
+Mean Squared Error: 0.04648672239865066
+R^2 Score: 0.6437567287047972
+
