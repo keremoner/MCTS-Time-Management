@@ -1,9 +1,9 @@
-Experiment Name: Cartpole_Base_MCTS_test (c59c7b825dc029fc522a0029862b2dc2f397b703)
-Environment: MountainCar-v0
+Experiment Name: Cartpole_Base_MCTS_test (f5ee0c8a3772f2a9e49200d4c809696043c5f222)
+Environment: CartPole-v1
 Agent: Discount Factor = 0.997, Horizon = Infinite
-Temperatures: [400]
-Simulations: [2]
-Trials: 5
+Temperatures: [500]
+Simulations: [22]
+Trials: 20
 ----------------------------------------
-Temperature: 400
-	Simulation = 2	Mean Reward = -200.0	Error = 0.0
+Temperature: 500
+	Simulation = 22	Mean Reward = 459.6	Error = 14.769969532805408

@@ -3,11 +3,11 @@ import src.MCTS as MCTS
 import matplotlib.pyplot as plt
 import numpy as np
 
-total = 10
+total = 1
 
-for temp in [1]:
+for temp in [500]:
     results = []
-    iterations = [1, 2, 4, 8, 16, 32, 64]
+    iterations = [20]
     intervals = []
     for iter in iterations:
         rewards = []

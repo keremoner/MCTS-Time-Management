@@ -9,7 +9,7 @@ class Node:
         self.action = action
         self.unexplored = list(action_space)
         self.children = []
-        self.children_N = [0, 0, 0, 0]
+        self.children_N = [0] * len(action_space)
         self.Q = 0
         self.N = 0
         self.isTerminal = isTerminal
@@ -35,6 +35,7 @@ class mcts_agent:
         self.copy_env = copy.deepcopy(env)
         root_state =  self.copy_env.get_state()
         root = Node(None, None, False, 0, self.action_space)
+        self.__expand2(root)
         root.isExplored = True
         
         for i in range(self.simulations):
@@ -60,13 +61,25 @@ class mcts_agent:
             
             self.depth += 1
             
-            if len(node.unexplored) > 0:
-                return self.__expand(node)
+            if len(node.children) == 0:
+                self.__expand2(node)
+                return node
             else:
-                node = self.__bestChild(node, self.temperature)
-                next_state, _, terminal, _ = self.copy_env.step(node.action)
+                if len(node.unexplored) > 0:
+                    unexpanded = node.unexplored[random.randint(0, len(node.unexplored) - 1)]
+                    new_state, reward, done, info = self.copy_env.step(unexpanded)
+                    node.children[unexpanded].isTerminal = done
+                    node.children[unexpanded].reward = reward
+                    node.unexplored.remove(unexpanded)
+                    node = node.children[unexpanded]
+                else:  
+                    node = self.__bestChild(node, self.temperature)
+                    next_state, _, terminal, _ = self.copy_env.step(node.action)
         return node
 
+    def __expand2(self, node):
+        node.children = [Node(node, action, False, 0, self.action_space) for action in node.unexplored]
+    
     def __expand(self, node):
         # Find an unexplored actions and choose randomly amongst them
         # unexpanded = node.unexplored[random.randint(0, len(node.unexplored) - 1)]
@@ -114,10 +127,7 @@ class mcts_agent:
         i = 0
         while not node == None:
             reward = self.discount_factor * reward + node.reward
-            if node.isExplored:
-                node.N += 1
-            else:
-                node.isExplored = True
+            node.N += 1
             if node.parent != None:
                 node.parent.children_N[node.action] = node.parent.children_N[node.action] + 1
             node.Q += reward

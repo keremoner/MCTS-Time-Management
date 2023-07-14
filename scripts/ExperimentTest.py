@@ -4,18 +4,18 @@ from src.Experiment import Experiment
 import gym
 import copy
 
-TEMPERATURES_1 = [400]
+TEMPERATURES_1 = [500]
 TEMPERATURES_2 = [1]
-SIMULATIONS = [2]
-TRIAL = 5
+SIMULATIONS = [22]
+TRIAL = 20
 
-env1 = StatelessGym.make("MountainCar-v0")
+env1 = StatelessGym.make("CartPole-v1")
 env2 = StatelessGym.make("FrozenLake-v1", desc=None, map_name="4x4", is_slippery=False)
 
 agent = MCTS.mcts_agent()
 
 experiment1 = Experiment(env1, agent, temperatures=TEMPERATURES_1, simulations=SIMULATIONS, trial=TRIAL, experiment_name="Cartpole_Base_MCTS_test")
-experiment2 = Experiment(env2, agent, temperatures=TEMPERATURES_2, simulations=SIMULATIONS, trial=TRIAL, experiment_name="FrozenLake_Base_MCTS")
+#experiment2 = Experiment(env2, agent, temperatures=TEMPERATURES_2, simulations=SIMULATIONS, trial=TRIAL, experiment_name="FrozenLake_Base_MCTS")
 
 experiment1.run(save=True)
 experiment1.show_results()
