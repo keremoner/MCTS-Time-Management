@@ -1,0 +1,164 @@
+JobId=8588139 JobName=cartpole_dataset.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=27242026 Nice=0 Account=ewi-insy-ii-influence QOS=short
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A
+   SubmitTime=2023-07-14T13:04:51 EligibleTime=2023-07-14T13:04:51
+   AccrueTime=2023-07-14T13:04:51
+   StartTime=2023-07-14T13:04:51 EndTime=2023-07-14T13:34:51 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2023-07-14T13:04:51 Scheduler=Main
+   Partition=general AllocNode:Sid=login1:3641
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=grs1
+   BatchHost=grs1
+   NumNodes=1 NumCPUs=10 NumTasks=10 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=10,mem=850M,node=1,billing=5
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=grs1 CPU_IDs=0-5,22-23,30-31 Mem=850 GRES=
+   MinCPUsNode=1 MinMemoryCPU=85M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/cartpole_dataset.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8588139.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8588139.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+srun: Job 8588139 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+states_Cluster_7_100_s1_100_t500_CartPole-v1: 10/100
+states_Cluster_7_100_s1_100_t500_CartPole-v1: 20/100
+states_Cluster_7_100_s1_100_t500_CartPole-v1: 30/100
+states_Cluster_7_100_s1_100_t500_CartPole-v1: 40/100
+states_Cluster_7_100_s1_100_t500_CartPole-v1: 50/100
+states_Cluster_7_100_s1_100_t500_CartPole-v1: 60/100
+states_Cluster_7_100_s1_100_t500_CartPole-v1: 70/100
+states_Cluster_7_100_s1_100_t500_CartPole-v1: 80/100
+states_Cluster_7_100_s1_100_t500_CartPole-v1: 90/100
+states_Cluster_7_100_s1_100_t500_CartPole-v1: 100/100
+states_Cluster_8_100_s1_100_t500_CartPole-v1: 10/100
+states_Cluster_8_100_s1_100_t500_CartPole-v1: 20/100
+states_Cluster_8_100_s1_100_t500_CartPole-v1: 30/100
+states_Cluster_8_100_s1_100_t500_CartPole-v1: 40/100
+states_Cluster_8_100_s1_100_t500_CartPole-v1: 50/100
+states_Cluster_8_100_s1_100_t500_CartPole-v1: 60/100
+states_Cluster_8_100_s1_100_t500_CartPole-v1: 70/100
+states_Cluster_8_100_s1_100_t500_CartPole-v1: 80/100
+states_Cluster_8_100_s1_100_t500_CartPole-v1: 90/100
+states_Cluster_8_100_s1_100_t500_CartPole-v1: 100/100
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for job 8588139
+states_Cluster_9_100_s1_100_t500_CartPole-v1: 10/100
+states_Cluster_9_100_s1_100_t500_CartPole-v1: 20/100
+states_Cluster_9_100_s1_100_t500_CartPole-v1: 30/100
+states_Cluster_9_100_s1_100_t500_CartPole-v1: 40/100
+states_Cluster_9_100_s1_100_t500_CartPole-v1: 50/100
+states_Cluster_9_100_s1_100_t500_CartPole-v1: 60/100
+states_Cluster_9_100_s1_100_t500_CartPole-v1: 70/100
+states_Cluster_9_100_s1_100_t500_CartPole-v1: 80/100
+states_Cluster_9_100_s1_100_t500_CartPole-v1: 90/100
+states_Cluster_9_100_s1_100_t500_CartPole-v1: 100/100
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for job 8588139
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for job 8588139
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+states_Cluster_5_100_s1_100_t500_CartPole-v1: 10/100
+states_Cluster_5_100_s1_100_t500_CartPole-v1: 20/100
+states_Cluster_5_100_s1_100_t500_CartPole-v1: 30/100
+states_Cluster_5_100_s1_100_t500_CartPole-v1: 40/100
+states_Cluster_5_100_s1_100_t500_CartPole-v1: 50/100
+states_Cluster_5_100_s1_100_t500_CartPole-v1: 60/100
+states_Cluster_5_100_s1_100_t500_CartPole-v1: 70/100
+states_Cluster_5_100_s1_100_t500_CartPole-v1: 80/100
+states_Cluster_5_100_s1_100_t500_CartPole-v1: 90/100
+states_Cluster_5_100_s1_100_t500_CartPole-v1: 100/100
+states_Cluster_6_100_s1_100_t500_CartPole-v1: 10/100
+states_Cluster_6_100_s1_100_t500_CartPole-v1: 20/100
+states_Cluster_6_100_s1_100_t500_CartPole-v1: 30/100
+states_Cluster_6_100_s1_100_t500_CartPole-v1: 40/100
+states_Cluster_6_100_s1_100_t500_CartPole-v1: 50/100
+states_Cluster_6_100_s1_100_t500_CartPole-v1: 60/100
+states_Cluster_6_100_s1_100_t500_CartPole-v1: 70/100
+states_Cluster_6_100_s1_100_t500_CartPole-v1: 80/100
+states_Cluster_6_100_s1_100_t500_CartPole-v1: 90/100
+states_Cluster_6_100_s1_100_t500_CartPole-v1: 100/100
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for job 8588139
+srun: Job 8588139 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for job 8588139
+states_Cluster_1_100_s1_100_t500_CartPole-v1: 10/100
+states_Cluster_1_100_s1_100_t500_CartPole-v1: 20/100
+states_Cluster_1_100_s1_100_t500_CartPole-v1: 30/100
+states_Cluster_1_100_s1_100_t500_CartPole-v1: 40/100
+states_Cluster_1_100_s1_100_t500_CartPole-v1: 50/100
+states_Cluster_1_100_s1_100_t500_CartPole-v1: 60/100
+states_Cluster_1_100_s1_100_t500_CartPole-v1: 70/100
+states_Cluster_1_100_s1_100_t500_CartPole-v1: 80/100
+states_Cluster_1_100_s1_100_t500_CartPole-v1: 90/100
+states_Cluster_1_100_s1_100_t500_CartPole-v1: 100/100
+states_Cluster_2_100_s1_100_t500_CartPole-v1: 10/100
+states_Cluster_2_100_s1_100_t500_CartPole-v1: 20/100
+states_Cluster_2_100_s1_100_t500_CartPole-v1: 30/100
+states_Cluster_2_100_s1_100_t500_CartPole-v1: 40/100
+states_Cluster_2_100_s1_100_t500_CartPole-v1: 50/100
+states_Cluster_2_100_s1_100_t500_CartPole-v1: 60/100
+states_Cluster_2_100_s1_100_t500_CartPole-v1: 70/100
+states_Cluster_2_100_s1_100_t500_CartPole-v1: 80/100
+states_Cluster_2_100_s1_100_t500_CartPole-v1: 90/100
+states_Cluster_2_100_s1_100_t500_CartPole-v1: 100/100
+states_Cluster_10_100_s1_100_t500_CartPole-v1: 10/100
+states_Cluster_10_100_s1_100_t500_CartPole-v1: 20/100
+states_Cluster_10_100_s1_100_t500_CartPole-v1: 30/100
+states_Cluster_10_100_s1_100_t500_CartPole-v1: 40/100
+states_Cluster_10_100_s1_100_t500_CartPole-v1: 50/100
+states_Cluster_10_100_s1_100_t500_CartPole-v1: 60/100
+states_Cluster_10_100_s1_100_t500_CartPole-v1: 70/100
+states_Cluster_10_100_s1_100_t500_CartPole-v1: 80/100
+states_Cluster_10_100_s1_100_t500_CartPole-v1: 90/100
+states_Cluster_10_100_s1_100_t500_CartPole-v1: 100/100
+states_Cluster_3_100_s1_100_t500_CartPole-v1: 10/100
+states_Cluster_3_100_s1_100_t500_CartPole-v1: 20/100
+states_Cluster_3_100_s1_100_t500_CartPole-v1: 30/100
+states_Cluster_3_100_s1_100_t500_CartPole-v1: 40/100
+states_Cluster_3_100_s1_100_t500_CartPole-v1: 50/100
+states_Cluster_3_100_s1_100_t500_CartPole-v1: 60/100
+states_Cluster_3_100_s1_100_t500_CartPole-v1: 70/100
+states_Cluster_3_100_s1_100_t500_CartPole-v1: 80/100
+states_Cluster_3_100_s1_100_t500_CartPole-v1: 90/100
+states_Cluster_3_100_s1_100_t500_CartPole-v1: 100/100
+states_Cluster_4_100_s1_100_t500_CartPole-v1: 10/100
+states_Cluster_4_100_s1_100_t500_CartPole-v1: 20/100
+states_Cluster_4_100_s1_100_t500_CartPole-v1: 30/100
+states_Cluster_4_100_s1_100_t500_CartPole-v1: 40/100
+states_Cluster_4_100_s1_100_t500_CartPole-v1: 50/100
+states_Cluster_4_100_s1_100_t500_CartPole-v1: 60/100
+states_Cluster_4_100_s1_100_t500_CartPole-v1: 70/100
+states_Cluster_4_100_s1_100_t500_CartPole-v1: 80/100
+states_Cluster_4_100_s1_100_t500_CartPole-v1: 90/100
+states_Cluster_4_100_s1_100_t500_CartPole-v1: 100/100
