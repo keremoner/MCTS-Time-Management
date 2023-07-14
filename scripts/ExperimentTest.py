@@ -3,10 +3,11 @@ from src.Environments import StatelessGym
 from src.Experiment import Experiment
 import gym
 import copy
+import random
 
 TEMPERATURES_1 = [500]
 TEMPERATURES_2 = [1]
-SIMULATIONS = [100]
+SIMULATIONS = [1,2,3,4]
 TRIAL = 1
 
 env1 = StatelessGym.make("CartPole-v1")
@@ -14,11 +15,12 @@ env2 = StatelessGym.make("FrozenLake-v1", desc=None, map_name="4x4", is_slippery
 
 agent = MCTS.mcts_agent()
 
-experiment1 = Experiment(env1, agent, temperatures=TEMPERATURES_1, simulations=SIMULATIONS, trial=TRIAL, experiment_name="Cartpole_Base_MCTS_test")
-#experiment2 = Experiment(env2, agent, temperatures=TEMPERATURES_2, simulations=SIMULATIONS, trial=TRIAL, experiment_name="FrozenLake_Base_MCTS")
+sims = [random.randint(1,100) for i in range(100)]
+#experiment1 = Experiment(env1, agent, temperatures=TEMPERATURES_1, simulations=SIMULATIONS, trial=TRIAL, experiment_name="Cartpole_Base_MCTS_test")
+experiment2 = Experiment(env2, agent, temperatures=TEMPERATURES_2, simulations=SIMULATIONS, trial=TRIAL, experiment_name="FrozenLake_Base_MCTS")
 
-experiment1.run(save=True)
-experiment1.show_results()
+experiment2.run(save=False)
+experiment2.show_results()
 
 # experiment2.run()
 # experiment2.show_results()
