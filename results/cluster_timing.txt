@@ -5,6 +5,7 @@ Sim: 1-100
 Temp: 500
 Size: 100 sample/CPU x 10cpu
 10 cpus
+TIME: 22 mins 47 seconds
 
 FrozenLake-v1
 
@@ -13,6 +14,13 @@ Sim: 1-100
 Temp: 1
 Size: 100 sample/CPU x 10cpu
 10 cpus
-
 TIME: 3  mins 35 seconds
 
+
+FrozenLake-v1
+
+Discounted return
+Sim: 1-100
+Temp: 1
+Size: 1000 sample/CPU x 10cpu
+TIME: 28 mins 36 seconds
