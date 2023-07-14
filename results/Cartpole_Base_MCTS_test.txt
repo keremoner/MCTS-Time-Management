@@ -1,9 +1,9 @@
-Experiment Name: Cartpole_Base_MCTS_test (f5ee0c8a3772f2a9e49200d4c809696043c5f222)
+Experiment Name: Cartpole_Base_MCTS_test (2ea9d33184f91d661c42bf9aaaabaacffdf0a54d)
 Environment: CartPole-v1
 Agent: Discount Factor = 0.997, Horizon = Infinite
 Temperatures: [500]
-Simulations: [22]
-Trials: 20
+Simulations: [100]
+Trials: 1
 ----------------------------------------
 Temperature: 500
-	Simulation = 22	Mean Reward = 459.6	Error = 14.769969532805408
+	Simulation = 100	Mean Reward = 500.0	Error = 0.0

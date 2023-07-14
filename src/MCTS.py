@@ -36,6 +36,8 @@ class mcts_agent:
         root_state =  self.copy_env.get_state()
         root = Node(None, None, False, 0, self.action_space)
         self.__expand2(root)
+        root.parent = None
+        root.action = None
         root.isExplored = True
         
         for i in range(self.simulations):

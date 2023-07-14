@@ -6,8 +6,8 @@ import copy
 
 TEMPERATURES_1 = [500]
 TEMPERATURES_2 = [1]
-SIMULATIONS = [22]
-TRIAL = 20
+SIMULATIONS = [100]
+TRIAL = 1
 
 env1 = StatelessGym.make("CartPole-v1")
 env2 = StatelessGym.make("FrozenLake-v1", desc=None, map_name="4x4", is_slippery=False)
