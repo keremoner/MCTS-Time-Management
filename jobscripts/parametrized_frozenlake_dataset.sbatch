@@ -44,7 +44,7 @@ conda activate MCTS-Time-Management
 #srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 100 --temperature 1 --simulations 1,16 --environment CartPole-v1 --dataset-name 4Cluster_1-16_100-Cartpole --horizon -1 &
 for ((i=1; i<=10; i++)); do
    
-    dataset_name="Parametrized_Cluster_${i}_1000_s1_100-t1-FrozenLake-v1" 
+    dataset_name="Parametrized_Cluster_${i}_10_s1_100-t1-FrozenLake-v1" 
 
     srun --ntasks=1 --exclusive python ../scripts/CreateParametrizedDataset.py --size 10 --temperature 1 --simulations 1,100 --environment FrozenLake-v1 --dataset-name "${dataset_name}" --horizon -1 --map_size 4,5 --freeze_prob 0.1,0.9 &
 done
