@@ -67,9 +67,14 @@ class CustomBaseEnv(CustomAbstractEnv):
 class CustomFrozenLake(CustomBaseEnv):
     def __init__(self, **kwargs):
         super().__init__('FrozenLake-v1', **kwargs)
+        self.map = kwargs.get('desc', None)
+    
+    def get_map(self):
+        return self.map
     
     def set_map(self, map):
         self.env = gym.make('FrozenLake-v1', desc=map, is_slippery=False)
+        self.map = map
     
     def randomize_parameters(self, map_size=4, freeze_prob=0.1, show_map=False):
         random_map = generate_random_map(size=map_size, p=freeze_prob)
@@ -77,6 +82,7 @@ class CustomFrozenLake(CustomBaseEnv):
         if show_map:
             self.reset()
             print(self.render(mode='ansi'))
+        return random_map
 
 class CustomCartPole(CustomAbstractEnv):
     def __init__(self, **kwargs):

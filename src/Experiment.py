@@ -164,3 +164,68 @@ class RandomExperiment():
                     writer.writerows(dataset)
                     dataset = []
         return dataset
+    
+class ParametrizedRandomExperiment():
+    def __init__(self, env, agent, **kwargs):
+        self.env = env
+        self.agent = agent
+        self.kwargs = kwargs
+        self.results = []
+        
+    def run(self):
+        #Randomize the number of simulations
+        simulation = random.randint(self.kwargs['simulations'][0], self.kwargs['simulations'][1])
+        
+        #Randomize environment parameters
+        if self.env.env.spec.id == "FrozenLake-v1":
+            map_size = random.randint(self.kwargs['map_size'][0], self.kwargs['map_size'][1])
+            freeze_prob = random.uniform(self.kwargs['freeze_prob'][0], self.kwargs['freeze_prob'][1])
+            parameters = self.env.randomize_parameters(map_size=map_size, freeze_prob=freeze_prob)
+        else:
+            parameters = self.env.randomize_parameters()
+        
+        #Set experiment parameters
+        temperature = self.kwargs['temperature']
+        self.agent.set_temperature(temperature)
+        self.agent.set_simulations(simulation)
+        e_return = 0
+        dis_e_return = 0
+        discount_factor = self.agent.discount_factor
+        initial_state = self.env.reset()
+        action = self.agent.select_action(self.env)
+        next_state, reward, done, _ = self.env.step(action)
+        e_return += reward
+        dis_e_return += reward
+        while not done:
+            action = self.agent.select_action(self.env)
+            next_state, reward, done, _ = self.env.step(action)
+            e_return += reward         
+            dis_e_return += reward * discount_factor
+            discount_factor *= self.agent.discount_factor
+            
+        if self.env.env.spec.id == "CartPole-v1":
+            return [temperature] + initial_state.tolist() + [simulation, e_return, dis_e_return]
+        elif self.env.env.spec.id == "FrozenLake-v1":
+            return [temperature, parameters, simulation, e_return, dis_e_return]
+        else:
+            return [temperature, simulation, e_return, dis_e_return]
+
+        
+    def create_dataset(self, n, file_name):
+        dataset = []
+        if self.env.env.spec.id == "CartPole-v1":
+            dataset.append(["Temperature", "Cart Position", "Cart Velocity", "Pole Angle", "Pole Angular Velocity", "Simulations", "Return", "Discounted Return"])
+        elif self.env.env.spec.id == "FrozenLake-v1":
+            dataset.append(["Temperature", "Map", "Simulations", "Return", "Discounted Return"])
+        else:
+            dataset.append(["Temperature", "Simulations", "Return", "Discounted Return"])            
+        
+        with open(file_dir("./../datasets/" + file_name + ".csv"), "w", newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            for i in range(1, n + 1):
+                dataset.append(self.run())
+                if i % (n // 10) == 0:
+                    print("%s: %d/%d" % (file_name, i, n))
+                    writer.writerows(dataset)
+                    dataset = []
+        return dataset

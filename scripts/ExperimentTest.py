@@ -14,6 +14,7 @@ TRIAL = 1
 env2 = StatelessGym.make("FrozenLake-v1", desc=None, map_name="4x4", is_slippery=False)
 env2.randomize_parameters(map_size=4, freeze_prob=0.5, show_map=True)
 agent = MCTS.mcts_agent()
+print(env2.get_map())
 
 sims = [random.randint(1,100) for i in range(100)]
 #experiment1 = Experiment(env1, agent, temperatures=TEMPERATURES_1, simulations=SIMULATIONS, trial=TRIAL, experiment_name="Cartpole_Base_MCTS_test")
