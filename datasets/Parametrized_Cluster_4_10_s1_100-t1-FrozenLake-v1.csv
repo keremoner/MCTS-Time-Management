@@ -1,0 +1,11 @@
+Temperature,Map,Simulations,Return,Discounted Return
+1,"['SHFH', 'FFFF', 'HFHF', 'FFHG']",26,0.0,0.0
+1,"['SFHFH', 'FFHHH', 'FHFFF', 'FFFHF', 'FHHFG']",21,0.0,0.0
+1,"['SFFHH', 'FHFFH', 'HHHFH', 'FFHFF', 'HHFHG']",13,0.0,0.0
+1,"['SFFF', 'HFFH', 'FFHH', 'HFFG']",87,1.0,0.9791880578299021
+1,"['SFFH', 'HFFF', 'HHFH', 'HHFG']",20,0.0,0.0
+1,"['SFHHH', 'HFFHH', 'FFFFF', 'HHFFF', 'FFFHG']",98,0.0,0.0
+1,"['SHHFH', 'FFHHH', 'HFFFH', 'FFHFF', 'FHHFG']",30,0.0,0.0
+1,"['SFHF', 'HFHH', 'HFFH', 'HHFG']",20,0.0,0.0
+1,"['SFFF', 'HFFF', 'FFFH', 'FHFG']",61,1.0,0.9304302024748964
+1,"['SFHH', 'HFFF', 'FFHF', 'FFFG']",69,1.0,0.9821344612135428
