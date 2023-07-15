@@ -5,14 +5,15 @@
     - 8k-10k seems to be enough for convergence
     - R2 is 6% better with discounted return than return (for gradient boosting regressor)
 - [x] Implement randomizer for environments, first Frozen Lake
-- [ ] Implement dataset generation for randomly parametrized Frozen Lake
-- [ ] Run dataset generation on cluster
+- [x] Implement dataset generation for randomly parametrized Frozen Lake
+- [x] Run dataset generation on cluster
 - [ ] Get results for mean prediction
 - [ ] Try to divide the simulation data for frozen lake such that the model is tested on unseen number of simulations
 - [ ] Check regression models, see if we can use the combination of features
 - [ ] Check supervised learning to see if it is appropriate to use data points with the same X
 - [ ] Get proper visuals for both CartPole-v1 and FrozenLake-v1
 - [ ] Run regression for randomly generated FL
+    - How to encode the map?
     - Look into MLP and how to choose the hyper-parameters
     - Different sized maps? Probably wouldn't work with MLP.
     - Feature normalization?
