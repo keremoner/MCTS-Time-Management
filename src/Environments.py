@@ -1,6 +1,7 @@
 import gym
 import copy
 from abc import ABC, abstractmethod
+from gym.envs.toy_text.frozen_lake import generate_random_map
 
 class StatelessGym:
     @staticmethod
@@ -11,6 +12,8 @@ class StatelessGym:
             return CustomAcrobot(**kwargs)
         elif env_name == 'MountainCar-v0':
             return CustomMountainCar(**kwargs)
+        elif env_name == 'FrozenLake-v1':
+            return CustomFrozenLake(**kwargs)
         else:
             return CustomBaseEnv(env_name, **kwargs)
 
@@ -24,6 +27,10 @@ class CustomAbstractEnv(ABC):
 
     @abstractmethod
     def set_state(self, state):
+        pass
+    
+    @abstractmethod
+    def randomize_parameters(self):
         pass
 
     def reset(self):
@@ -53,7 +60,23 @@ class CustomBaseEnv(CustomAbstractEnv):
 
     def set_state(self, state):
         self.env = copy.deepcopy(state)
+    
+    def randomize_parameters(self):
+        pass
 
+class CustomFrozenLake(CustomBaseEnv):
+    def __init__(self, **kwargs):
+        super().__init__('FrozenLake-v1', **kwargs)
+    
+    def set_map(self, map):
+        self.env = gym.make('FrozenLake-v1', desc=map, is_slippery=False)
+    
+    def randomize_parameters(self, map_size=4, freeze_prob=0.1, show_map=False):
+        random_map = generate_random_map(size=map_size, p=freeze_prob)
+        self.set_map(random_map)
+        if show_map:
+            self.reset()
+            print(self.render(mode='ansi'))
 
 class CustomCartPole(CustomAbstractEnv):
     def __init__(self, **kwargs):
@@ -69,6 +92,9 @@ class CustomCartPole(CustomAbstractEnv):
         self.env._elapsed_steps = elapsed_steps
         self.env.env.env.steps_beyond_done = steps_beyond_done
         self.env.env._has_reset = has_reset
+    
+    def randomize_parameters(self):
+        pass
         
 class CustomAcrobot(CustomAbstractEnv):
     def __init__(self, **kwargs):
@@ -83,6 +109,9 @@ class CustomAcrobot(CustomAbstractEnv):
         self.env.env.env.state = actual_state
         self.env._elapsed_steps = elapsed_steps
         self.env.env._has_reset = has_reset
+        
+    def randomize_parameters(self):
+        pass
 
 class CustomMountainCar(CustomAbstractEnv):
     def __init__(self, **kwargs):
@@ -97,3 +126,6 @@ class CustomMountainCar(CustomAbstractEnv):
         self.env.env.env.state = actual_state
         self.env._elapsed_steps = elapsed_steps
         self.env.env._has_reset = has_reset
+        
+    def randomize_parameters(self):
+        pass

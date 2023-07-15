@@ -1,0 +1,24 @@
+Env: FrozenLake-v1
+Size: 11k
+Sim: 1-100
+Temp: 1
+
+Model: LinearRegression
+Mean Squared Error: 0.0817528501537438
+R^2 Score: 0.3318454540257749
+
+Model: SVR
+Mean Squared Error: 0.0465924589585092
+R^2 Score: 0.6192063860440244
+
+Model: DecisionTreeRegressor
+Mean Squared Error: 0.04072964531458192
+R^2 Score: 0.6671223373658799
+
+Model: RandomForestRegressor
+Mean Squared Error: 0.040691499313651465
+R^2 Score: 0.6674340992663457
+
+Model: GradientBoostingRegressor
+Mean Squared Error: 0.04074208695621802
+R^2 Score: 0.6670206535786736

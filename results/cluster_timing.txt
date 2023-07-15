@@ -7,6 +7,16 @@ Size: 100 sample/CPU x 10cpu
 10 cpus
 TIME: 22 mins 47 seconds
 
+Cartpole-v1
+
+All features + discounted return
+Sim: 1-100
+Temp: 500
+Size: 1000 sample/CPU x 10cpu
+10 cpus
+TIME: 3 hours 17 mins 45 seconds
+
+
 FrozenLake-v1
 
 Discounted return

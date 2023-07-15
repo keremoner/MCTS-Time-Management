@@ -7,12 +7,12 @@ import random
 
 TEMPERATURES_1 = [500]
 TEMPERATURES_2 = [1]
-SIMULATIONS = [1,2,3,4]
+SIMULATIONS = [1,8, 16, 32]
 TRIAL = 1
 
-env1 = StatelessGym.make("CartPole-v1")
+#env1 = StatelessGym.make("CartPole-v1")
 env2 = StatelessGym.make("FrozenLake-v1", desc=None, map_name="4x4", is_slippery=False)
-
+env2.randomize_parameters(map_size=4, freeze_prob=0.5, show_map=True)
 agent = MCTS.mcts_agent()
 
 sims = [random.randint(1,100) for i in range(100)]
