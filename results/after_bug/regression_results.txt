@@ -3,6 +3,8 @@ Size: 11k
 Sim: 1-100
 Temp: 1
 
+Y = Return
+
 Model: LinearRegression
 Mean Squared Error: 0.0817528501537438
 R^2 Score: 0.3318454540257749
@@ -22,3 +24,26 @@ R^2 Score: 0.6674340992663457
 Model: GradientBoostingRegressor
 Mean Squared Error: 0.04074208695621802
 R^2 Score: 0.6670206535786736
+
+Y = Discounted Return
+
+Model: LinearRegression
+Mean Squared Error: 0.06463782992136967
+R^2 Score: 0.40970047406619226
+
+Model: SVR
+Mean Squared Error: 0.03445793230273527
+R^2 Score: 0.6853158417027987
+
+Model: DecisionTreeRegressor
+Mean Squared Error: 0.03223485011834737
+R^2 Score: 0.7056179521101629
+
+Model: RandomForestRegressor
+Mean Squared Error: 0.032256645610034974
+R^2 Score: 0.7054189066219969
+
+Model: GradientBoostingRegressor
+Mean Squared Error: 0.03223385797661622
+R^2 Score: 0.7056270127607798
+

@@ -34,3 +34,13 @@ Sim: 1-100
 Temp: 1
 Size: 1000 sample/CPU x 10cpu
 TIME: 28 mins 36 seconds
+
+FrozenLake-v1
+
+Parametrized: m4-4
+Discounted return
+Sim: 1-100
+Temp: 1
+Size: 100 sample/CPU x 10cpu
+TIME: ????
+
