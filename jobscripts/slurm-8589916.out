@@ -1,0 +1,146 @@
+JobId=8589916 JobName=parametrized_frozenlake_dataset.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=27204502 Nice=0 Account=ewi-insy-ii-influence QOS=short
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:01 TimeLimit=00:30:00 TimeMin=N/A
+   SubmitTime=2023-07-15T16:47:39 EligibleTime=2023-07-15T16:47:39
+   AccrueTime=2023-07-15T16:47:39
+   StartTime=2023-07-15T16:47:39 EndTime=2023-07-15T17:17:39 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2023-07-15T16:47:39 Scheduler=Main
+   Partition=general AllocNode:Sid=login1:14476
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=grs3
+   BatchHost=grs3
+   NumNodes=1 NumCPUs=10 NumTasks=10 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=10,mem=850M,node=1,billing=5
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=grs3 CPU_IDs=4-5,8-11,16-17,20-21 Mem=850 GRES=
+   MinCPUsNode=1 MinMemoryCPU=85M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/parametrized_frozenlake_dataset.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8589916.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8589916.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+Parametrized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+srun: Job 8589916 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Step created for job 8589916
+srun: Job 8589916 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 8589916 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 8589916 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 8589916 step creation temporarily disabled, retrying (Requested nodes are busy)
+Parametrized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+srun: Job 8589916 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for job 8589916
+srun: Job 8589916 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for job 8589916
+srun: Job 8589916 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for job 8589916
+srun: Job 8589916 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for job 8589916
+Parametrized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
