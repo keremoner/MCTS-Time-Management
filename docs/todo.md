@@ -22,14 +22,17 @@
     - It looks like it can benefit from more samples
   
 ## 17.07.2023
-- [ ] Get learning curve for FL using 151k samples - (150, 150, 150, 150)
-- [ ] Implement one-hot encoding - FL
-- [ ] Get learning curve using one-hot encoding - FL constant mapsize
+- [ ] Get learning curve using categorical encoding for FL using 151k samples - (150, 150, 150, 150)
+- [x] Implement one-hot encoding - FL
+- [ ] Get learning curve using one-hot encoding (150, 150, 150, 150) - FL constant mapsize
 - [ ] Get proper visuals for both CartPole-v1 and FrozenLake-v1, first setting
 - [ ] Get results for mean prediction
 - [ ] Try to divide the simulation data for frozen lake such that the model is tested on unseen number of simulations
 - [ ] Check regression models, see if we can use the combination of features
 - [ ] Check supervised learning to see if it is appropriate to use data points with the same X
+- [ ] Implement grid-search hpc script
+- [ ] Do grid search for categorical encoding
+- [ ] Do grid search for one-hot encoding
 - [ ] Implement multi-channel map encoding - FL
 - [ ] Train using multi-channel map encoding - FL constant mapsize
 - [ ] Implement padding for different sized maps
