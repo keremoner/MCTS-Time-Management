@@ -18,6 +18,7 @@ import pandas as pd
 import ast
 import numpy as np
 import argparse
+from sklearn.preprocessing import OneHotEncoder
 
 def encode_maze(maze):
     num_rows = len(maze)
@@ -36,6 +37,27 @@ def encode_maze(maze):
             elif maze[i][j] == 'G':
                 encoded_maze.append(3)
     return encoded_maze
+
+def encode_map(map):
+    # Convert the map to a 2D array
+    map_array =  []
+    for row in map:
+        for letter in row:
+            map_array.append([letter])
+    # Create an instance of OneHotEncoder
+    encoder = OneHotEncoder(sparse=False)
+
+    # Fit and transform the map array
+    encoded_map = encoder.fit_transform(map_array).astype('int64')
+
+    # Get the categories (unique values) from the encoder
+    categories = encoder.categories_[0]
+
+    # Create a dictionary to map the encoded values to the original categories
+    category_mapping = {i: category for i, category in enumerate(categories)}
+
+    # Return the encoded map and the category mapping
+    return encoded_map, category_mapping
 
 def file_dir(relative_path):
     absolute_path = os.path.dirname(__file__)
@@ -62,15 +84,19 @@ if __name__ == "__main__":
         dataset['Map'] = dataset['Map'].apply(ast.literal_eval)
         dataset['F_count'] = dataset['Map'].apply(lambda x: sum(row.count('F') for row in x))
         dataset['Encoded_Map'] = dataset['Map'].apply(lambda x: encode_maze(x))
+        dataset['OneHotEncoded_Map'] = dataset['Map'].apply(lambda x: np.reshape(encode_map(x)[0], (-1)))
     
     #features = ['Simulations', 'Cart Position', 'Cart Velocity', 'Pole Angle', 'Pole Angular Velocity']
     #features = ['Simulations']
-    features = ['Simulations', 'Encoded_Map']
+    features = ['Simulations', 'OneHotEncoded_Map']
 
     if 'Encoded_Map' in features:
         features.remove('Encoded_Map')
         X = np.append(dataset[features].values.reshape(-1, len(features)), dataset['Encoded_Map'].apply(pd.Series).values, axis=1)
         print(type(X))
+    elif 'OneHotEncoded_Map' in features:
+        features.remove('OneHotEncoded_Map')
+        X = np.append(dataset[features].values.reshape(-1, len(features)), dataset['OneHotEncoded_Map'].apply(pd.Series).values, axis=1).astype('int64')
     else:
         X = dataset[features].values.reshape(-1, len(features))
     y = dataset['Discounted Return'].values
@@ -85,7 +111,7 @@ if __name__ == "__main__":
     #'RandomForestRegressor': RandomForestRegressor(),
     #'GradientBoostingRegressor': GradientBoostingRegressor(),
     #'KNeighborsRegressor': KNeighborsRegressor(n_neighbors=5),
-    'MLPRegressor': MLPRegressor(hidden_layer_sizes=(150, 150, 150, 150), activation='relu', learning_rate='adaptive')
+    'MLPRegressor': MLPRegressor(hidden_layer_sizes=(150, 150, 150, 150), activation='tanh', learning_rate='adaptive')
     }
 
     train_sizes, train_scores, test_scores = learning_curve(models['MLPRegressor'], X[:size], y[:size], cv=5, train_sizes=np.append(np.linspace(0.01, 0.1, 5, endpoint=False), np.linspace(0.1, 1.0, 10)), scoring='r2', n_jobs=cores, verbose=2)
@@ -111,6 +137,6 @@ if __name__ == "__main__":
     plt.ylabel('R2 Score')
     plt.title('Learning Curve | FrozenLake-v1 | Temp=1 | MLPRegressor | Y=Discounted Return')
     plt.legend(loc='best')
-    plt.savefig(file_dir('../results/after_bug/FrozenLake/learning_curve_151k.png'))
+    plt.savefig(file_dir('../results/after_bug/FrozenLake/learning_curve_onehot_151k.png'))
     df = pd.DataFrame({'train_sizes': train_sizes, 'train_mean': train_mean, 'train_std': train_std, 'test_mean': test_mean, 'test_std': test_std})
-    df.to_csv(file_dir('../results/after_bug/FrozenLake/learning_curve_151k.csv'), index=False)
+    df.to_csv(file_dir('../results/after_bug/FrozenLake/learning_curve_onehot_151k.csv'), index=False)
