@@ -24,7 +24,7 @@
 ## 17.07.2023
 - [ ] Get learning curve for FL using 151k samples - (150, 150, 150, 150)
 - [ ] Implement one-hot encoding - FL
-- [ ] Train using one-hot encoding - FL constant mapsize
+- [ ] Get learning curve using one-hot encoding - FL constant mapsize
 - [ ] Get proper visuals for both CartPole-v1 and FrozenLake-v1, first setting
 - [ ] Get results for mean prediction
 - [ ] Try to divide the simulation data for frozen lake such that the model is tested on unseen number of simulations
