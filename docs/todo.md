@@ -7,18 +7,33 @@
 - [x] Implement randomizer for environments, first Frozen Lake
 - [x] Implement dataset generation for randomly parametrized Frozen Lake
 - [x] Run dataset generation on cluster
+- [x] Run regression for randomly generated FL
+    - How to encode the map?
+        - Categorical Encoding: Convert letters to numbers, than flatten it
+        - One hot encoding
+        - 4 channel encoding: For each tile type, create a grid consisting of 0s and 1s indicating whether that cell is the given channel's type
+    - Different sized maps? Probably wouldn't work with MLP.
+        - Padding can be used. Make the map size constant such as 15x15 and add empty cells for maps smaller than 15x15. 
+
+## 16.07.2023
+- [x] Use a little dataset to achieve high training scores for parametrized frozen lake. Decide on NN size. (categorical encoding with constant map size)
+    - Best I found was (150, 150, 150, 150) and activation='relu'
+- [ ] Run a learning curve seperately for the found NN size
+- [ ] Get proper visuals for both CartPole-v1 and FrozenLake-v1, first setting
 - [ ] Get results for mean prediction
 - [ ] Try to divide the simulation data for frozen lake such that the model is tested on unseen number of simulations
 - [ ] Check regression models, see if we can use the combination of features
 - [ ] Check supervised learning to see if it is appropriate to use data points with the same X
-- [ ] Get proper visuals for both CartPole-v1 and FrozenLake-v1
-- [ ] Run regression for randomly generated FL
-    - How to encode the map?
-    - Look into MLP and how to choose the hyper-parameters
-    - Different sized maps? Probably wouldn't work with MLP.
-    - Feature normalization?
+- [ ] Implement multi-channel map encoding - FL
+- [ ] Implement one-hot encoding - FL
+- [ ] Train using multi-channel map encoding - FL constant mapsize
+- [ ] Train using one-hot encoding - FL constant mapsize
+- [ ] Implement padding for different sized maps
+- [ ] Train using different sized maps
 
 ## Future
+- Feature normalization?
+- Look into MLP and how to choose the hyper-parameters
 - How are learning curves created? What affects the uncertainty in CV scores?
 - Writing the report
     - Check the document format for HPC

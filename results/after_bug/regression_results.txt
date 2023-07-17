@@ -47,3 +47,36 @@ Model: GradientBoostingRegressor
 Mean Squared Error: 0.03223385797661622
 R^2 Score: 0.7056270127607798
 
+
+
+
+
+
+
+
+Model: LinearRegression
+Mean Squared Error: 0.09333120775217853
+R^2 Score: 0.4687015250753138
+
+Model: SVR
+Mean Squared Error: 0.08773725357351324
+R^2 Score: 0.5005457430545253
+
+Model: DecisionTreeRegressor
+Mean Squared Error: 0.1015831525421304
+R^2 Score: 0.4217263943804922
+
+Model: RandomForestRegressor
+Mean Squared Error: 0.061231329215618725
+R^2 Score: 0.6514337206880274
+
+Model: GradientBoostingRegressor
+Mean Squared Error: 0.06810677468351357
+R^2 Score: 0.6122944683468392
+
+Model: MLPRegressor (32, 32)
+Mean Squared Error: 0.05709038336880306
+R^2 Score: 0.6750065241065872
+
+
+
