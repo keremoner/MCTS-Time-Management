@@ -18,16 +18,20 @@
 ## 16.07.2023
 - [x] Use a little dataset to achieve high training scores for parametrized frozen lake. Decide on NN size. (categorical encoding with constant map size)
     - Best I found was (150, 150, 150, 150) and activation='relu'
-- [ ] Run a learning curve seperately for the found NN size
+- [x] Run a learning curve seperately for the found NN size
+    - It looks like it can benefit from more samples
+  
+## 17.07.2023
+- [ ] Get learning curve for FL using 151k samples - (150, 150, 150, 150)
+- [ ] Implement one-hot encoding - FL
+- [ ] Train using one-hot encoding - FL constant mapsize
 - [ ] Get proper visuals for both CartPole-v1 and FrozenLake-v1, first setting
 - [ ] Get results for mean prediction
 - [ ] Try to divide the simulation data for frozen lake such that the model is tested on unseen number of simulations
 - [ ] Check regression models, see if we can use the combination of features
 - [ ] Check supervised learning to see if it is appropriate to use data points with the same X
 - [ ] Implement multi-channel map encoding - FL
-- [ ] Implement one-hot encoding - FL
 - [ ] Train using multi-channel map encoding - FL constant mapsize
-- [ ] Train using one-hot encoding - FL constant mapsize
 - [ ] Implement padding for different sized maps
 - [ ] Train using different sized maps
 
