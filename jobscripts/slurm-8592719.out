@@ -1,0 +1,35 @@
+JobId=8592719 JobName=analysis.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=18692737 Nice=0 Account=ewi-insy-ii-influence QOS=medium
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:00 TimeLimit=04:10:00 TimeMin=N/A
+   SubmitTime=2023-07-17T15:25:37 EligibleTime=2023-07-17T15:25:37
+   AccrueTime=2023-07-17T15:25:37
+   StartTime=2023-07-17T15:25:38 EndTime=2023-07-17T19:35:38 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2023-07-17T15:25:38 Scheduler=Main
+   Partition=general AllocNode:Sid=login1:27418
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=grs2
+   BatchHost=grs2
+   NumNodes=1 NumCPUs=10 NumTasks=1 CPUs/Task=10 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=10,mem=4G,node=1,billing=5
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=grs2 CPU_IDs=12-15,26-31 Mem=4096 GRES=
+   MinCPUsNode=10 MinMemoryNode=4G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/analysis.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8592719.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8592719.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+[learning_curve] Training set sizes: [  1208   3382   5556   7731   9905  12080  24160  36240  48320  60400
+  72480  84560  96640 108720 120800]
+[Parallel(n_jobs=10)]: Using backend LokyBackend with 10 concurrent workers.
