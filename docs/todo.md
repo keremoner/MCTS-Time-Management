@@ -38,6 +38,7 @@
 - [ ] Implement multi-channel map encoding - FL
 - [ ] Train using multi-channel map encoding - FL constant mapsize
 - [ ] Implement padding for different sized maps
+- [ ] Create dataset for different sized maps
 - [ ] Train using different sized maps
 
 
