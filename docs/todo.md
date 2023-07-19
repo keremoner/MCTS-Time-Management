@@ -28,18 +28,23 @@
 - [X] Implement grid-search hpc script
 
 ## 18.07.2023
+- Travel
+
+## 19.07.2023
 - [ ] Get proper visuals for both CartPole-v1 and FrozenLake-v1, first setting
 - [ ] Get results for mean prediction
 - [ ] Try to divide the simulation data for frozen lake such that the model is tested on unseen number of simulations
 - [ ] Check regression models, see if we can use the combination of features
 - [ ] Check supervised learning to see if it is appropriate to use data points with the same X
+
 - [ ] Do grid search for categorical encoding
 - [ ] Do grid search for one-hot encoding
+
 - [ ] Implement multi-channel map encoding - FL
-- [ ] Train using multi-channel map encoding - FL constant mapsize
+- [ ] Get learning curves for multi-channel map encoding - FL constant mapsize
 - [ ] Implement padding for different sized maps
-- [ ] Create dataset for different sized maps
 - [ ] Train using different sized maps
+- [ ] Create dataset for different sized maps
 
 
 ## Future
@@ -56,3 +61,4 @@
     - Dataset generation with folder
     - Experiment information on .yaml
     - Script for generating all of the data analysis with images
+    - Ipython widgets
