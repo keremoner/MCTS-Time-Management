@@ -1,0 +1,19 @@
+Model: LinearRegression
+Mean Squared Error: 968.4154402338374
+R^2 Score: 0.19769656639790834
+
+Model: SVR
+Mean Squared Error: 1025.3355999013397
+R^2 Score: 0.15053990444775478
+
+Model: RandomForestRegressor
+Mean Squared Error: 474.8101301267042
+R^2 Score: 0.606633907429515
+
+Model: GradientBoostingRegressor
+Mean Squared Error: 458.7523385251745
+R^2 Score: 0.6199373109098057
+
+Model: MLPRegressor (50, 50) - tanh - learning_rate=adaptive
+Mean Squared Error: 449.86467625076176
+R^2 Score: 0.6273004751709366

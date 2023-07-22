@@ -1,0 +1,15 @@
+Model: LinearRegression
+Mean Squared Error: 0.06463782992136967
+R^2 Score: 0.40970047406619226
+
+Model: SVR
+Mean Squared Error: 0.03445793230273527
+R^2 Score: 0.6853158417027987
+
+Model: RandomForestRegressor
+Mean Squared Error: 0.03225836669505952
+R^2 Score: 0.7054031889582801
+
+Model: GradientBoostingRegressor
+Mean Squared Error: 0.03223385797661622
+R^2 Score: 0.7056270127607798
