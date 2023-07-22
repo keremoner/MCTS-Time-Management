@@ -64,7 +64,7 @@ def file_dir(relative_path):
     return os.path.join(absolute_path, relative_path)
     
 if __name__ == "__main__":
-    directory = file_dir("../datasets/after_bug/FrozenLake-v1_m4-4_s1-100_t1/")
+    directory = file_dir("../datasets/after_bug/states_s1-100_t500_Cartpole-v1/")
     #directory = "../datasets/10k/"
     dataset_names = os.listdir(directory)
     dataset = pd.DataFrame()
@@ -86,9 +86,9 @@ if __name__ == "__main__":
         dataset['Encoded_Map'] = dataset['Map'].apply(lambda x: encode_maze(x))
         dataset['OneHotEncoded_Map'] = dataset['Map'].apply(lambda x: np.reshape(encode_map(x)[0], (-1)))
     
-    #features = ['Simulations', 'Cart Position', 'Cart Velocity', 'Pole Angle', 'Pole Angular Velocity']
+    features = ['Simulations', 'Cart Position', 'Cart Velocity', 'Pole Angle', 'Pole Angular Velocity']
     #features = ['Simulations']
-    features = ['Simulations', 'OneHotEncoded_Map']
+    #features = ['Simulations', 'OneHotEncoded_Map']
 
     if 'Encoded_Map' in features:
         features.remove('Encoded_Map')
@@ -111,10 +111,10 @@ if __name__ == "__main__":
     #'RandomForestRegressor': RandomForestRegressor(),
     #'GradientBoostingRegressor': GradientBoostingRegressor(),
     #'KNeighborsRegressor': KNeighborsRegressor(n_neighbors=5),
-    'MLPRegressor': MLPRegressor(hidden_layer_sizes=(150, 150, 150, 150), activation='tanh', learning_rate='adaptive')
+    'MLPRegressor': MLPRegressor(hidden_layer_sizes=(50, 50), activation='tanh', learning_rate='adaptive', max_iter=100000)
     }
 
-    train_sizes, train_scores, test_scores = learning_curve(models['MLPRegressor'], X[:size], y[:size], cv=5, train_sizes=np.append(np.linspace(0.01, 0.1, 5, endpoint=False), np.linspace(0.1, 1.0, 10)), scoring='r2', n_jobs=cores, verbose=2)
+    train_sizes, train_scores, test_scores = learning_curve(models['MLPRegressor'], X[:size], y[:size], cv=5, train_sizes=np.append(np.linspace(0.01, 0.1, 10, endpoint=False), np.linspace(0.1, 1.0, 10)), scoring='r2', n_jobs=cores, verbose=2)
 
     # Calculate the mean and standard deviation of the training and test scores
     train_mean = np.mean(train_scores, axis=1)
@@ -135,8 +135,8 @@ if __name__ == "__main__":
     # Add labels and title
     plt.xlabel('Training Set Size')
     plt.ylabel('R2 Score')
-    plt.title('Learning Curve | FrozenLake-v1 | Temp=1 | MLPRegressor | Y=Discounted Return')
+    plt.title('Learning Curve | CartPole-v1 | Temp=1 | MLPRegressor | Y=Discounted Return')
     plt.legend(loc='best')
-    plt.savefig(file_dir('../results/after_bug/FrozenLake/learning_curve_onehot_151k.png'))
+    plt.savefig(file_dir('../results/after_bug/CartPole/learning_curve_multifeature_maxiter.png'))
     df = pd.DataFrame({'train_sizes': train_sizes, 'train_mean': train_mean, 'train_std': train_std, 'test_mean': test_mean, 'test_std': test_std})
-    df.to_csv(file_dir('../results/after_bug/FrozenLake/learning_curve_onehot_151k.csv'), index=False)
+    df.to_csv(file_dir('../results/after_bug/CartPole/learning_curve_multifeature_maxiter.csv'), index=False)

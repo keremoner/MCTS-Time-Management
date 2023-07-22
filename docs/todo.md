@@ -43,6 +43,8 @@
 ## 22.07.2023
 ### FrozenLake Constant Map Size
 - [ ] Change number of iterations for MLP
+  - [ ] Do a grid search for CartPole multi feature
+  - [ ] Get a learning curve for CartPole multi feature
   - [ ] Do a grid search for categorical encoding with low sample size
   - [ ] Draw the learning curve for categorical encoding
 
