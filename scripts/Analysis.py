@@ -135,7 +135,7 @@ if __name__ == "__main__":
     # Add labels and title
     plt.xlabel('Training Set Size')
     plt.ylabel('R2 Score')
-    plt.title('Learning Curve | CartPole-v1 | Temp=1 | MLPRegressor | Y=Discounted Return')
+    plt.title('Learning Curve | CartPole-v1 | Temp=500 | MLPRegressor | Y=Discounted Return')
     plt.legend(loc='best')
     plt.savefig(file_dir('../results/after_bug/CartPole/learning_curve_multifeature_maxiter.png'))
     df = pd.DataFrame({'train_sizes': train_sizes, 'train_mean': train_mean, 'train_std': train_std, 'test_mean': test_mean, 'test_std': test_std})
