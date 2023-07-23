@@ -112,10 +112,10 @@ if __name__ == "__main__":
     #'RandomForestRegressor': RandomForestRegressor(),
     #'GradientBoostingRegressor': GradientBoostingRegressor(),
     #'KNeighborsRegressor': KNeighborsRegressor(n_neighbors=5),
-    'MLPRegressor': MLPRegressor(hidden_layer_sizes=(150, 150, 150, 150), activation='tanh', learning_rate='adaptive', max_iter=100000)
+    'MLPRegressor': MLPRegressor(hidden_layer_sizes=(150, 150, 150, 150), activation='tanh', learning_rate='adaptive', max_iter=1000000)
     }
 
-    train_sizes, train_scores, test_scores = learning_curve(models['MLPRegressor'], X[:size], y[:size], cv=8, train_sizes=np.append(np.linspace(0.01, 0.1, 10, endpoint=False), np.linspace(0.1, 1.0, 10)), scoring='r2', n_jobs=cores, verbose=2)
+    train_sizes, train_scores, test_scores = learning_curve(models['MLPRegressor'], X[:size], y[:size], cv=10, train_sizes=np.append(np.linspace(0.001, 0.1, 10, endpoint=False), np.linspace(0.1, 1.0, 10)), scoring='r2', n_jobs=cores, verbose=2)
 
     # Calculate the mean and standard deviation of the training and test scores
     train_mean = np.mean(train_scores, axis=1)
