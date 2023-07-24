@@ -49,8 +49,8 @@
   - [ ] Draw the learning curve for categorical encoding
 
 ### FrozenLake Different Map Size
-- [ ] Create dataset for different sized maps
-- [ ] Implement padding for different sized maps
+- [x] Create dataset for different sized maps
+- [x] Implement padding for different sized maps
 - [ ] Train using different sized maps
 
 ## 23.07.2023
