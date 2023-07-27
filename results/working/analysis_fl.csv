@@ -1,0 +1,8 @@
+param_hidden_layer_sizes,param_activation,param_max_iter,mean_train_r2,mean_test_r2,size
+"(150, 150, 150, 150)",tanh,1000,0.5609709676677104,0.49402446979378534,1000
+"(150, 150, 150, 150)",tanh,10000,0.5574002338355729,0.4804023800179209,1000
+param_hidden_layer_sizes,param_activation,param_max_iter,mean_train_r2,mean_test_r2,size
+"(150, 150, 150, 150)",tanh,100000,0.5668483203519417,0.5100699334282364,1000
+"(150, 150, 150, 150)",tanh,500000,0.5741076487985315,0.5024670219029685,1000
+param_hidden_layer_sizes,param_activation,param_max_iter,mean_train_r2,mean_test_r2,size
+"(1000, 1000)",tanh,100000,0.5855351068078145,0.5197544951093152,1000

@@ -28,18 +28,56 @@
 - [X] Implement grid-search hpc script
 
 ## 18.07.2023
-- [ ] Get proper visuals for both CartPole-v1 and FrozenLake-v1, first setting
-- [ ] Get results for mean prediction
-- [ ] Try to divide the simulation data for frozen lake such that the model is tested on unseen number of simulations
-- [ ] Check regression models, see if we can use the combination of features
-- [ ] Check supervised learning to see if it is appropriate to use data points with the same X
-- [ ] Do grid search for categorical encoding
-- [ ] Do grid search for one-hot encoding
-- [ ] Implement multi-channel map encoding - FL
-- [ ] Train using multi-channel map encoding - FL constant mapsize
-- [ ] Implement padding for different sized maps
+- Travel
+
+## 19.07.2023
+- Not completed
+
+## 20.07.2023
+- [x] Get proper visuals for both CartPole-v1 and FrozenLake-v1, first setting
+- [x] Meeting
+
+## 21.07.2023
+- Contemplation
+
+## 22.07.2023
+### FrozenLake Constant Map Size
+- [ ] Change number of iterations for MLP
+  - [x] Do a grid search for CartPole multi feature
+  - [x] Get a learning curve for CartPole multi feature
+  - [ ] Do a grid search for categorical encoding with low sample size
+  - [ ] Draw the learning curve for categorical encoding
+
+### FrozenLake Different Map Size
+- [x] Create dataset for different sized maps
+- [x] Implement padding for different sized maps
 - [ ] Train using different sized maps
 
+## 23.07.2023
+### Different encodings
+- [ ] Do grid search for one-hot encoding
+- [ ] Draw the learning curve for one-hot encoding
+- [ ] Implement multi-channel map encoding - FL
+- [ ] Do grid search for multi-channel map encoding - FL
+- [ ] Get learning curves for multi-channel map encoding - FL constant mapsize
+
+## 24.07.2023
+### For understanding and showing results
+- [ ] Check the bug again
+- [ ] Try out CartPole with more variation in initial state
+- [ ] Show how the maps are different in frozen lake
+
+## 25.07.2023
+### Different way of prediction
+- [ ] Check regression models, see if we can use the combination of features
+- [ ] Check supervised learning to see if it is appropriate to use data points with the same X
+- [ ] Get results for mean prediction
+- [ ] Try to divide the simulation data for frozen lake such that the model is tested on unseen number of simulations
+- [ ] FrozenLake-v1 multiple maps (same size) sim vs mean return 
+
+## 26.07.2023
+- [ ] Create simple log of the results, get the results again if necessary
+- [ ] 
 
 ## Future
 - Feature normalization?
@@ -55,3 +93,4 @@
     - Dataset generation with folder
     - Experiment information on .yaml
     - Script for generating all of the data analysis with images
+    - Ipython widgets
