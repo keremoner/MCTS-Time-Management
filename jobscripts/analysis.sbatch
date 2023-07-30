@@ -17,10 +17,10 @@
 
 # The default number of CPUs per task is 1 (note: CPUs are always allocated to jobs per 2)
 # Request 1 CPU per active thread of your program (assume 1 unless you specifically set this)
-#SBATCH --cpus-per-task=10
+#SBATCH --cpus-per-task=20
 
 # The default memory per node is 1024 megabytes (1GB) (for multiple tasks, specify --mem-per-cpu ins tead)
-#SBATCH --mem=4096
+#SBATCH --mem=8192
 
 # Set mail type to 'END' to receive a mail when the job finishes
 # Do not enable mails when submitting large numbers (>20) of jobs at once
@@ -39,6 +39,6 @@ conda activate MCTS-Time-Management
 
 # Computations should be started with 'srun'. For example:
 
-srun python ../scripts/Analysis.py --cores 10
+srun python ../scripts/Analysis.py --cores 20
 
 wait
