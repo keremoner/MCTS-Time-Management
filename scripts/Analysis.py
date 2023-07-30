@@ -87,7 +87,7 @@ def file_dir(relative_path):
     return os.path.join(absolute_path, relative_path)
     
 if __name__ == "__main__":
-    directory = file_dir("../datasets/after_bug/FrozenLake-v1_m4-6_s1-100_t1/")
+    directory = file_dir("../datasets/FrozenLake-v1_m4-7_s1-200_t1/")
     #directory = "../datasets/10k/"
     dataset_names = os.listdir(directory)
     dataset = pd.DataFrame()
@@ -103,7 +103,7 @@ if __name__ == "__main__":
     size = int(args.size)
     cores = int(args.cores)
     
-    padding = 7
+    padding = 10
 
     if 'Map' in dataset.columns:
         if padding > 0: 
@@ -142,7 +142,7 @@ if __name__ == "__main__":
     'MLPRegressor': MLPRegressor(hidden_layer_sizes=(150, 200, 200, 150), activation='tanh', learning_rate='adaptive', max_iter=1000000)
     }
 
-    train_sizes, train_scores, test_scores = learning_curve(models['MLPRegressor'], X[:size], y[:size], cv=10, train_sizes=np.append(np.linspace(0.001, 0.1, 10, endpoint=False), np.linspace(0.1, 1.0, 10)), scoring='r2', n_jobs=cores, verbose=2)
+    train_sizes, train_scores, test_scores = learning_curve(models['MLPRegressor'], X[:size], y[:size], cv=10, train_sizes=np.append(np.linspace(0.01, 0.1, 10, endpoint=False), np.linspace(0.1, 1.0, 10)), scoring='r2', n_jobs=cores, verbose=2)
 
     # Calculate the mean and standard deviation of the training and test scores
     train_mean = np.mean(train_scores, axis=1)
@@ -151,7 +151,7 @@ if __name__ == "__main__":
     test_std = np.std(test_scores, axis=1)
     
     models['MLPRegressor'].fit(X[:size], y[:size])
-    filename = file_dir('../results/after_bug/FrozenLake/FL_m4-6_encodedmap_150-150-150-150.sav')
+    filename = file_dir('../results/after_bug/FrozenLake/FL_m4-7_encodedmap_150-200-200-150.sav')
     pickle.dump(models['MLPRegressor'], open(filename, 'wb'))
     
     # Plot the learning curve
@@ -167,8 +167,8 @@ if __name__ == "__main__":
     # Add labels and title
     plt.xlabel('Training Set Size')
     plt.ylabel('R2 Score')
-    plt.title('Learning Curve | FrozenLake-v1 (m4-6) | Temp=1 | MLPRegressor (150,200,200,150)')
+    plt.title('Learning Curve | FrozenLake-v1 (m4-7) | Temp=1 | MLPRegressor (150,200,200,150)')
     plt.legend(loc='best')
-    plt.savefig(file_dir('../results/after_bug/FrozenLake/learning_curve_m4-6_150-200-200-150.png'))
+    plt.savefig(file_dir('../results/after_bug/FrozenLake/learning_curve_m4-7_150-200-200-150.png'))
     df = pd.DataFrame({'train_sizes': train_sizes, 'train_mean': train_mean, 'train_std': train_std, 'test_mean': test_mean, 'test_std': test_std})
-    df.to_csv(file_dir('../results/after_bug/FrozenLake/learning_curve_m4-6_150-200-200-150.csv'), index=False)
+    df.to_csv(file_dir('../results/after_bug/FrozenLake/learning_curve_m4-7_150-200-200-150.csv'), index=False)
