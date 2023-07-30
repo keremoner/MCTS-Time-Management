@@ -123,5 +123,5 @@ Parametrized: m7-7
 Discounted return
 Sim: 1-100
 Temp: 1
-Size: 100 sample/CPU x 10cpu
-TIME: ???
+Size: 50 sample/CPU x 10cpu
+TIME: 14 mins 35 seconds
