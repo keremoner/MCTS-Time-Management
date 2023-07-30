@@ -1,7 +1,7 @@
 ## Todo
-- [ ] Check datasets for FrozenLake different sized maps
-  - [ ] Calculate how much time is required for each map size
-  - [ ] Run scripts on cluster to get the maps
+- [x] Check datasets for FrozenLake different sized maps
+  - [x] Calculate how much time is required for each map size
+  - [x] Run scripts on cluster to get the maps
 - [ ] Modify the dataset generation code so that it can generate samples for a specific map
   - [ ] Generate samples for a specific map (7x7 - 8x8 - 9x9 - 10x10) using cluster
 - [ ] Implement mean prediction version of regression
