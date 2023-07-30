@@ -87,6 +87,7 @@ Parametrized: m4-4
 Size: 151k
 Model: (150, 150, 150, 150)
 CV: 5
+Cores: 10
 TIME: 1 hour 28 minutes 23 seconds
 
 
@@ -169,4 +170,13 @@ Discounted return
 Sim: 1-200
 Temp: 1
 Size: 2000 sample/CPU x 10cpu
-TIME: ????
+TIME: 11 hours 14 minutes
+
+FrozenLake-v1 - REGRESSION
+
+Parametrized: m4-7
+Size: 220k
+Model: (150, 200, 200, 150)
+CV: 10
+Cores: 20
+TIME: 1 hour 53 minutes
