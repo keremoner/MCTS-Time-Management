@@ -19,6 +19,7 @@ if __name__ == "__main__":
     # Add arguments to the parser
     parser.add_argument('--size')
     parser.add_argument('--interval')
+    parser.add_argument('--times')
     parser.add_argument('--temperature', help='The temperatures argument, enter the temperatures as an integer, eg. 100')
     parser.add_argument('--dataset-name', help='The dataset_name argument, enter the name of the dataset, eg. 1-16_1000-Cartpole')
     parser.add_argument('--horizon', help='The horizon argument, enter the horizon, eg. 100')
@@ -27,6 +28,7 @@ if __name__ == "__main__":
     TEMPERATURE = int(args.temperature)
     SIZE = int(args.size)
     INTERVAL = int(args.interval)
+    TIMES = int(args.times)
     
     directory = file_dir("../datasets/FrozenLake-v1_m4-4_s1-100_t1/")
     #directory = "../datasets/10k/"
@@ -46,11 +48,12 @@ if __name__ == "__main__":
     new_dataset = []
     new_dataset.append(["Temperature", "Simulations", "Return", "Discounted Return", "Map"])
     for index, vals in errors.items():
-        map = ast.literal_eval(index[0])
-        sim = index[1]
-        rand_experiment = RandomExperiment(env, agent, temperature=TEMPERATURE, simulations=[sim, sim])
-        result = rand_experiment.run() + [map]
-        new_dataset.append(result)
+        for _ in range(TIMES):
+            map = ast.literal_eval(index[0])
+            sim = index[1]
+            rand_experiment = RandomExperiment(env, agent, temperature=TEMPERATURE, simulations=[sim, sim])
+            result = rand_experiment.run() + [map]
+            new_dataset.append(result)
         
     with open(file_dir("./../datasets/" + args.dataset_name + ".csv"), "w", newline='') as csvfile:
         writer = csv.writer(csvfile)

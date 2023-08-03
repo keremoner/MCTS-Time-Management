@@ -10,7 +10,7 @@
 #SBATCH --qos=short
 
 # The default run (wall-clock) time is 1 minute
-#SBATCH --time=30
+#SBATCH --time=45
 # The default number of parallel tasks per job is 1
 #SBATCH --ntasks=40
 
@@ -37,10 +37,10 @@ module load miniconda
 conda activate MCTS-Time-Management
 
 # Computations should be started with 'srun'. For example:
-for ((i=0; i<40;i++)); do
+for ((i=0; i<38; i++)); do
    
-    dataset_name="Boosting_${i}_500_t1_m4-4_FrozenLake-v1"
-    srun --ntasks=1 --exclusive python ../scripts/CreateSpecificDataset.py --size 500 --interval ${i} --temperature 1 --dataset-name ${dataset_name} --horizon -1 &
+    dataset_name="Boosting2_${i}_1500_t1_m4-4_FrozenLake-v1"
+    srun --ntasks=1 --exclusive python ../scripts/CreateSpecificDataset.py --size 500 --times 3 --interval ${i} --temperature 1 --dataset-name ${dataset_name} --horizon -1 &
 done
 
 wait
