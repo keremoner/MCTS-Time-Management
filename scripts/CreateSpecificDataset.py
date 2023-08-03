@@ -50,9 +50,7 @@ if __name__ == "__main__":
         sim = index[1]
         rand_experiment = RandomExperiment(env, agent, temperature=TEMPERATURE, simulations=[sim, sim])
         result = rand_experiment.run() + [map]
-        print(result)
         new_dataset.append(result)
-        print(new_dataset)
         
     with open(file_dir("./../datasets/" + args.dataset_name + ".csv"), "w", newline='') as csvfile:
         writer = csv.writer(csvfile)
