@@ -77,7 +77,6 @@
 
 ## 26.07.2023
 - [ ] Create simple log of the results, get the results again if necessary
-- [ ] 
 
 ## Future
 - Feature normalization?

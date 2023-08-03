@@ -159,7 +159,7 @@ class RandomExperiment():
             writer = csv.writer(csvfile)
             for i in range(1, n + 1):
                 dataset.append(self.run())
-                if i % (n // 10) == 0:
+                if n < 10 or i % (n // 10) == 0:
                     print("%s: %d/%d" % (file_name, i, n))
                     writer.writerows(dataset)
                     dataset = []

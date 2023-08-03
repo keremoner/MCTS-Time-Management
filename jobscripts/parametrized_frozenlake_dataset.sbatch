@@ -37,10 +37,6 @@ module load miniconda
 conda activate MCTS-Time-Management
 
 # Computations should be started with 'srun'. For example:
-#srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 100 --temperature 1 --simulations 1,16 --environment CartPole-v1 --dataset-name 1Cluster_1-16_100-Cartpole --horizon -1 &
-#srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 100 --temperature 1 --simulations 1,16 --environment CartPole-v1 --dataset-name 2Cluster_1-16_100-Cartpole --horizon -1 &
-#srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 100 --temperature 1 --simulations 1,16 --environment CartPole-v1 --dataset-name 3Cluster_1-16_100-Cartpole --horizon -1 &
-#srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 100 --temperature 1 --simulations 1,16 --environment CartPole-v1 --dataset-name 4Cluster_1-16_100-Cartpole --horizon -1 &
 for ((i=1; i<=10; i++)); do
    
     dataset_name="Parametrized_Cluster_${i}_2000_s1-200_t1_m5-5_FrozenLake-v1"
