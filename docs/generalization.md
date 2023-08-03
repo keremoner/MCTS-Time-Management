@@ -49,3 +49,10 @@
  - It shows that the model is able to generalize
  - Training error increases as the training set size increases
    - Reason for that is my original dataset size is not large enough (guess)
+ - Training error exceeds the test error after some point, but they both converge to some value
+   - I was expecting them to converge at the same point
+   - The reason may be either model complexity is not high enough
+   - Another reason may be the size of the test set
+ - I tried to change the unique maps seen in training
+   - It can generalize with < 0.1 MSE with as little as 30 maps
+   - 

@@ -1,0 +1,6 @@
+Temperature,Simulations,Return,Discounted Return,Map
+1,1,0.0,0.0,"['SFFF', 'FFFF', 'FFFF', 'FFHG']"
+1,2,0.0,0.0,"['SFFF', 'FFFF', 'FFFF', 'FFHG']"
+1,1,0.0,0.0,"['SFFF', 'FFFF', 'FFFF', 'FHFG']"
+1,2,0.0,0.0,"['SFFF', 'FFFF', 'FFFF', 'FHFG']"
+1,2,0.0,0.0,"['SFFF', 'FFFF', 'FFFF', 'FHHG']"
