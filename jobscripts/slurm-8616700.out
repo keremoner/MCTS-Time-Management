@@ -1,0 +1,365 @@
+JobId=8616700 JobName=parametrized_frozenlake_dataset.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=18581005 Nice=0 Account=ewi-insy-ii-influence QOS=medium
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:00 TimeLimit=12:30:00 TimeMin=N/A
+   SubmitTime=2023-08-03T03:20:52 EligibleTime=2023-08-03T03:20:52
+   AccrueTime=2023-08-03T03:20:52
+   StartTime=2023-08-03T03:21:08 EndTime=2023-08-03T15:51:08 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2023-08-03T03:21:08 Scheduler=Backfill
+   Partition=general AllocNode:Sid=login1:13930
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=grs[1-4]
+   BatchHost=grs1
+   NumNodes=4 NumCPUs=60 NumTasks=30 CPUs/Task=2 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=60,mem=5040M,node=4,billing=30
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=grs1 CPU_IDs=0-13,16-23 Mem=1848 GRES=
+     Nodes=grs2 CPU_IDs=0-3,8-9,12-13,16-19 Mem=1008 GRES=
+     Nodes=grs3 CPU_IDs=2-9,12-19,24-31 Mem=2016 GRES=
+     Nodes=grs4 CPU_IDs=0-1 Mem=168 GRES=
+   MinCPUsNode=2 MinMemoryCPU=84M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/parametrized_frozenlake_dataset.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8616700.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8616700.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 4 nodes, setting nnodes to 1
+Parametrized_Cluster_4_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_4_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_4_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_4_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_4_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_4_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_4_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_4_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_4_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_4_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_19_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_19_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_19_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_19_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_19_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_19_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_19_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_19_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_19_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_19_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_14_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_14_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_14_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_14_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_14_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_14_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_14_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_14_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_14_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_14_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_16_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_16_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_16_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_16_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_16_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_16_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_16_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_16_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_16_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_16_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_10_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_10_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_10_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_10_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_10_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_10_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_10_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_10_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_10_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_10_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_15_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_15_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_15_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_15_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_15_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_15_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_15_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_15_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_15_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_15_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_20_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_20_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_20_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_20_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_20_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_20_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_20_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_20_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_20_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_20_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_24_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_24_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_24_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_24_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_24_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_24_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_24_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_24_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_24_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_24_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_13_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_13_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_13_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_13_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_13_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_13_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_13_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_13_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_13_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_13_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_23_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_23_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_23_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_23_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_23_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_23_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_23_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_23_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_23_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_23_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_1_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_1_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_1_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_1_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_1_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_1_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_1_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_1_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_1_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_1_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_2_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_2_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_2_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_2_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_2_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_2_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_2_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_2_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_2_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_2_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_30_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_30_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_30_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_30_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_30_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_30_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_30_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_30_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_30_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_30_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_8_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_8_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_8_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_8_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_8_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_8_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_8_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_8_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_8_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_8_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_21_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_21_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_21_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_21_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_21_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_21_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_21_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_21_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_21_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_21_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_9_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_9_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_9_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_9_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_9_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_9_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_9_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_9_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_9_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_9_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_26_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_26_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_26_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_26_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_26_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_26_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_26_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_26_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_26_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_26_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_11_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_11_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_11_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_11_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_11_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_11_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_11_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_11_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_11_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_11_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_5_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_5_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_5_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_5_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_5_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_5_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_5_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_5_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_5_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_5_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_27_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_27_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_27_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_27_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_27_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_27_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_27_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_27_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_27_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_27_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_3_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_3_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_3_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_3_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_3_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_3_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_3_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_3_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_3_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_3_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_28_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_28_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_28_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_28_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_28_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_28_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_28_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_28_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_28_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_28_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_12_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_12_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_12_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_12_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_12_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_12_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_12_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_12_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_12_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_12_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_7_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_7_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_7_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_7_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_7_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_7_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_7_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_7_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_7_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_7_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_6_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_6_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_6_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_6_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_6_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_6_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_6_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_6_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_6_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_6_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_22_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_22_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_22_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_22_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_22_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_22_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_22_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_22_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_22_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_22_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_18_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_18_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_18_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_18_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_18_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_18_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_18_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_18_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_18_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_18_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_25_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_25_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_25_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_25_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_25_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_25_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_25_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_25_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_25_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_25_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_29_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_29_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_29_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_29_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_29_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_29_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_29_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_29_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_29_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_29_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
+Parametrized_Cluster_17_10000_s1-100_t1_m4-4_FrozenLake-v1: 1000/10000
+Parametrized_Cluster_17_10000_s1-100_t1_m4-4_FrozenLake-v1: 2000/10000
+Parametrized_Cluster_17_10000_s1-100_t1_m4-4_FrozenLake-v1: 3000/10000
+Parametrized_Cluster_17_10000_s1-100_t1_m4-4_FrozenLake-v1: 4000/10000
+Parametrized_Cluster_17_10000_s1-100_t1_m4-4_FrozenLake-v1: 5000/10000
+Parametrized_Cluster_17_10000_s1-100_t1_m4-4_FrozenLake-v1: 6000/10000
+Parametrized_Cluster_17_10000_s1-100_t1_m4-4_FrozenLake-v1: 7000/10000
+Parametrized_Cluster_17_10000_s1-100_t1_m4-4_FrozenLake-v1: 8000/10000
+Parametrized_Cluster_17_10000_s1-100_t1_m4-4_FrozenLake-v1: 9000/10000
+Parametrized_Cluster_17_10000_s1-100_t1_m4-4_FrozenLake-v1: 10000/10000
