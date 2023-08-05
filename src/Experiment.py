@@ -177,7 +177,7 @@ class ParametrizedRandomExperiment():
         self.kwargs = kwargs
         self.results = []
         
-    def run(self):
+    def run(self, initial_state_random=False):
         #Randomize the number of simulations
         simulation = random.randint(self.kwargs['simulations'][0], self.kwargs['simulations'][1])
         
@@ -196,7 +196,11 @@ class ParametrizedRandomExperiment():
         e_return = 0
         dis_e_return = 0
         discount_factor = self.agent.discount_factor
-        initial_state = self.env.reset()
+        initial_state = None
+        if initial_state_random == True:
+            initial_state = self.env.reset(True)
+        else: 
+            initial_state = self.env.reset()
         action = self.agent.select_action(self.env)
         next_state, reward, done, _ = self.env.step(action)
         e_return += reward
@@ -211,24 +215,24 @@ class ParametrizedRandomExperiment():
         if self.env.env.spec.id == "CartPole-v1":
             return [temperature] + initial_state.tolist() + [simulation, e_return, dis_e_return]
         elif self.env.env.spec.id == "FrozenLake-v1":
-            return [temperature, parameters, simulation, e_return, dis_e_return]
+            return [temperature, parameters, simulation, initial_state, e_return, dis_e_return]
         else:
             return [temperature, simulation, e_return, dis_e_return]
 
         
-    def create_dataset(self, n, file_name):
+    def create_dataset(self, n, file_name, initial_state_random=False):
         dataset = []
         if self.env.env.spec.id == "CartPole-v1":
             dataset.append(["Temperature", "Cart Position", "Cart Velocity", "Pole Angle", "Pole Angular Velocity", "Simulations", "Return", "Discounted Return"])
         elif self.env.env.spec.id == "FrozenLake-v1":
-            dataset.append(["Temperature", "Map", "Simulations", "Return", "Discounted Return"])
+            dataset.append(["Temperature", "Map", "Simulations", "Initial State", "Return", "Discounted Return"])
         else:
             dataset.append(["Temperature", "Simulations", "Return", "Discounted Return"])            
         
         with open(file_dir("./../datasets/" + file_name + ".csv"), "w", newline='') as csvfile:
             writer = csv.writer(csvfile)
             for i in range(1, n + 1):
-                dataset.append(self.run())
+                dataset.append(self.run(initial_state_random=initial_state_random))
                 if i % (n // 10) == 0:
                     print("%s: %d/%d" % (file_name, i, n))
                     writer.writerows(dataset)

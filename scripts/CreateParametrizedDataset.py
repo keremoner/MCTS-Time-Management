@@ -19,12 +19,14 @@ if __name__ == "__main__":
     parser.add_argument('--horizon', help='The horizon argument, enter the horizon, eg. 100')
     parser.add_argument('--map_size', help='The map_size argument, enter the min and max map size, eg. 4,8')
     parser.add_argument('--freeze_prob', help='The freeze_prob argument, enter the min and max freeze probability, eg. 0.1,0.9')
+    parser.add_argument('--random-state')
 
     # Parse the arguments
     args = parser.parse_args()
     TEMPERATURE = int(args.temperature)
     SIMULATIONS = [int(simulation) for simulation in args.simulations.split(',')]
     SIZE = int(args.size)
+    initial_state_random = bool(args.random_state)
     
     agent = MCTS.mcts_agent(horizon=int(args.horizon))
     
@@ -37,4 +39,4 @@ if __name__ == "__main__":
         env = StatelessGym.make(args.environment)
         rand_experiment = ParametrizedRandomExperiment(env, agent, temperature=TEMPERATURE, simulations=SIMULATIONS)
     
-    rand_experiment.create_dataset(SIZE, args.dataset_name)
+    rand_experiment.create_dataset(SIZE, args.dataset_name, initial_state_random=initial_state_random)
