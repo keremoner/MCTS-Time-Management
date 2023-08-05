@@ -2,6 +2,7 @@ import gym
 import copy
 from abc import ABC, abstractmethod
 from gym.envs.toy_text.frozen_lake import generate_random_map
+import numpy as np
 
 class StatelessGym:
     @staticmethod
@@ -64,10 +65,19 @@ class CustomBaseEnv(CustomAbstractEnv):
     def randomize_parameters(self):
         pass
 
-class CustomFrozenLake(CustomBaseEnv):
+class CustomFrozenLake(CustomAbstractEnv):
     def __init__(self, **kwargs):
-        super().__init__('FrozenLake-v1', **kwargs)
+        super().__init__(gym.make('FrozenLake-v1', **kwargs))
         self.map = kwargs.get('desc', None)
+    
+    def set_state(self, state):
+        self.env.reset()
+        s, lastaction = state
+        self.env.env.env.s = s
+        self.env.env.env.lastaction = lastaction
+    
+    def get_state(self):
+        return (copy.deepcopy(self.env.env.env.s), copy.deepcopy(self.env.env.env.lastaction))
     
     def get_map(self):
         return self.map
@@ -83,6 +93,22 @@ class CustomFrozenLake(CustomBaseEnv):
             self.reset()
             print(self.render(mode='ansi'))
         return random_map
+    
+    def reset(self, initial_state_random = False):
+        s = self.env.reset()
+        if initial_state_random:
+            map_size = self.env.env.env.ncol * self.env.env.env.nrow
+            map_byte = self.env.env.env.desc
+            spawnable = []
+            for i in range(len(map_byte)):
+                for j in range(len(map_byte)):
+                    if map_byte[i][j] != b'H' and map_byte[i][j] != b'G':
+                        spawnable.append(i * len(map_byte) + j)
+                    
+            s = np.random.choice(spawnable)
+            self.set_state((s, None))
+        return s
+             
 
 class CustomCartPole(CustomAbstractEnv):
     def __init__(self, **kwargs):
