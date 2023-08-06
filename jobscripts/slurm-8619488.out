@@ -1,0 +1,584 @@
+JobId=8619488 JobName=frozenlake_dataset.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=16014925 Nice=0 Account=ewi-insy-ii-influence QOS=medium
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:00 TimeLimit=12:30:00 TimeMin=N/A
+   SubmitTime=2023-08-06T02:23:01 EligibleTime=2023-08-06T02:23:01
+   AccrueTime=2023-08-06T02:23:01
+   StartTime=2023-08-06T02:23:02 EndTime=2023-08-06T14:53:02 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2023-08-06T02:23:02 Scheduler=Main
+   Partition=general AllocNode:Sid=login1:30227
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=awi[17-21]
+   BatchHost=awi17
+   NumNodes=5 NumCPUs=100 NumTasks=50 CPUs/Task=2 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=100,mem=8500M,node=5,billing=50
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=awi17 CPU_IDs=36-55 Mem=1700 GRES=
+     Nodes=awi[18-20] CPU_IDs=34-55 Mem=1870 GRES=
+     Nodes=awi21 CPU_IDs=34-47 Mem=1190 GRES=
+   MinCPUsNode=2 MinMemoryCPU=85M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/frozenlake_dataset.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8619488.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8619488.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+Cluster_45_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_45_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_45_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_45_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_45_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_45_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_45_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_45_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_45_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_45_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_32_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_32_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_32_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_32_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_32_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_32_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_32_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_32_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_32_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_32_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_19_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_19_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_19_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_19_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_19_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_19_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_19_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_19_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_19_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_19_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_21_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_21_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_21_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_21_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_21_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_21_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_21_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_21_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_21_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_21_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_33_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_33_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_33_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_33_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_33_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_33_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_33_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_33_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_33_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_33_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_25_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_25_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_25_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_25_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_25_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_25_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_25_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_25_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_25_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_25_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_18_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_18_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_18_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_18_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_18_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_18_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_18_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_18_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_18_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_18_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_44_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_44_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_44_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_44_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_44_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_44_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_44_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_44_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_44_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_44_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_27_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_27_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_27_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_27_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_27_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_27_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_27_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_27_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_27_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_27_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_12_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_12_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_12_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_12_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_12_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_12_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_12_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_12_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_12_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_12_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_10_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_10_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_10_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_10_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_10_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_10_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_10_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_10_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_10_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_10_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_41_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_41_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_41_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_41_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_41_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_41_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_41_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_41_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_41_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_41_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_34_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_34_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_34_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_34_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_34_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_34_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_34_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_34_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_34_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_34_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_15_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_15_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_15_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_15_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_15_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_15_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_15_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_15_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_15_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_15_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_7_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_7_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_7_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_7_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_7_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_7_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_7_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_7_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_7_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_7_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_46_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_46_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_46_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_46_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_46_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_46_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_46_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_46_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_46_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_46_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_2_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_2_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_2_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_2_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_2_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_2_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_2_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_2_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_2_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_2_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_13_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_13_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_13_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_13_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_13_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_13_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_13_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_13_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_13_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_13_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_17_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_17_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_17_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_17_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_17_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_17_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_17_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_17_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_17_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_17_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_5_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_5_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_5_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_5_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_5_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_5_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_5_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_5_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_5_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_5_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_24_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_24_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_24_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_24_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_24_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_24_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_24_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_24_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_24_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_24_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_35_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_35_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_35_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_35_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_35_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_35_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_35_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_35_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_35_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_35_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_42_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_42_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_42_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_42_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_42_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_42_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_42_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_42_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_42_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_42_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_14_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_14_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_14_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_14_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_14_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_14_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_14_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_14_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_14_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_14_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_11_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_11_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_11_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_11_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_11_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_11_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_11_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_11_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_11_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_11_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_1_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_1_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_1_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_1_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_1_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_1_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_1_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_1_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_1_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_1_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_40_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_40_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_40_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_40_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_40_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_40_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_40_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_40_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_40_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_40_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_22_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_22_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_22_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_22_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_22_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_22_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_22_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_22_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_22_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_22_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_43_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_43_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_43_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_43_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_43_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_43_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_43_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_43_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_43_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_43_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_6_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_6_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_6_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_6_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_6_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_6_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_6_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_6_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_6_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_6_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_49_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_49_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_49_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_49_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_49_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_49_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_49_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_49_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_49_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_49_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_36_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_36_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_36_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_36_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_36_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_36_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_36_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_36_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_36_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_36_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_50_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_50_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_50_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_50_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_50_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_50_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_50_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_50_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_50_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_50_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_48_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_48_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_48_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_48_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_48_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_48_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_48_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_48_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_48_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_48_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_37_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_37_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_37_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_37_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_37_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_37_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_37_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_37_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_37_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_37_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_4_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_4_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_4_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_4_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_4_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_4_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_4_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_4_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_4_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_4_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_38_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_38_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_38_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_38_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_38_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_38_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_38_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_38_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_38_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_38_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_23_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_23_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_23_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_23_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_23_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_23_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_23_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_23_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_23_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_23_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_3_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_3_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_3_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_3_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_3_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_3_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_3_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_3_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_3_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_3_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_30_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_30_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_30_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_30_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_30_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_30_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_30_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_30_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_30_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_30_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_16_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_16_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_16_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_16_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_16_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_16_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_16_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_16_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_16_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_16_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_20_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_20_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_20_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_20_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_20_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_20_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_20_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_20_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_20_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_20_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_9_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_9_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_9_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_9_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_9_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_9_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_9_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_9_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_9_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_9_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_47_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_47_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_47_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_47_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_47_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_47_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_47_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_47_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_47_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_47_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_29_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_29_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_29_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_29_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_29_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_29_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_29_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_29_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_29_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_29_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_28_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_28_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_28_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_28_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_28_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_28_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_28_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_28_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_28_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_28_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_31_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_31_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_31_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_31_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_31_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_31_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_31_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_31_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_31_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_31_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_8_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_8_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_8_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_8_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_8_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_8_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_8_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_8_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_8_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_8_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_26_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_26_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_26_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_26_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_26_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_26_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_26_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_26_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_26_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_26_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
+Cluster_39_300000_s1-100_t1_Randomized_FrozenLake-v1: 30000/300000
+Cluster_39_300000_s1-100_t1_Randomized_FrozenLake-v1: 60000/300000
+Cluster_39_300000_s1-100_t1_Randomized_FrozenLake-v1: 90000/300000
+Cluster_39_300000_s1-100_t1_Randomized_FrozenLake-v1: 120000/300000
+Cluster_39_300000_s1-100_t1_Randomized_FrozenLake-v1: 150000/300000
+Cluster_39_300000_s1-100_t1_Randomized_FrozenLake-v1: 180000/300000
+Cluster_39_300000_s1-100_t1_Randomized_FrozenLake-v1: 210000/300000
+Cluster_39_300000_s1-100_t1_Randomized_FrozenLake-v1: 240000/300000
+Cluster_39_300000_s1-100_t1_Randomized_FrozenLake-v1: 270000/300000
+Cluster_39_300000_s1-100_t1_Randomized_FrozenLake-v1: 300000/300000
