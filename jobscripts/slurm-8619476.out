@@ -1,0 +1,132 @@
+JobId=8619476 JobName=parametrized_frozenlake_dataset.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=22014925 Nice=0 Account=ewi-insy-ii-influence QOS=short
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:01 TimeLimit=00:15:00 TimeMin=N/A
+   SubmitTime=2023-08-06T00:54:17 EligibleTime=2023-08-06T00:54:17
+   AccrueTime=2023-08-06T00:54:17
+   StartTime=2023-08-06T00:54:23 EndTime=2023-08-06T01:09:23 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2023-08-06T00:54:23 Scheduler=Backfill
+   Partition=general AllocNode:Sid=login1:8837
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=grs4
+   BatchHost=grs4
+   NumNodes=1 NumCPUs=20 NumTasks=10 CPUs/Task=2 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=20,mem=1680M,node=1,billing=10
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=grs4 CPU_IDs=0-19 Mem=1680 GRES=
+   MinCPUsNode=2 MinMemoryCPU=84M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/parametrized_frozenlake_dataset.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8619476.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8619476.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+Parametrized_Randomized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Randomized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Randomized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Randomized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Randomized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Randomized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Randomized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Randomized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Randomized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Randomized_Cluster_1_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Randomized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Randomized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Randomized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Randomized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Randomized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Randomized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Randomized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Randomized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Randomized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Randomized_Cluster_5_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Randomized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Randomized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Randomized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Randomized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Randomized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Randomized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Randomized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Randomized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Randomized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Randomized_Cluster_7_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Randomized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Randomized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Randomized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Randomized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Randomized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Randomized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Randomized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Randomized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Randomized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Randomized_Cluster_3_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Randomized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Randomized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Randomized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Randomized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Randomized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Randomized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Randomized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Randomized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Randomized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Randomized_Cluster_4_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Randomized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Randomized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Randomized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Randomized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Randomized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Randomized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Randomized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Randomized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Randomized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Randomized_Cluster_2_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Randomized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Randomized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Randomized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Randomized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Randomized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Randomized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Randomized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Randomized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Randomized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Randomized_Cluster_8_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Randomized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Randomized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Randomized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Randomized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Randomized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Randomized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Randomized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Randomized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Randomized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Randomized_Cluster_10_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Randomized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Randomized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Randomized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Randomized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Randomized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Randomized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Randomized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Randomized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Randomized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Randomized_Cluster_6_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100
+Parametrized_Randomized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 10/100
+Parametrized_Randomized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 20/100
+Parametrized_Randomized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 30/100
+Parametrized_Randomized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 40/100
+Parametrized_Randomized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 50/100
+Parametrized_Randomized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 60/100
+Parametrized_Randomized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 70/100
+Parametrized_Randomized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 80/100
+Parametrized_Randomized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 90/100
+Parametrized_Randomized_Cluster_9_100_s1-100_t1_m4-4_FrozenLake-v1: 100/100

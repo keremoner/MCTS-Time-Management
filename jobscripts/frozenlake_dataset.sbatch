@@ -7,13 +7,13 @@
 #SBATCH --partition=general
 
 # The default Quality of Service is the 'short' QoS (maximum run time: 4 hours)
-#SBATCH --qos=short
+#SBATCH --qos=medium
 
 # The default run (wall-clock) time is 1 minute
-#SBATCH --time=30
+#SBATCH --time=750
 
 # The default number of parallel tasks per job is 1
-#SBATCH --ntasks=10
+#SBATCH --ntasks=50
 
 # The default number of CPUs per task is 1 (note: CPUs are always allocated to jobs per 2)
 # Request 1 CPU per active thread of your program (assume 1 unless you specifically set this)
@@ -42,11 +42,11 @@ conda activate MCTS-Time-Management
 #srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 100 --temperature 1 --simulations 1,16 --environment CartPole-v1 --dataset-name 2Cluster_1-16_100-Cartpole --horizon -1 &
 #srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 100 --temperature 1 --simulations 1,16 --environment CartPole-v1 --dataset-name 3Cluster_1-16_100-Cartpole --horizon -1 &
 #srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 100 --temperature 1 --simulations 1,16 --environment CartPole-v1 --dataset-name 4Cluster_1-16_100-Cartpole --horizon -1 &
-for ((i=1; i<=10; i++)); do
+for ((i=1; i<=50; i++)); do
    
-    dataset_name="Cluster_${i}_1000_s1-100_t1_Randomized_FrozenLake-v1" 
+    dataset_name="Cluster_${i}_300000_s1-100_t1_Randomized_FrozenLake-v1" 
 
-    srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 1000 --temperature 1 --simulations 1,100 --environment FrozenLake-v1 --dataset-name "${dataset_name}" --horizon -1 --random-state True &
+    srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 300000 --temperature 1 --simulations 1,100 --environment FrozenLake-v1 --dataset-name "${dataset_name}" --horizon -1 --random-state True &
 done
 
 wait

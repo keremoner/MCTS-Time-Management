@@ -1,0 +1,55 @@
+JobId=8619477 JobName=parametrized_frozenlake_dataset.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=22014925 Nice=0 Account=ewi-insy-ii-influence QOS=short
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:01 TimeLimit=00:15:00 TimeMin=N/A
+   SubmitTime=2023-08-06T00:59:26 EligibleTime=2023-08-06T00:59:26
+   AccrueTime=2023-08-06T00:59:26
+   StartTime=2023-08-06T00:59:53 EndTime=2023-08-06T01:14:53 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2023-08-06T00:59:53 Scheduler=Backfill
+   Partition=general AllocNode:Sid=login1:8837
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=grs4
+   BatchHost=grs4
+   NumNodes=1 NumCPUs=20 NumTasks=10 CPUs/Task=2 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=20,mem=1680M,node=1,billing=10
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=grs4 CPU_IDs=0-19 Mem=1680 GRES=
+   MinCPUsNode=2 MinMemoryCPU=84M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/parametrized_frozenlake_dataset.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8619477.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8619477.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 8619477.2 ON grs4 CANCELLED AT 2023-08-06T01:01:49 ***
+slurmstepd: error: *** STEP 8619477.6 ON grs4 CANCELLED AT 2023-08-06T01:01:49 ***
+slurmstepd: error: *** STEP 8619477.3 ON grs4 CANCELLED AT 2023-08-06T01:01:49 ***
+slurmstepd: error: *** STEP 8619477.7 ON grs4 CANCELLED AT 2023-08-06T01:01:49 ***
+slurmstepd: error: *** STEP 8619477.4 ON grs4 CANCELLED AT 2023-08-06T01:01:49 ***
+slurmstepd: error: *** STEP 8619477.8 ON grs4 CANCELLED AT 2023-08-06T01:01:49 ***
+slurmstepd: error: *** STEP 8619477.5 ON grs4 CANCELLED AT 2023-08-06T01:01:49 ***
+slurmstepd: error: *** JOB 8619477 ON grs4 CANCELLED AT 2023-08-06T01:01:49 ***
+slurmstepd: error: *** STEP 8619477.0 ON grs4 CANCELLED AT 2023-08-06T01:01:49 ***
+slurmstepd: error: *** STEP 8619477.1 ON grs4 CANCELLED AT 2023-08-06T01:01:49 ***
+slurmstepd: error: *** STEP 8619477.9 ON grs4 CANCELLED AT 2023-08-06T01:01:49 ***
+srun: error: grs4: task 0: Terminated
+srun: launch/slurm: _step_signal: Terminating StepId=8619477.2
