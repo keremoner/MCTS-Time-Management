@@ -127,8 +127,8 @@ if __name__ == "__main__":
     training_set_size = 5000
 
     # Unique maps seen in training
-    unique_train_sizes = list(range(1, 101, 10)) + list(range(100, 1001, 100))
-    #unique_train_sizes = list(range(50, 101, 10)) + list(range(100, 1001, 100))
+    unique_train_sizes = list(range(1, 101, 10)) + list(range(100, 1001, 100)) + list(range(1000, 3001, 500))
+    #unique_train_sizes = list(range(50, 101, 10)) + list(range(100, 1001, 100)) + list(range(1000, 3001, 500))
     replacement = True
 
     train_scores1 = []
