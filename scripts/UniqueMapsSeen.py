@@ -1,0 +1,239 @@
+
+import src.MCTS as MCTS
+from src.Environments import StatelessGym
+from src.Experiment import Experiment, RandomExperiment, ParametrizedRandomExperiment
+import pandas as pd
+import matplotlib.pyplot as plt
+import os
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression, Ridge, Lasso, ElasticNet
+from sklearn.svm import SVR
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.neural_network import MLPRegressor
+from sklearn.tree import plot_tree
+from sklearn.metrics import mean_squared_error
+from sklearn.metrics import explained_variance_score
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, explained_variance_score
+from sklearn.metrics import median_absolute_error, mean_squared_log_error, max_error
+from sklearn.metrics import mean_poisson_deviance, mean_gamma_deviance, mean_tweedie_deviance
+from sklearn.preprocessing import OneHotEncoder
+import ast
+import math
+import argparse
+
+def encode_maze(maze):
+    num_rows = len(maze)
+    num_cols = len(maze[0])
+
+    encoded_maze = []
+
+    for i in range(num_rows):
+        for j in range(num_cols):
+            if maze[i][j] == 'S':
+                encoded_maze.append(0)
+            elif maze[i][j] == 'F':
+                encoded_maze.append(1)
+            elif maze[i][j] == 'H':
+                encoded_maze.append(2)
+            elif maze[i][j] == 'G':
+                encoded_maze.append(3)
+            elif maze[i][j] == 'E':
+                encoded_maze.append(4)
+    return encoded_maze
+
+def add_padding(map, target_size):
+    current_size = len(map)
+    diff = target_size - current_size
+    if diff < 0:
+        raise Exception("Current map size is greater than target size")
+    elif diff == 0:
+        return map
+    else:
+        result = []
+        padding = diff // 2
+        left_out = diff % 2
+        for i in range(padding):
+            result.append('E' * target_size)
+        for row in map:
+            new_row = 'E' * padding + row + 'E' * padding + 'E' * left_out
+            result.append(new_row)
+        for i in range(padding + left_out):
+            result.append('E' * target_size)
+        return result
+            
+def file_dir(relative_path):
+    absolute_path = os.path.dirname(__file__)
+    return os.path.join(absolute_path, relative_path)
+
+if __name__ == "__main__":
+    # Create an argument parser
+    parser = argparse.ArgumentParser()
+    result_string = ""
+    # Add arguments to the parser
+    parser.add_argument('--experiment-code')
+    args = parser.parse_args()
+    
+    # DATASET LOAD
+    directory = file_dir("../datasets/FrozenLake-v1_m4-4_s1-100_t1/")
+    dataset_names = os.listdir(directory)
+    dataset = pd.DataFrame()
+
+    for dataset_name in dataset_names:
+        dataset = dataset.append(pd.read_csv(directory + dataset_name), ignore_index=True)
+        
+    padding = 4
+
+    if 'Map' in dataset.columns:
+        if padding > 0: 
+            dataset['List_Map'] = dataset['Map'].apply(ast.literal_eval).apply(lambda x: add_padding(x, padding))
+        else: 
+            dataset['List_Map'] = dataset['Map'].apply(ast.literal_eval)
+        #dataset['F_count'] = dataset['Map'].apply(lambda x: sum(row.count('F') for row in x))
+        dataset['Encoded_Map'] = dataset['List_Map'].apply(lambda x: encode_maze(x))
+    
+    models = {
+    #'LinearRegression': LinearRegression(),
+    # #'Ridge': Ridge(alpha=1.0),
+    # #'Lasso': Lasso(alpha=1.0),
+    # #'ElasticNet':  ElasticNet(alpha=1.0, l1_ratio=0.5),
+    #'SVR': SVR(),
+    #'DecisionTreeRegressor': DecisionTreeRegressor(),
+    #'RandomForestRegressor': RandomForestRegressor(),
+    'GradientBoostingRegressor': GradientBoostingRegressor(n_estimators=100, max_depth=10),
+    #'KNeighborsRegressor': KNeighborsRegressor(n_neighbors=5),
+    #'MLPRegressor': MLPRegressor(hidden_layer_sizes=(150, 150, 150), activation='tanh', max_iter=1000000, n_iter_no_change=100, tol=1e-4)
+    }
+    
+    #Getting min and max number of simulations
+    sim_min = dataset['Simulations'].min()
+    sim_max = dataset['Simulations'].max()
+
+    #Features to be used in the model
+    features = ['Simulations']
+
+    #Unique maps
+    unique_maps = []
+    for map in dataset["Map"].unique():
+        unique_maps.append(map)
+    map_count = len(unique_maps)
+
+    #Folds
+    fold = 3
+
+    # Train size
+    training_set_size = 5000
+
+    # Unique maps seen in training
+    unique_train_sizes = list(range(1, 101, 10)) + list(range(100, 1001, 100))
+    #unique_train_sizes = list(range(50, 101, 10)) + list(range(100, 1001, 100))
+    replacement = True
+
+    train_scores1 = []
+    train_scores2 = []
+    test_scores = []
+
+    for unique_train_size in  unique_train_sizes:
+        train_scores1.append([])
+        train_scores2.append([])
+        test_scores.append([])
+        
+        for i in range(fold):
+            #Creating Test Set
+            
+            train_maps = np.random.default_rng().choice(unique_maps, size=unique_train_size, replace=False)
+            #test_maps = np.setdiff1d(unique_maps, train_maps)
+            test_maps = np.random.default_rng().choice(np.setdiff1d(unique_maps, train_maps), size=math.ceil(map_count * 0.2), replace=False)
+            #print("Total unique maps?: ", len(train_maps) + len(test_maps))
+            test_set = dataset[dataset['Map'].isin(test_maps)].groupby(["Map", "Simulations"]).mean()["Discounted Return"]
+            test_set_x = []
+            test_set_y = []
+            for j in range(len(test_set)):
+                test_set_x.append([test_set.index[j][1]] + encode_maze(add_padding(ast.literal_eval(test_set.index[j][0]), padding)))
+                test_set_y.append(test_set[j])
+
+            #Creating Training Set
+            training_set = dataset[dataset['Map'].isin(train_maps)]
+            training_set_sampled = training_set.sample(n=training_set_size, replace=replacement)
+            training_set_x = np.append(training_set_sampled["Simulations"].values.reshape(-1, 1), training_set_sampled['Encoded_Map'].apply(pd.Series).values, axis=1)
+            training_set_y = training_set_sampled["Discounted Return"].values
+
+            #print("Maps seen in training: %d" % (len(training_set["Map"].unique())))
+            #Creating Training Score 1 Set - Looking only sampled points
+            training_score1_set = training_set_sampled.groupby(["Map", "Simulations"]).mean()["Discounted Return"]
+            training_score1_set_x = []
+            training_score1_set_y = []
+            for j in range(len(training_score1_set)):
+                training_score1_set_x.append([training_score1_set.index[j][1]] + encode_maze(add_padding(ast.literal_eval(training_score1_set.index[j][0]), padding)))
+                training_score1_set_y.append(training_score1_set[j])
+                
+            #Creating Training Score 2 Set - Looking all datapoints in the training sample
+            training_sampled_unique = training_set_sampled["Map"].unique()
+            training_score2_set = training_set[training_set["Map"].isin(training_sampled_unique)].groupby(["Map", "Simulations"]).mean()["Discounted Return"]
+            training_score2_set_x = []
+            training_score2_set_y = []
+            for i in range(len(training_score2_set)):
+                training_score2_set_x.append([training_score2_set.index[i][1]] + encode_maze(training_score2_set.index[i][0]))
+                training_score2_set_y.append(training_score2_set[i])
+
+
+            # print("train score set info: ")
+            # a = (training_set.groupby(["Map", "Simulations"]).std()["Discounted Return"] / (training_set.groupby(["Map", "Simulations"]).count()["Discounted Return"] ** 0.5))
+            # print(a.mean())
+            # print("test set info: ")
+            # b = (dataset[dataset['Map'].isin(test_maps)].groupby(["Map", "Simulations"]).std()["Discounted Return"] / (dataset[dataset['Map'].isin(test_maps)].groupby(["Map", "Simulations"]).count()["Discounted Return"] ** 0.5))
+            # print(b.mean())
+            #Training
+            for model_name, model in models.items():
+                model.fit(training_set_x, training_set_y)
+                
+                #Predicting on test set
+                y_pred = model.predict(test_set_x)
+                test_score = mean_squared_error(test_set_y, y_pred)
+                test_scores[-1].append(test_score)
+                
+                #Predicting on training score 1 set
+                y_pred = model.predict(training_score1_set_x)
+                train_score1 = mean_squared_error(training_score1_set_y, y_pred)
+                train_scores1[-1].append(train_score1)
+                
+                #Predicting on training score 2 set
+                y_pred = model.predict(training_score2_set_x)
+                train_score2 = mean_squared_error(training_score2_set_y, y_pred)
+                train_scores2[-1].append(train_score2)
+                
+            # print("Fold: %d\nTraining set size: %d\nTraining error: %f\nTest error: %f\n" % (i, training_set_size, train_score, test_score))
+        result_string += "Unique trainig size: %d\nTraining error 1: %f ± %f\nTraining error 2: %f ± %f\nTest error: %f ± %f\n" % (unique_train_size, np.mean(train_scores1[-1]), np.std(train_scores1[-1]), np.mean(train_scores2[-1]), np.std(train_scores2[-1]), np.mean(test_scores[-1]), np.std(test_scores[-1]))
+        print(result_string)
+    
+    with open('./../results/' + args.experiment_code + '.txt', 'w') as f:
+        print(result_string, file=f)
+    # Calculate the mean and standard deviation of the training and test scores
+    train1_mean = np.mean(train_scores1, axis=1)
+    train1_std = np.std(train_scores1, axis=1)
+    train2_mean = np.mean(train_scores2, axis=1)
+    train2_std = np.std(train_scores2, axis=1)
+    test_mean = np.mean(test_scores, axis=1)
+    test_std = np.std(test_scores, axis=1)
+
+    # Plot the learning curve
+    plt.figure(figsize=(10, 6))
+    plt.plot(unique_train_sizes, train1_mean, label='Training error 1')
+    plt.plot(unique_train_sizes, train2_mean, label='Training error 2')
+    plt.plot(unique_train_sizes, test_mean, label='Test error')
+
+    # Add error bands showing the standard deviation
+    plt.fill_between(unique_train_sizes, train1_mean - train1_std, train1_mean + train1_std, alpha=0.1)
+    plt.fill_between(unique_train_sizes, train2_mean - train2_std, train2_mean + train2_std, alpha=0.1)
+    plt.fill_between(unique_train_sizes, test_mean - test_std, test_mean + test_std, alpha=0.1)
+
+    # Add labels and title
+    plt.xlabel('Unique Maps Seen in Training')
+    plt.ylabel('MSE')
+    plt.title('Learning Curve')
+    plt.legend(loc='best')
+    plt.ylim([0.0, 0.4])
+    plt.savefig(file_dir("./../results/" + args.experiment_code + ".png"))
+        
