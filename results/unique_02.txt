@@ -1,0 +1,101 @@
+Unique trainig size: 1
+Training error 1: 0.000000 ± 0.000000
+Training error 2: 0.000001 ± 0.000001
+Test error: 0.155861 ± 0.011822
+Unique trainig size: 11
+Training error 1: 0.000016 ± 0.000009
+Training error 2: 0.000691 ± 0.000331
+Test error: 0.134562 ± 0.007656
+Unique trainig size: 21
+Training error 1: 0.000075 ± 0.000037
+Training error 2: 0.005694 ± 0.004106
+Test error: 0.138595 ± 0.008452
+Unique trainig size: 31
+Training error 1: 0.000152 ± 0.000078
+Training error 2: 0.008549 ± 0.001535
+Test error: 0.138507 ± 0.006439
+Unique trainig size: 41
+Training error 1: 0.000216 ± 0.000048
+Training error 2: 0.015258 ± 0.002778
+Test error: 0.128479 ± 0.004615
+Unique trainig size: 51
+Training error 1: 0.000380 ± 0.000108
+Training error 2: 0.023144 ± 0.003456
+Test error: 0.115121 ± 0.001304
+Unique trainig size: 61
+Training error 1: 0.000534 ± 0.000151
+Training error 2: 0.027774 ± 0.007413
+Test error: 0.116910 ± 0.003615
+Unique trainig size: 71
+Training error 1: 0.000558 ± 0.000101
+Training error 2: 0.030801 ± 0.003924
+Test error: 0.109058 ± 0.008009
+Unique trainig size: 81
+Training error 1: 0.000699 ± 0.000176
+Training error 2: 0.036264 ± 0.006958
+Test error: 0.114146 ± 0.006470
+Unique trainig size: 91
+Training error 1: 0.000710 ± 0.000262
+Training error 2: 0.032934 ± 0.002676
+Test error: 0.106198 ± 0.003575
+Unique trainig size: 100
+Training error 1: 0.000811 ± 0.000364
+Training error 2: 0.035721 ± 0.003558
+Test error: 0.106416 ± 0.000157
+Unique trainig size: 200
+Training error 1: 0.001104 ± 0.000164
+Training error 2: 0.050710 ± 0.003088
+Test error: 0.091331 ± 0.001061
+Unique trainig size: 300
+Training error 1: 0.001502 ± 0.000230
+Training error 2: 0.060722 ± 0.003634
+Test error: 0.088391 ± 0.001855
+Unique trainig size: 400
+Training error 1: 0.002515 ± 0.000239
+Training error 2: 0.066276 ± 0.000816
+Test error: 0.087872 ± 0.001246
+Unique trainig size: 500
+Training error 1: 0.002924 ± 0.000315
+Training error 2: 0.069326 ± 0.001265
+Test error: 0.086024 ± 0.001277
+Unique trainig size: 600
+Training error 1: 0.003184 ± 0.000313
+Training error 2: 0.069484 ± 0.003178
+Test error: 0.086846 ± 0.001866
+Unique trainig size: 700
+Training error 1: 0.003997 ± 0.000735
+Training error 2: 0.076310 ± 0.001688
+Test error: 0.086462 ± 0.001842
+Unique trainig size: 800
+Training error 1: 0.004100 ± 0.000097
+Training error 2: 0.075528 ± 0.001313
+Test error: 0.086620 ± 0.001172
+Unique trainig size: 900
+Training error 1: 0.004175 ± 0.000052
+Training error 2: 0.076565 ± 0.002083
+Test error: 0.087159 ± 0.000998
+Unique trainig size: 1000
+Training error 1: 0.004658 ± 0.000263
+Training error 2: 0.077682 ± 0.001577
+Test error: 0.086574 ± 0.001617
+Unique trainig size: 1000
+Training error 1: 0.004664 ± 0.000811
+Training error 2: 0.081110 ± 0.002192
+Test error: 0.087380 ± 0.001387
+Unique trainig size: 1500
+Training error 1: 0.005951 ± 0.000476
+Training error 2: 0.083272 ± 0.001330
+Test error: 0.089157 ± 0.000633
+Unique trainig size: 2000
+Training error 1: 0.007399 ± 0.000182
+Training error 2: 0.089269 ± 0.001229
+Test error: 0.089509 ± 0.001461
+Unique trainig size: 2500
+Training error 1: 0.007524 ± 0.000356
+Training error 2: 0.088496 ± 0.001490
+Test error: 0.091824 ± 0.001098
+Unique trainig size: 3000
+Training error 1: 0.008191 ± 0.000483
+Training error 2: 0.091197 ± 0.001010
+Test error: 0.090914 ± 0.001832
+
