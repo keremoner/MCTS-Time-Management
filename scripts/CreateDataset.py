@@ -37,7 +37,7 @@ if __name__ == "__main__":
         high = float(args.high)
         step_size = float(args.step_size)
         print(initial_state_default, low, high, step_size)
-        env = StatelessGym.make("CartPole-v1", initial_state_default=initial_state_default)
+        env = StatelessGym.make("CartPole-v1", initial_state_default=initial_state_default, low=low, high=high, step_size=step_size)
     else:
         env = StatelessGym.make(args.environment)
     agent = MCTS.mcts_agent(horizon=int(args.horizon))
