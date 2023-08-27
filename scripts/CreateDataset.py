@@ -17,7 +17,7 @@ if __name__ == "__main__":
     parser.add_argument('--environment', help='The environment argument, enter the name of the environment, eg. CartPole-v1')
     parser.add_argument('--dataset-name', help='The dataset_name argument, enter the name of the dataset, eg. 1-16_1000-Cartpole')
     parser.add_argument('--horizon', help='The horizon argument, enter the horizon, eg. 100')
-    parser.add_argument('--random-state')
+    parser.add_argument('--random-state', default=str(False))
     parser.add_argument('--initial-state-default', default=str(True))
     parser.add_argument('--low', default=str(-0.05))
     parser.add_argument('--high', default=str(0.05))
@@ -28,14 +28,15 @@ if __name__ == "__main__":
     TEMPERATURE = int(args.temperature)
     SIMULATIONS = [int(simulation) for simulation in args.simulations.split(',')]
     SIZE = int(args.size)
-    initial_state_random = bool(args.random_state)
+    initial_state_random = eval(args.random_state)
     if args.environment == 'FrozenLake-v1':
         env = StatelessGym.make("FrozenLake-v1", desc=None, map_name="4x4", is_slippery=False)
     elif args.environment == 'CartPole-v1':
-        initial_state_default = bool(args.initial_state_default)
+        initial_state_default = eval(args.initial_state_default)
         low = float(args.low)
         high = float(args.high)
         step_size = float(args.step_size)
+        print(initial_state_default, low, high, step_size)
         env = StatelessGym.make("CartPole-v1", initial_state_default=initial_state_default)
     else:
         env = StatelessGym.make(args.environment)
