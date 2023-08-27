@@ -107,7 +107,7 @@ if __name__ == "__main__":
         
     padding = 4
     
-    one_hot = True
+    one_hot = False
 
     if 'Map' in dataset.columns:
         if padding > 0: 
@@ -128,9 +128,9 @@ if __name__ == "__main__":
     #'SVR': SVR(),
     #'DecisionTreeRegressor': DecisionTreeRegressor(),
     #'RandomForestRegressor': RandomForestRegressor(),
-    #'GradientBoostingRegressor': GradientBoostingRegressor(n_estimators=100, max_depth=10),
+    'GradientBoostingRegressor': GradientBoostingRegressor(n_estimators=100, max_depth=10),
     #'KNeighborsRegressor': KNeighborsRegressor(n_neighbors=5),
-    'MLPRegressor': MLPRegressor(hidden_layer_sizes=(1000, 1000, 1000, 1000, 1000), activation='tanh', max_iter=1000000, n_iter_no_change=10, tol=1e-4)
+    #'MLPRegressor': MLPRegressor(hidden_layer_sizes=(200, 200, 200, 200, 200), activation='tanh', max_iter=1000000, n_iter_no_change=10, tol=1e-4)
     }
     
     #Getting min and max number of simulations
@@ -155,7 +155,7 @@ if __name__ == "__main__":
     #Train set sizes
     #train_sizes = [1, 8, 16, 25, 75, 100, 1000, 2000, 3000, 4000, 5000, 10000, 15000, 30000, 60000, 100000, 150000, 200000, 250000, 300000]
     #train_sizes = train_sizes = list(range(10, 1000, 125)) + list(range(1000, 10000, 1000))
-    train_sizes = [1000, 2000, 3000, 10000, 20000, 40000]
+    train_sizes = [1000, 2000, 3000, 5000, 10000, 20000, 40000, 80000, 160000, 320000]
     #train_sizes = [1, 25, 100]
 
     train_scores1 = []
@@ -163,7 +163,8 @@ if __name__ == "__main__":
     test_scores = []
 
     categories = encode_map(dataset['List_Map'].iloc[0])[1]
-
+    test_maps = np.random.default_rng().choice(unique_maps, size=test_set_size, replace=False)
+    
     for training_set_size in  train_sizes:
         train_scores1.append([])
         train_scores2.append([])
@@ -171,7 +172,7 @@ if __name__ == "__main__":
         
         for i in range(fold):
             #Creating Test Set
-            test_maps = np.random.default_rng().choice(unique_maps, size=test_set_size, replace=False)
+            
             test_set = dataset[dataset['Map'].isin(test_maps)].groupby(["Map", "Simulations"]).mean()["Discounted Return"]
             test_set_x = []
             test_set_y = []
@@ -190,7 +191,6 @@ if __name__ == "__main__":
             else:
                 training_set_x = np.append(training_set_sampled["Simulations"].values.reshape(-1, 1), training_set_sampled['Encoded_Map'].apply(pd.Series).values, axis=1)
             training_set_y = training_set_sampled["Discounted Return"].values
-            print(training_set_x)
             
             #print("Maps seen in training: %d" % (len(training_set["Map"].unique())))
             #Creating Training Score 1 Set - Looking only sampled points
@@ -258,9 +258,9 @@ if __name__ == "__main__":
 
     # Plot the learning curve
     plt.figure(figsize=(10, 6))
-    plt.plot(train_sizes, train1_mean, label='Training error 1')
-    plt.plot(train_sizes, train2_mean, label='Training error 2')
-    plt.plot(train_sizes, test_mean, label='Test error')
+    plt.plot(train_sizes, train1_mean, marker='o', markersize=4, label='Training error 1')
+    plt.plot(train_sizes, train2_mean, marker='o', markersize=4, label='Training error 2')
+    plt.plot(train_sizes, test_mean, marker='o', markersize=4, label='Test error')
 
     # Add error bands showing the standard deviation
     plt.fill_between(train_sizes, train1_mean - train1_std, train1_mean + train1_std, alpha=0.1)
@@ -272,5 +272,5 @@ if __name__ == "__main__":
     plt.ylabel('MSE')
     plt.title('Learning Curve')
     plt.legend(loc='best')
-    plt.ylim([0.0, 0.2])
+    plt.ylim([0.0, 0.5])
     plt.savefig(file_dir("./../results/" + args.experiment_code + ".png"))

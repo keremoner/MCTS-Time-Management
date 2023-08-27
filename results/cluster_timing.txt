@@ -191,6 +191,14 @@ TIME: 12 mins
 
 Cartpole-v1
 
+Discretized default
+Sim: 1-100
+Temp: 500
+Size: 1000 sample/CPU x 100cpu
+TIME: ????
+
+Cartpole-v1
+
 Discretized - low = high = 0.20 - step_size=0.01
 Sim: 1-100
 Temp: 500
