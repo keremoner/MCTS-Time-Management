@@ -87,7 +87,7 @@ def file_dir(relative_path):
     return os.path.join(absolute_path, relative_path)
     
 if __name__ == "__main__":
-    directory = file_dir("../datasets/FrozenLake-v1_m4-7_s1-200_t1/")
+    directory = file_dir("../datasets/FrozenLake-v1_m4-4_s1-100_t1/")
     #directory = "../datasets/10k/"
     dataset_names = os.listdir(directory)
     dataset = pd.DataFrame()

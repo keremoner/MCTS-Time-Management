@@ -111,8 +111,13 @@ class CustomFrozenLake(CustomAbstractEnv):
              
 
 class CustomCartPole(CustomAbstractEnv):
-    def __init__(self, **kwargs):
+    def __init__(self, initial_state_default=True, low=-0.05, high=0.05, step_size=0.01, **kwargs):
         super().__init__(gym.make('CartPole-v1', **kwargs))
+        self.initial_state_default = initial_state_default
+        self.low = low
+        self.high = high
+        self.step_size = step_size
+        self.arange = np.append(np.arange(self.low, 0, self.step_size), np.arange(0, self.high + self.step_size, self.step_size))
 
     def get_state(self):
         return (copy.deepcopy(self.env.env.env.state), self.env._elapsed_steps, self.env.env.env.steps_beyond_done, self.env.env._has_reset)
@@ -127,6 +132,15 @@ class CustomCartPole(CustomAbstractEnv):
     
     def randomize_parameters(self):
         pass
+    
+    def reset(self):
+        s = self.env.reset()
+        if not self.initial_state_default:
+            state = self.get_state()
+            actual_state, elapsed_steps, steps_beyond_done, has_reset = state
+            s = np.random.choice(self.arange, size=4)
+            self.set_state((s, elapsed_steps, steps_beyond_done, has_reset))
+        return s
         
 class CustomAcrobot(CustomAbstractEnv):
     def __init__(self, **kwargs):

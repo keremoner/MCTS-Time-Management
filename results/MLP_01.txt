@@ -1,0 +1,17 @@
+Training set size: 1000
+Training error 1: 0.091092 ± 0.002091
+Training error 2: 0.126025 ± 0.001620
+Test error: 0.103462 ± 0.000795
+Training set size: 2000
+Training error 1: 0.091213 ± 0.001314
+Training error 2: 0.131055 ± 0.008547
+Test error: 0.113171 ± 0.004785
+Training set size: 3000
+Training error 1: 0.087578 ± 0.002406
+Training error 2: 0.123514 ± 0.005570
+Test error: 0.106573 ± 0.002593
+Training set size: 10000
+Training error 1: 0.084850 ± 0.000437
+Training error 2: 0.103536 ± 0.003398
+Test error: 0.100786 ± 0.002409
+
