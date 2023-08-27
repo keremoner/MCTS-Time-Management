@@ -180,3 +180,19 @@ Model: (150, 200, 200, 150)
 CV: 10
 Cores: 20
 TIME: 1 hour 53 minutes
+
+Cartpole-v1
+
+Discretized default
+Sim: 1-100
+Temp: 500
+Size: 100 sample/CPU x 10cpu
+TIME: 12 mins
+
+Cartpole-v1
+
+Discretized - low = high = 0.20 - step_size=0.01
+Sim: 1-100
+Temp: 500
+Size: 100 sample/CPU x 10cpu
+TIME: 13 mins
