@@ -1,0 +1,648 @@
+JobId=8660911 JobName=cartpole_dataset.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=17428571 Nice=0 Account=ewi-insy-ii-influence QOS=medium
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:01 TimeLimit=08:20:00 TimeMin=N/A
+   SubmitTime=2023-08-29T00:05:04 EligibleTime=2023-08-29T00:05:04
+   AccrueTime=2023-08-29T00:05:04
+   StartTime=2023-08-29T00:05:30 EndTime=2023-08-29T08:25:30 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2023-08-29T00:05:30 Scheduler=Backfill
+   Partition=general AllocNode:Sid=login1:16765
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=awi[15-21],grs[1-4]
+   BatchHost=awi15
+   NumNodes=11 NumCPUs=400 NumTasks=200 CPUs/Task=2 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=400,mem=100000M,node=11,billing=208
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=awi15 CPU_IDs=12-13,54-55 Mem=1000 GRES=
+     Nodes=awi16 CPU_IDs=0-13,20-27,32-55 Mem=11500 GRES=
+     Nodes=awi[17-20] CPU_IDs=0-55 Mem=14000 GRES=
+     Nodes=awi21 CPU_IDs=0-35 Mem=9000 GRES=
+     Nodes=grs1 CPU_IDs=0-31 Mem=8000 GRES=
+     Nodes=grs2 CPU_IDs=12-31 Mem=5000 GRES=
+     Nodes=grs3 CPU_IDs=0-1,16-31 Mem=4500 GRES=
+     Nodes=grs4 CPU_IDs=12-31 Mem=5000 GRES=
+   MinCPUsNode=2 MinMemoryCPU=250M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/cartpole_dataset.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8660911.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8660911.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 11 nodes, setting nnodes to 1
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: Unable to establish control machine address
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: Unable to establish control machine address
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to establish control machine address
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: error: Unable to confirm allocation for job 8660911: No such file or directory
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 8660911
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 8660911.8 ON grs2 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.161 ON grs1 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.7 ON grs1 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.10 ON grs4 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.160 ON grs1 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.159 ON grs1 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.28 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.9 ON grs3 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.22 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.151 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.23 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.158 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.58 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.152 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.30 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.143 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.2 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** JOB 8660911 ON awi15 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.33 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.43 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.63 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.48 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.24 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.81 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.150 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.79 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.72 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.34 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.149 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.13 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.42 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.62 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.61 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.14 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.40 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.145 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.147 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.49 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.15 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.69 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.35 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.146 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.154 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.1 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.142 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.38 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.26 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.21 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.17 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.148 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.68 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.52 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.12 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.20 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.153 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.157 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.29 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.76 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.57 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.84 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.156 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.46 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.155 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.73 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.115 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.6 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.32 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.75 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.127 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.136 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.19 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.126 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.47 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.123 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.144 ON awi21 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.50 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.31 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.132 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.11 ON awi15 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.25 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.129 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.56 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.0 ON awi15 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.91 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.45 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.86 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.122 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.116 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.100 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.65 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.109 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.85 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.27 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.118 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.5 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.53 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.77 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.133 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.125 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.104 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.37 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.55 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.102 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.90 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.78 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.71 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.18 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.130 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.16 ON awi16 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.80 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.131 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.60 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.83 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.134 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.99 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.41 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.51 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.88 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.70 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+srun: error: grs1: task 0: Terminated
+slurmstepd: error: *** STEP 8660911.128 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.138 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.39 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+srun: launch/slurm: _step_signal: Terminating StepId=8660911.7
+slurmstepd: error: *** STEP 8660911.67 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.141 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.96 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.54 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.119 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.74 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.107 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.66 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.101 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.135 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.44 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.64 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.95 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.3 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.59 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.121 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.82 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.117 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.139 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.87 ON awi18 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.120 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.124 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.140 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.105 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.36 ON awi17 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.137 ON awi20 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.112 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.98 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.97 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.4 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.110 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.93 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.108 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.94 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.113 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.103 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.92 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.89 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.111 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.106 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+slurmstepd: error: *** STEP 8660911.114 ON awi19 CANCELLED AT 2023-08-29T00:06:49 ***
+srun: error: grs2: task 0: Terminated
+srun: launch/slurm: _step_signal: Terminating StepId=8660911.8
+srun: error: grs4: task 0: Terminated
+srun: launch/slurm: _step_signal: Terminating StepId=8660911.10

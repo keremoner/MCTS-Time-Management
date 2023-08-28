@@ -10,17 +10,17 @@
 #SBATCH --qos=medium
 
 # The default run (wall-clock) time is 1 minute
-#SBATCH --time=360
+#SBATCH --time=500
 
 # The default number of parallel tasks per job is 1
-#SBATCH --ntasks=100
+#SBATCH --ntasks=200
 
 # The default number of CPUs per task is 1 (note: CPUs are always allocated to jobs per 2)
 # Request 1 CPU per active thread of your program (assume 1 unless you specifically set this)
 #SBATCH --cpus-per-task=2
 
 # The default memory per node is 1024 megabytes (1GB) (for multiple tasks, specify --mem-per-cpu ins tead)
-#SBATCH --mem-per-cpu=100
+#SBATCH --mem-per-cpu=250
 
 # Set mail type to 'END' to receive a mail when the job finishes
 # Do not enable mails when submitting large numbers (>20) of jobs at once
@@ -42,11 +42,11 @@ conda activate MCTS-Time-Management
 #srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 100 --temperature 1 --simulations 1,16 --environment CartPole-v1 --dataset-name 2Cluster_1-16_100-Cartpole --horizon -1 &
 #srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 100 --temperature 1 --simulations 1,16 --environment CartPole-v1 --dataset-name 3Cluster_1-16_100-Cartpole --horizon -1 &
 #srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 100 --temperature 1 --simulations 1,16 --environment CartPole-v1 --dataset-name 4Cluster_1-16_100-Cartpole --horizon -1 &
-for ((i=1; i<=100; i++)); do
+for ((i=1; i<=200; i++)); do
    
-    dataset_name="CartPole-v1_disc-default_2000_s1-100_t500_${i}" 
+    dataset_name="CartPole-v1_disc-0.2_4000_s1-100_t500_${i}" 
 
-    srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 2000 --temperature 500 --simulations 1,100 --environment CartPole-v1 --dataset-name "${dataset_name}" --horizon -1 --initial-state-default False &
+    srun --ntasks=1 --exclusive python ../scripts/CreateDataset.py --size 4000 --temperature 500 --simulations 1,100 --environment CartPole-v1 --dataset-name "${dataset_name}" --horizon -1 --initial-state-default False --low=-0.2 --high=0.2 --step-size=0.04 &
 done
 
 wait
