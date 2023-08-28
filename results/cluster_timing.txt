@@ -195,7 +195,7 @@ Discretized default
 Sim: 1-100
 Temp: 500
 Size: 1000 sample/CPU x 100cpu
-TIME: ????
+TIME: 2 hours 10 mins
 
 Cartpole-v1
 

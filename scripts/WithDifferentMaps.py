@@ -128,7 +128,7 @@ if __name__ == "__main__":
     #'SVR': SVR(),
     #'DecisionTreeRegressor': DecisionTreeRegressor(),
     #'RandomForestRegressor': RandomForestRegressor(),
-    'GradientBoostingRegressor': GradientBoostingRegressor(n_estimators=100, max_depth=10),
+    'GradientBoostingRegressor': GradientBoostingRegressor(n_estimators=200, max_depth=20),
     #'KNeighborsRegressor': KNeighborsRegressor(n_neighbors=5),
     #'MLPRegressor': MLPRegressor(hidden_layer_sizes=(200, 200, 200, 200, 200), activation='tanh', max_iter=1000000, n_iter_no_change=10, tol=1e-4)
     }
@@ -155,7 +155,7 @@ if __name__ == "__main__":
     #Train set sizes
     #train_sizes = [1, 8, 16, 25, 75, 100, 1000, 2000, 3000, 4000, 5000, 10000, 15000, 30000, 60000, 100000, 150000, 200000, 250000, 300000]
     #train_sizes = train_sizes = list(range(10, 1000, 125)) + list(range(1000, 10000, 1000))
-    train_sizes = [1000, 2000, 3000, 5000, 10000, 20000, 40000, 80000, 160000, 320000]
+    train_sizes = [1000, 2000, 3000, 5000, 10000, 20000, 40000, 80000, 160000, 320000, 640000]
     #train_sizes = [1, 25, 100]
 
     train_scores1 = []
