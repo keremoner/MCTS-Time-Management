@@ -199,8 +199,24 @@ TIME: 2 hours 10 mins
 
 Cartpole-v1
 
-Discretized - low = high = 0.20 - step_size=0.01
+Discretized - low = high = 0.20 - step_size=0.04
 Sim: 1-100
 Temp: 500
 Size: 100 sample/CPU x 10cpu
 TIME: 13 mins
+
+Cartpole-v1
+
+Discretized - low = high = 0.20 - step_size=0.04
+Sim: 1-100
+Temp: 500
+Size: 2000 sample/CPU x 100cpu
+TIME: 3 hours 21 mins
+
+Cartpole-v1
+
+Discretized - low = high = 0.20 - step_size=0.04
+Sim: 1-100
+Temp: 500
+Size: 1000 sample/CPU x 200cpu
+TIME: 1 hour 56 minutes

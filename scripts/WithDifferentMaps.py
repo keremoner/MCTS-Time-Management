@@ -22,6 +22,7 @@ from sklearn.preprocessing import OneHotEncoder
 import ast
 import math
 import argparse
+import tensorflow as tf
 
 def encode_maze(maze):
     num_rows = len(maze)
@@ -147,7 +148,7 @@ if __name__ == "__main__":
     map_count = len(unique_maps)
 
     #Folds
-    fold = 4
+    fold = 3
 
     #Test set size
     test_set_size = math.ceil((map_count * 0.33))
@@ -224,23 +225,33 @@ if __name__ == "__main__":
             # b = (dataset[dataset['Map'].isin(test_maps)].groupby(["Map", "Simulations"]).std()["Discounted Return"] / (dataset[dataset['Map'].isin(test_maps)].groupby(["Map", "Simulations"]).count()["Discounted Return"] ** 0.5))
             # print(b.mean())
             #Training
-            for model_name, model in models.items():
-                model.fit(training_set_x, training_set_y)
-                
-                #Predicting on test set
-                y_pred = model.predict(test_set_x)
-                test_score = mean_squared_error(test_set_y, y_pred)
-                test_scores[-1].append(test_score)
-                
-                #Predicting on training score 1 set
-                y_pred = model.predict(training_score1_set_x)
-                train_score1 = mean_squared_error(training_score1_set_y, y_pred)
-                train_scores1[-1].append(train_score1)
-                
-                #Predicting on training score 2 set
-                y_pred = model.predict(training_score2_set_x)
-                train_score2 = mean_squared_error(training_score2_set_y, y_pred)
-                train_scores2[-1].append(train_score2)
+            model = tf.keras.Sequential([
+                tf.keras.layers.Dense(units=1000, activation='tanh', input_shape=(17,)),
+                tf.keras.layers.Dense(units=1000, activation='tanh'),
+                tf.keras.layers.Dense(units=1000, activation='tanh'),
+                tf.keras.layers.Dense(units=1000, activation='tanh'),
+                tf.keras.layers.Dense(units=1000, activation='tanh'),
+                tf.keras.layers.Dense(units=1000, activation='tanh'),
+                tf.keras.layers.Dense(units=1000, activation='tanh'),
+                tf.keras.layers.Dense(units=1)
+            ])
+            model.compile(optimizer='adam', loss='mean_squared_error')
+            model.fit(np.asarray(training_set_x).astype('float32'), training_set_y, epochs = 20, verbose = 1)
+            
+            #Predicting on test set
+            y_pred = model.predict(np.asarray(test_set_x).astype('float32'))
+            test_score = mean_squared_error(test_set_y, y_pred)
+            test_scores[-1].append(test_score)
+            
+            #Predicting on training score 1 set
+            y_pred = model.predict(np.asarray(training_score1_set_x).astype('float32'))
+            train_score1 = mean_squared_error(training_score1_set_y, y_pred)
+            train_scores1[-1].append(train_score1)
+            
+            #Predicting on training score 2 set
+            y_pred = model.predict(np.asarray(training_score2_set_x).astype('float32'))
+            train_score2 = mean_squared_error(training_score2_set_y, y_pred)
+            train_scores2[-1].append(train_score2)
                 
             # print("Fold: %d\nTraining set size: %d\nTraining error: %f\nTest error: %f\n" % (i, training_set_size, train_score, test_score))
         result_string += "Training set size: %d\nTraining error 1: %f ± %f\nTraining error 2: %f ± %f\nTest error: %f ± %f\n" % (training_set_size, np.mean(train_scores1[-1]), np.std(train_scores1[-1]) / (fold ** 0.5), np.mean(train_scores2[-1]), np.std(train_scores2[-1]) / (fold ** 0.5), np.mean(test_scores[-1]), np.std(test_scores[-1]) / (fold ** 0.5))
