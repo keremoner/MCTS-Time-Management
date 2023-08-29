@@ -220,3 +220,11 @@ Sim: 1-100
 Temp: 500
 Size: 1000 sample/CPU x 200cpu
 TIME: 1 hour 56 minutes
+
+Cartpole-v1
+
+Discretized - low = high = 0.20 - step_size=0.04
+Sim: 1-100
+Temp: 500
+Size: 4000 sample/CPU x 200cpu
+TIME: 7 hours 6 minutes
