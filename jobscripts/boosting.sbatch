@@ -7,12 +7,12 @@
 #SBATCH --partition=general
 
 # The default Quality of Service is the 'short' QoS (maximum run time: 4 hours)
-#SBATCH --qos=medium
+#SBATCH --qos=short
 
 # The default run (wall-clock) time is 1 minute
-#SBATCH --time=450
+#SBATCH --time=20
 # The default number of parallel tasks per job is 1
-#SBATCH --ntasks=41
+#SBATCH --ntasks=50
 
 # The default number of CPUs per task is 1 (note: CPUs are always allocated to jobs per 2)
 # Request 1 CPU per active thread of your program (assume 1 unless you specifically set this)
@@ -37,10 +37,10 @@ module load miniconda
 conda activate MCTS-Time-Management
 
 # Computations should be started with 'srun'. For example:
-for ((i=0; i<41; i++)); do
+for ((i=0; i<50; i++)); do
    
-    dataset_name="FrozenLake-v1_total-random_m4-4_t1_s1-100_100_${i}"
-    srun --ntasks=1 --exclusive python ../scripts/CreateSpecificDataset.py --size 500 --temperature 1 --dataset-name ${dataset_name} --simulations 1,100 --horizon -1 &
+    dataset_name="FrozenLake-v1_total-random_m4-4_t1_s1-100_1000_${i}"
+    srun --ntasks=1 --exclusive python ../scripts/CreateSpecificDataset.py --size 1000 --temperature 1 --dataset-name ${dataset_name} --simulations 1,100 --horizon -1 &
 done
 
 wait

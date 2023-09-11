@@ -54,10 +54,8 @@ if __name__ == "__main__":
     
     new_dataset = []
     new_dataset.append(["Temperature", "Simulations", "Return", "Discounted Return", "Map"])
-    print("started")
     for i in range(SIZE):
         map = unique_maps[random.randint(0, len(unique_maps) - 1)]
-        print("current map: ", map)
         env.set_map(map)
         rand_experiment = RandomExperiment(env, agent, temperature=TEMPERATURE, simulations=SIMULATIONS)
         result = rand_experiment.run() + [map]
@@ -75,3 +73,4 @@ if __name__ == "__main__":
     with open(file_dir("./../datasets/" + args.dataset_name + ".csv"), "w", newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerows(new_dataset)
+    print("Completed", args.dataset_name)
