@@ -23,6 +23,7 @@ import ast
 import math
 import argparse
 import tensorflow as tf
+import pickle
 
 def encode_maze(maze):
     num_rows = len(maze)
@@ -92,6 +93,7 @@ def file_dir(relative_path):
 
 if __name__ == "__main__":
     # Create an argument parser
+    tf.device('/GPU:0')
     parser = argparse.ArgumentParser()
     result_string = ""
     # Add arguments to the parser
@@ -99,7 +101,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     # DATASET LOAD
-    directory = file_dir("../datasets/FrozenLake-v1_m4-4_s1-100_t1/")
+    directory = file_dir("../datasets/FrozenLake-v1_m4-4_s1-100_t1_unboosted/")
     dataset_names = os.listdir(directory)
     dataset = pd.DataFrame()
 
@@ -108,7 +110,7 @@ if __name__ == "__main__":
         
     padding = 4
     
-    one_hot = False
+    one_hot = True
 
     if 'Map' in dataset.columns:
         if padding > 0: 
@@ -156,7 +158,7 @@ if __name__ == "__main__":
     #Train set sizes
     #train_sizes = [1, 8, 16, 25, 75, 100, 1000, 2000, 3000, 4000, 5000, 10000, 15000, 30000, 60000, 100000, 150000, 200000, 250000, 300000]
     #train_sizes = train_sizes = list(range(10, 1000, 125)) + list(range(1000, 10000, 1000))
-    train_sizes = [1000, 2000, 3000, 5000, 10000, 20000, 40000, 80000, 160000, 320000, 640000]
+    train_sizes = [1000, 2000, 3000, 5000, 10000, 20000, 40000, 80000, 160000, 320000]
     #train_sizes = [1, 25, 100]
 
     train_scores1 = []
@@ -186,7 +188,7 @@ if __name__ == "__main__":
 
             #Creating Training Set
             training_set = dataset[~dataset['Map'].isin(test_maps)]
-            training_set_sampled = training_set.sample(n=training_set_size, replace=False)
+            training_set_sampled = training_set.sample(n=training_set_size, replace=True)
             if one_hot:
                 training_set_x = np.append(training_set_sampled["Simulations"].values.reshape(-1, 1), training_set_sampled['OneHotEncoded_Map'].apply(pd.Series).values, axis=1).astype('int64')
             else:
@@ -218,25 +220,24 @@ if __name__ == "__main__":
                 training_score2_set_y.append(training_score2_set[i])
 
 
-            # print("train score set info: ")
-            # a = (training_set.groupby(["Map", "Simulations"]).std()["Discounted Return"] / (training_set.groupby(["Map", "Simulations"]).count()["Discounted Return"] ** 0.5))
-            # print(a.mean())
-            # print("test set info: ")
-            # b = (dataset[dataset['Map'].isin(test_maps)].groupby(["Map", "Simulations"]).std()["Discounted Return"] / (dataset[dataset['Map'].isin(test_maps)].groupby(["Map", "Simulations"]).count()["Discounted Return"] ** 0.5))
-            # print(b.mean())
-            #Training
+            print("train score set info: ")
+            a = (training_set.groupby(["Map", "Simulations"]).std()["Discounted Return"] / (training_set.groupby(["Map", "Simulations"]).count()["Discounted Return"] ** 0.5))
+            print(a.mean())
+            print("test set info: ")
+            b = (dataset[dataset['Map'].isin(test_maps)].groupby(["Map", "Simulations"]).std()["Discounted Return"] / (dataset[dataset['Map'].isin(test_maps)].groupby(["Map", "Simulations"]).count()["Discounted Return"] ** 0.5))
+            print(b.mean())            
             model = tf.keras.Sequential([
-                tf.keras.layers.Dense(units=1000, activation='tanh', input_shape=(17,)),
-                tf.keras.layers.Dense(units=1000, activation='tanh'),
-                tf.keras.layers.Dense(units=1000, activation='tanh'),
-                tf.keras.layers.Dense(units=1000, activation='tanh'),
-                tf.keras.layers.Dense(units=1000, activation='tanh'),
-                tf.keras.layers.Dense(units=1000, activation='tanh'),
-                tf.keras.layers.Dense(units=1000, activation='tanh'),
+                tf.keras.layers.Dense(units=200, activation='tanh', input_shape=(65,)),
+                tf.keras.layers.Dense(units=200, activation='tanh'),
+                tf.keras.layers.Dense(units=200, activation='tanh'),
+                tf.keras.layers.Dense(units=200, activation='tanh'),
+                tf.keras.layers.Dense(units=200, activation='tanh'),
                 tf.keras.layers.Dense(units=1)
             ])
             model.compile(optimizer='adam', loss='mean_squared_error')
-            model.fit(np.asarray(training_set_x).astype('float32'), training_set_y, epochs = 20, verbose = 1)
+            model.fit(np.asarray(training_set_x).astype('float32'), training_set_y, epochs = 1000, verbose = 0)
+            # model = GradientBoostingRegressor(n_estimators=200, max_depth=20)
+            # model.fit(np.asarray(training_set_x).astype('float32'), training_set_y)
             
             #Predicting on test set
             y_pred = model.predict(np.asarray(test_set_x).astype('float32'))
@@ -252,13 +253,23 @@ if __name__ == "__main__":
             y_pred = model.predict(np.asarray(training_score2_set_x).astype('float32'))
             train_score2 = mean_squared_error(training_score2_set_y, y_pred)
             train_scores2[-1].append(train_score2)
+            if training_set_size == train_sizes[-1] and i == fold - 1:
+                #Save final model
+                filename = file_dir('../results/' + args.experiment_code + '_model.keras')
+                model.save(filename)
                 
             # print("Fold: %d\nTraining set size: %d\nTraining error: %f\nTest error: %f\n" % (i, training_set_size, train_score, test_score))
-        result_string += "Training set size: %d\nTraining error 1: %f ± %f\nTraining error 2: %f ± %f\nTest error: %f ± %f\n" % (training_set_size, np.mean(train_scores1[-1]), np.std(train_scores1[-1]) / (fold ** 0.5), np.mean(train_scores2[-1]), np.std(train_scores2[-1]) / (fold ** 0.5), np.mean(test_scores[-1]), np.std(test_scores[-1]) / (fold ** 0.5))
-        print(result_string)
+        result_string += "Training set size: %d\nTraining error 1: %f ± %f\nTraining error 2: %f ± %f\nTest error: %f ± %f\n\n" % (training_set_size, np.mean(train_scores1[-1]), np.std(train_scores1[-1]) / (fold ** 0.5), np.mean(train_scores2[-1]), np.std(train_scores2[-1]) / (fold ** 0.5), np.mean(test_scores[-1]), np.std(test_scores[-1]) / (fold ** 0.5))
+        print("Training set size: %d\nTraining error 1: %f ± %f\n\Training error 2: %f ± %f\nTest error: %f ± %f\n" % (training_set_size, np.mean(train_scores1[-1]), np.std(train_scores1[-1]) / (fold ** 0.5), np.mean(train_scores2[-1]), np.std(train_scores2[-1]) / (fold ** 0.5), np.mean(test_scores[-1]), np.std(test_scores[-1]) / (fold ** 0.5)))
     
-    with open('./../results/' + args.experiment_code + '.txt', 'w') as f:
+    with open('./../results/' + args.experiment_code + '_result-string.txt', 'w') as f:
         print(result_string, file=f)
+    
+    with open('./../results/' + args.experiment_code + '_arrays.txt', 'w') as f:
+        print(test_scores, file=f)
+        print(train_scores1, file=f)
+        print(train_scores2, file=f)
+
     # Calculate the mean and standard deviation of the training and test scores
     train1_mean = np.mean(train_scores1, axis=1)
     train1_std = np.std(train_scores1, axis=1) / (fold ** 0.5)

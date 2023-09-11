@@ -39,8 +39,8 @@ conda activate MCTS-Time-Management
 # Computations should be started with 'srun'. For example:
 for ((i=0; i<41; i++)); do
    
-    dataset_name="Boosting2_${i}_15000_t1_m4-4_FrozenLake-v1"
-    srun --ntasks=1 --exclusive python ../scripts/CreateSpecificDataset.py --size 500 --times 30 --interval ${i} --temperature 1 --dataset-name ${dataset_name} --horizon -1 &
+    dataset_name="FrozenLake-v1_total-random_m4-4_t1_s1-100_100_${i}"
+    srun --ntasks=1 --exclusive python ../scripts/CreateSpecificDataset.py --size 500 --temperature 1 --dataset-name ${dataset_name} --simulations 1,100 --horizon -1 &
 done
 
 wait
