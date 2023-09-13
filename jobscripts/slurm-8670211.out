@@ -1,0 +1,136 @@
+JobId=8670211 JobName=boosting.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=24212523 Nice=0 Account=ewi-insy-ii-influence QOS=short
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A
+   SubmitTime=2023-09-11T17:56:14 EligibleTime=2023-09-11T17:56:14
+   AccrueTime=2023-09-11T17:56:14
+   StartTime=2023-09-11T17:56:21 EndTime=2023-09-11T18:56:21 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2023-09-11T17:56:21 Scheduler=Backfill
+   Partition=general AllocNode:Sid=login1:18562
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=awi[15-17],grs[3-4]
+   BatchHost=awi15
+   NumNodes=5 NumCPUs=100 NumTasks=50 CPUs/Task=2 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=100,mem=25G,node=5,billing=52
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=awi15 CPU_IDs=14-17,20-55 Mem=10240 GRES=
+     Nodes=awi16 CPU_IDs=28-33,40-49 Mem=4096 GRES=
+     Nodes=awi17 CPU_IDs=28-33,46-51 Mem=3072 GRES=
+     Nodes=grs3 CPU_IDs=16-31 Mem=4096 GRES=
+     Nodes=grs4 CPU_IDs=6-19,30-31 Mem=4096 GRES=
+   MinCPUsNode=2 MinMemoryCPU=256M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/boosting.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8670211.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8670211.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_44
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_41
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_35
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_42
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_33
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_31
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_43
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_46
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_45
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_48
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_49
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_3
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_47
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_37
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_10
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_13
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_2
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_27
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_14
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_34
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_22
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_6
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_11
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_18
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_16
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_5
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_17
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_7
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_20
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_26
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_23
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_40
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_32
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_30
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_28
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_36
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_38
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_24
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_1
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_4
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_19
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_0
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_15
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_25
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_9
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_39
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_21
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_8
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_29
+Completed FrozenLake-v1_total-random_m4-4_t1_s1-100_10000_12

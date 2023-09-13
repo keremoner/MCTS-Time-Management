@@ -228,3 +228,31 @@ Sim: 1-100
 Temp: 500
 Size: 4000 sample/CPU x 200cpu
 TIME: 7 hours 6 minutes
+
+FrozenLake-v1
+Total Random
+Sim: 1-100
+Temp: 1
+Size: 100 sample/cpu x 10cpu
+TIME: 1 mins
+
+FrozenLake-v1
+Total Random
+Sim: 1-100
+Temp: 1
+Size: 1000 sample/cpu x 50cpu
+TIME:  4 mins 40 seconds
+
+FrozenLake-v1
+Total Random
+Sim: 1-100
+Temp: 1
+Size: 10000 sample/cpu x 50cpu
+TIME: 47 mins 40 seconds
+
+FrozenLake-v1
+Total Random
+Sim: 1-100
+Temp: 1
+Size: 50000 sample/cpu x 50cpu
+TIME: 3 hours 53 minutes
