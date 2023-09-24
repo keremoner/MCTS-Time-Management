@@ -24,10 +24,10 @@ import math
 import argparse
 import tensorflow as tf
 import pickle
-
 import torch
 import torch.nn as nn
 import torch.optim as optim
+
 class MyModel(nn.Module):
     def __init__(self):
         super(MyModel, self).__init__()

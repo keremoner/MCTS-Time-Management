@@ -1,0 +1,5 @@
+Training set size: 600
+Training error 1: 35.463710 ± 0.000000
+Training error 2: 1711.625047 ± 0.000000
+Test error: 1302.311439 ± 0.000000
+
