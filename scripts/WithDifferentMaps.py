@@ -25,6 +25,32 @@ import argparse
 import tensorflow as tf
 import pickle
 
+import torch
+import torch.nn as nn
+import torch.optim as optim
+class MyModel(nn.Module):
+    def __init__(self):
+        super(MyModel, self).__init__()
+        self.fc1 = nn.Linear(17, 200)
+        self.fc2 = nn.Linear(200, 200)
+        self.fc3 = nn.Linear(200, 200)
+        self.fc4 = nn.Linear(200, 200)
+        self.fc5 = nn.Linear(200, 200)
+        self.fc6 = nn.Linear(200, 1)
+        
+    def forward(self, x):
+        x = torch.tanh(self.fc1(x))
+        x = torch.tanh(self.fc2(x))
+        x = torch.tanh(self.fc3(x))
+        x = torch.tanh(self.fc4(x))
+        x = torch.tanh(self.fc5(x))
+        x = self.fc6(x)
+        return x
+    
+    def predict(self, x):
+        with torch.no_grad():
+            return self(torch.tensor(x, dtype=torch.float32))
+
 def encode_maze(maze):
     num_rows = len(maze)
     num_cols = len(maze[0])
@@ -93,24 +119,34 @@ def file_dir(relative_path):
 
 if __name__ == "__main__":
     # Create an argument parser
-    tf.device('/GPU:0')
     parser = argparse.ArgumentParser()
     result_string = ""
     # Add arguments to the parser
     parser.add_argument('--experiment-code')
     args = parser.parse_args()
     
-    # DATASET LOAD
-    directory = file_dir("../datasets/FrozenLake-v1_m4-4_s1-100_t1_unboosted/")
-    dataset_names = os.listdir(directory)
-    dataset = pd.DataFrame()
-
-    for dataset_name in dataset_names:
-        dataset = dataset.append(pd.read_csv(directory + dataset_name), ignore_index=True)
-        
+    #Hyper-parameters
+    one_hot = False
+    NN = True
+    #test_set_size = len(unique_maps) - 50
+    #train_sizes = [1, 8, 16, 25, 75, 100, 1000, 2000, 3000, 4000, 5000, 10000, 15000, 30000, 60000, 100000, 150000, 200000, 250000, 300000]
+    #train_sizes = train_sizes = list(range(10, 1000, 125)) + list(range(1000, 10000, 1000))
+    train_sizes = [1, 25, 100]
+    train_sizes = [1000, 2000]
+    fold = 1
+    n_epochs = 1000
     padding = 4
     
-    one_hot = True
+    # DATASET LOAD
+    directory = file_dir("../datasets/FrozenLake-v1_m4-4_s1-100_t1_total-random/")
+    dataset = pd.read_csv(directory + "total.csv")
+    # dataset_names = os.listdir(directory)
+    # dataset = pd.DataFrame()
+
+    # for dataset_name in dataset_names:
+    #     dataset = dataset.append(pd.read_csv(directory + dataset_name), ignore_index=True)
+    
+    # dataset = dataset.rename(columns={'Simulations': 'Empty', 'Temperature': 'Simulations'})[0:10000]
 
     if 'Map' in dataset.columns:
         if padding > 0: 
@@ -122,19 +158,6 @@ if __name__ == "__main__":
         if one_hot:
             categories = encode_map(dataset['List_Map'].iloc[0])[1]
             dataset['OneHotEncoded_Map'] = dataset['List_Map'].apply(lambda x: np.reshape(encode_map(x, categories)[0], (-1)))
-    
-    models = {
-    #'LinearRegression': LinearRegression(),
-    # #'Ridge': Ridge(alpha=1.0),
-    # #'Lasso': Lasso(alpha=1.0),
-    # #'ElasticNet':  ElasticNet(alpha=1.0, l1_ratio=0.5),
-    #'SVR': SVR(),
-    #'DecisionTreeRegressor': DecisionTreeRegressor(),
-    #'RandomForestRegressor': RandomForestRegressor(),
-    'GradientBoostingRegressor': GradientBoostingRegressor(n_estimators=200, max_depth=20),
-    #'KNeighborsRegressor': KNeighborsRegressor(n_neighbors=5),
-    #'MLPRegressor': MLPRegressor(hidden_layer_sizes=(200, 200, 200, 200, 200), activation='tanh', max_iter=1000000, n_iter_no_change=10, tol=1e-4)
-    }
     
     #Getting min and max number of simulations
     sim_min = dataset['Simulations'].min()
@@ -148,19 +171,8 @@ if __name__ == "__main__":
     for map in dataset["Map"].unique():
         unique_maps.append(map)
     map_count = len(unique_maps)
-
-    #Folds
-    fold = 3
-
-    #Test set size
     test_set_size = math.ceil((map_count * 0.33))
-    #test_set_size = len(unique_maps) - 50
-    #Train set sizes
-    #train_sizes = [1, 8, 16, 25, 75, 100, 1000, 2000, 3000, 4000, 5000, 10000, 15000, 30000, 60000, 100000, 150000, 200000, 250000, 300000]
-    #train_sizes = train_sizes = list(range(10, 1000, 125)) + list(range(1000, 10000, 1000))
-    train_sizes = [1000, 2000, 3000, 5000, 10000, 20000, 40000, 80000, 160000, 320000]
-    #train_sizes = [1, 25, 100]
-
+    
     train_scores1 = []
     train_scores2 = []
     test_scores = []
@@ -173,7 +185,7 @@ if __name__ == "__main__":
         train_scores2.append([])
         test_scores.append([])
         
-        for i in range(fold):
+        for current_fold in range(fold):
             #Creating Test Set
             
             test_set = dataset[dataset['Map'].isin(test_maps)].groupby(["Map", "Simulations"]).mean()["Discounted Return"]
@@ -212,33 +224,39 @@ if __name__ == "__main__":
             training_score2_set = training_set[training_set["Map"].isin(training_sampled_unique)].groupby(["Map", "Simulations"]).mean()["Discounted Return"]
             training_score2_set_x = []
             training_score2_set_y = []
-            for i in range(len(training_score2_set)):
+            for j in range(len(training_score2_set)):
                 if one_hot:
                     training_score2_set_x.append([training_score2_set.index[j][1]] + list(np.reshape(encode_map(add_padding(ast.literal_eval(training_score2_set.index[j][0]), padding), categories=categories)[0], (-1))))
                 else:
-                    training_score2_set_x.append([training_score2_set.index[i][1]] + encode_maze(training_score2_set.index[i][0]))
-                training_score2_set_y.append(training_score2_set[i])
+                    training_score2_set_x.append([training_score2_set.index[j][1]] + encode_maze(training_score2_set.index[j][0]))
+                training_score2_set_y.append(training_score2_set[j])
 
-
-            print("train score set info: ")
-            a = (training_set.groupby(["Map", "Simulations"]).std()["Discounted Return"] / (training_set.groupby(["Map", "Simulations"]).count()["Discounted Return"] ** 0.5))
-            print(a.mean())
-            print("test set info: ")
-            b = (dataset[dataset['Map'].isin(test_maps)].groupby(["Map", "Simulations"]).std()["Discounted Return"] / (dataset[dataset['Map'].isin(test_maps)].groupby(["Map", "Simulations"]).count()["Discounted Return"] ** 0.5))
-            print(b.mean())            
-            model = tf.keras.Sequential([
-                tf.keras.layers.Dense(units=200, activation='tanh', input_shape=(65,)),
-                tf.keras.layers.Dense(units=200, activation='tanh'),
-                tf.keras.layers.Dense(units=200, activation='tanh'),
-                tf.keras.layers.Dense(units=200, activation='tanh'),
-                tf.keras.layers.Dense(units=200, activation='tanh'),
-                tf.keras.layers.Dense(units=1)
-            ])
-            model.compile(optimizer='adam', loss='mean_squared_error')
-            model.fit(np.asarray(training_set_x).astype('float32'), training_set_y, epochs = 1000, verbose = 0)
-            # model = GradientBoostingRegressor(n_estimators=200, max_depth=20)
-            # model.fit(np.asarray(training_set_x).astype('float32'), training_set_y)
-            
+            # a = (training_set.groupby(["Map", "Simulations"]).std()["Discounted Return"] / (training_set.groupby(["Map", "Simulations"]).count()["Discounted Return"] ** 0.5))
+            # print("train score set info: ", a.mean())
+            # b = (dataset[dataset['Map'].isin(test_maps)].groupby(["Map", "Simulations"]).std()["Discounted Return"] / (dataset[dataset['Map'].isin(test_maps)].groupby(["Map", "Simulations"]).count()["Discounted Return"] ** 0.5))
+            # print("test set info: " % (b.mean()))
+                        
+            if NN:
+                model = MyModel()
+                loss_fn = nn.MSELoss()
+                optimizer = optim.Adam(model.parameters())
+                batch_size = len(training_set_x)
+                
+                for epoch in range(n_epochs):
+                    for i in range(0, len(training_set_x), batch_size):
+                        Xbatch = torch.tensor(training_set_x[i:i+batch_size], dtype=torch.float32)
+                        y_pred = model(Xbatch)
+                        ybatch = torch.tensor(training_set_y[i:i+batch_size], dtype=torch.float32).reshape(-1, 1)
+                        loss = loss_fn(y_pred, ybatch)
+                        optimizer.zero_grad()
+                        loss.backward()
+                        optimizer.step()
+                    if epoch == 0 or (epoch + 1) % 1000 == 0:
+                        print(f'Finished epoch {epoch + 1}, latest loss {loss}')
+            else: 
+                model = GradientBoostingRegressor(n_estimators=200, max_depth=20)
+                model.fit(np.asarray(training_set_x).astype('float32'), training_set_y)
+                
             #Predicting on test set
             y_pred = model.predict(np.asarray(test_set_x).astype('float32'))
             test_score = mean_squared_error(test_set_y, y_pred)
@@ -253,10 +271,12 @@ if __name__ == "__main__":
             y_pred = model.predict(np.asarray(training_score2_set_x).astype('float32'))
             train_score2 = mean_squared_error(training_score2_set_y, y_pred)
             train_scores2[-1].append(train_score2)
-            if training_set_size == train_sizes[-1] and i == fold - 1:
-                #Save final model
-                filename = file_dir('../results/' + args.experiment_code + '_model.keras')
-                model.save(filename)
+            if training_set_size == train_sizes[-1] and current_fold == (fold - 1):
+                print("\n\nSaving final model\n\n")
+                if NN:
+                    torch.save(model.state_dict(), '../results/' + args.experiment_code + '_model.pt')
+                else:
+                    pickle.dump(model, '../results/' + args.experiment_code + '_model.sav')
                 
             # print("Fold: %d\nTraining set size: %d\nTraining error: %f\nTest error: %f\n" % (i, training_set_size, train_score, test_score))
         result_string += "Training set size: %d\nTraining error 1: %f ± %f\nTraining error 2: %f ± %f\nTest error: %f ± %f\n\n" % (training_set_size, np.mean(train_scores1[-1]), np.std(train_scores1[-1]) / (fold ** 0.5), np.mean(train_scores2[-1]), np.std(train_scores2[-1]) / (fold ** 0.5), np.mean(test_scores[-1]), np.std(test_scores[-1]) / (fold ** 0.5))
