@@ -22,8 +22,32 @@ from sklearn.preprocessing import OneHotEncoder
 import ast
 import math
 import argparse
-import tensorflow as tf
 import pickle
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+class MyModel(nn.Module):
+    def __init__(self, input_size=2):
+        super(MyModel, self).__init__()
+        self.fc1 = nn.Linear(input_size, 200)
+        self.fc2 = nn.Linear(200, 200)
+        self.fc3 = nn.Linear(200, 200)
+        self.fc4 = nn.Linear(200, 200)
+        self.fc5 = nn.Linear(200, 1)
+        
+    def forward(self, x):
+        x = torch.tanh(self.fc1(x))
+        x = torch.tanh(self.fc2(x))
+        x = torch.tanh(self.fc3(x))
+        x = torch.tanh(self.fc4(x))
+        x = self.fc5(x)
+        return x
+    
+    def predict(self, x):
+        with torch.no_grad():
+            return self(torch.tensor(x, dtype=torch.float32))
+
 
 def encode_maze(maze):
     num_rows = len(maze)
@@ -107,8 +131,16 @@ if __name__ == "__main__":
     for dataset_name in dataset_names:
         dataset = dataset.append(pd.read_csv(directory + dataset_name), ignore_index=True)
     print ("Dataset Loaded Successfully: ", len(dataset))
-
+    
+    # PARAMETERS
     padding = 4
+    NN = True
+    n_epochs = 125000
+    fold = 1
+    test_sims = [ 3, 5, 9, 13, 14, 18, 21, 25, 26, 27, 29, 38, 41, 43, 47, 48, 53, 55, 59, 60, 65, 67, 69, 70, 75, 78, 84, 85, 86, 89, 90, 96, 98]
+    #test_sims = np.sort(np.random.choice(np.arange(sim_min, sim_max + 1), size=math.ceil((sim_max - sim_min + 1) * 0.33), replace=False))
+    #train_sizes = [100, 200, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 128000, 256000, 512000, 750000]
+    train_sizes = [600]
     
     if 'Map' in dataset.columns:
         if padding > 0: 
@@ -138,12 +170,8 @@ if __name__ == "__main__":
     sim_max = dataset['Simulations'].max()
 
     #Features to be used in the model
-    features = ['Simulations', 'Pole Angle', 'Pole Angular Velocity', 'Cart Position', 'Cart Velocity']
+    features = ['Simulations', 'Pole Angle']
 
-    #Folds
-    fold = 50
-    #test_sims = np.sort(np.random.choice(np.arange(sim_min, sim_max + 1), size=math.ceil((sim_max - sim_min + 1) * 0.33), replace=False))
-    test_sims = [ 3, 5, 9, 13, 14, 18, 21, 25, 26, 27, 29, 38, 41, 43, 47, 48, 53, 55, 59, 60, 65, 67, 69, 70, 75, 78, 84, 85, 86, 89, 90, 96, 98]
     #Creating test set by taking average for test set simulations
     test_set = dataset[dataset['Simulations'].isin(test_sims)].groupby(features)['Discounted Return'].mean()
     data = test_set.index.values
@@ -159,7 +187,6 @@ if __name__ == "__main__":
 
 
     #train_sizes = list(range(100, 1001, 125)) + list(range(1000, 5001, 250)) + [10000, 20000, 40000, 80000]
-    train_sizes = [100, 200, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 128000, 256000, 512000, 750000]
     train_scores = []
     train_scores2 = []
     test_scores = []
@@ -203,41 +230,57 @@ if __name__ == "__main__":
             else: 
                 training_score_set2_x = data.reshape(-1, 1)
             training_score_set2_y = training_score_set2.values
-            # print(test_sims)
-            # print(training_score_set)
-            # print(training_score_set_x.shape)
-            # print(training_score_set_y.shape)
 
             #Training
-            for model_name, model in models.items():
-                model.fit(training_set_x, training_set_y)
-                #Predicting on test set
-                y_pred = model.predict(test_set_x)
-                #Calculating MSE
-                test_score = mean_squared_error(test_set_y, y_pred)
-                test_scores[-1].append(test_score)
+            if NN:
+                model = MyModel(input_size=len(features))
+                loss_fn = nn.MSELoss()
+                optimizer = optim.Adam(model.parameters())
+                batch_size = len(training_set_x)
                 
-                test_score_abs = mean_absolute_error(test_set_y, y_pred)
-                test_scores_abs[-1].append(test_score_abs)
-                
-                
-                #Predicting on training set
-                y_pred = model.predict(training_score_set_x)
-                train_score = mean_squared_error(training_score_set_y, y_pred)
-                train_scores[-1].append(train_score)
-                train_score_abs = mean_absolute_error(training_score_set_y, y_pred)
-                train_scores_abs[-1].append(train_score_abs)
-                
-                y_pred = model.predict(training_score_set2_x)
-                train_score2 = mean_squared_error(training_score_set2_y, y_pred)
-                train_scores2[-1].append(train_score2)
-                train_score2_abs = mean_absolute_error(training_score_set2_y, y_pred)
-                train_scores2_abs[-1].append(train_score2_abs)
-                if training_set_size == train_sizes[-1] and i == fold - 1:
-                    #Save final model
-                    filename = file_dir('../results/' + args.experiment_code + '_model.sav')
-                    pickle.dump(model, open(filename, 'wb'))
-                    
+                for epoch in range(n_epochs):
+                    for i in range(0, len(training_set_x), batch_size):
+                        Xbatch = torch.tensor(training_set_x[i:i+batch_size], dtype=torch.float32)
+                        y_pred = model(Xbatch)
+                        ybatch = torch.tensor(training_set_y[i:i+batch_size], dtype=torch.float32).reshape(-1, 1)
+                        loss = loss_fn(y_pred, ybatch)
+                        optimizer.zero_grad()
+                        loss.backward()
+                        optimizer.step()
+                    if epoch == 0 or (epoch + 1) % 1000 == 0:
+                        print(f'Finished epoch {epoch + 1}, latest loss {loss}')
+            else: 
+                model = GradientBoostingRegressor(n_estimators=200, max_depth=20)
+                model.fit(np.asarray(training_set_x).astype('float32'), training_set_y)
+            
+            #Predicting on test set
+            y_pred = model.predict(test_set_x)
+            #Calculating MSE
+            test_score = mean_squared_error(test_set_y, y_pred)
+            test_scores[-1].append(test_score)
+            
+            test_score_abs = mean_absolute_error(test_set_y, y_pred)
+            test_scores_abs[-1].append(test_score_abs)
+            
+            
+            #Predicting on training set
+            y_pred = model.predict(training_score_set_x)
+            train_score = mean_squared_error(training_score_set_y, y_pred)
+            train_scores[-1].append(train_score)
+            train_score_abs = mean_absolute_error(training_score_set_y, y_pred)
+            train_scores_abs[-1].append(train_score_abs)
+            
+            y_pred = model.predict(training_score_set2_x)
+            train_score2 = mean_squared_error(training_score_set2_y, y_pred)
+            train_scores2[-1].append(train_score2)
+            train_score2_abs = mean_absolute_error(training_score_set2_y, y_pred)
+            train_scores2_abs[-1].append(train_score2_abs)
+            if training_set_size == train_sizes[-1] and i == fold - 1:
+                print("\n\nSaving final model\n\n")
+                if NN:
+                    torch.save(model.state_dict(), '../results/' + args.experiment_code + '_model.pt')
+                else:
+                    pickle.dump(model, '../results/' + args.experiment_code + '_model.sav')  
                     
         result_string += "Training set size: %d\nTraining error 1: %f ± %f\nTraining error 2: %f ± %f\nTest error: %f ± %f\n" % (training_set_size, np.mean(train_scores[-1]), np.std(train_scores[-1]) / (fold ** 0.5), np.mean(train_scores2[-1]), np.std(train_scores2[-1]) / (fold ** 0.5), np.mean(test_scores[-1]), np.std(test_scores[-1]) / (fold ** 0.5))
         print(result_string)
