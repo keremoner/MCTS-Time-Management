@@ -30,11 +30,11 @@ import torch.optim as optim
 class MyModel(nn.Module):
     def __init__(self, input_size=2):
         super(MyModel, self).__init__()
-        self.fc1 = nn.Linear(input_size, 128)
-        self.fc2 = nn.Linear(128, 128)
-        self.fc3 = nn.Linear(128, 128)
-        self.fc4 = nn.Linear(128, 128)
-        self.fc5 = nn.Linear(128, 1)
+        self.fc1 = nn.Linear(input_size, 200)
+        self.fc2 = nn.Linear(200, 200)
+        self.fc3 = nn.Linear(200, 200)
+        self.fc4 = nn.Linear(200, 200)
+        self.fc5 = nn.Linear(200, 1)
         
     def forward(self, x):
         x = torch.tanh(self.fc1(x))
