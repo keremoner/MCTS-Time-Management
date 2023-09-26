@@ -10,17 +10,17 @@
 #SBATCH --qos=short
 
 # The default run (wall-clock) time is 1 minute
-#SBATCH --time=10
+#SBATCH --time=150
 
 # The default number of parallel tasks per job is 1
 #SBATCH --ntasks=1
 
 # The default number of CPUs per task is 1 (note: CPUs are always allocated to jobs per 2)
 # Request 1 CPU per active thread of your program (assume 1 unless you specifically set this)
-#SBATCH --cpus-per-task=2
+#SBATCH --cpus-per-task=64
 
 # The default memory per node is 1024 megabytes (1GB) (for multiple tasks, specify --mem-per-cpu ins tead)
-#SBATCH --mem=2048
+#SBATCH --mem=16384
 
 # Set mail type to 'END' to receive a mail when the job finishes
 # Do not enable mails when submitting large numbers (>20) of jobs at once
@@ -39,6 +39,6 @@ conda activate MCTS-Time-Management
 
 # Computations should be started with 'srun'. For example:
 
-srun python -u ../scripts/WithDifferentMaps.py --experiment-code pytorch_cluster_trial
+srun python -u ../scripts/WithDifferentMaps.py --experiment-code FrozenLake-v1_m4-4_total-random_pytorch_02
 
 wait

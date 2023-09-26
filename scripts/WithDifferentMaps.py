@@ -22,7 +22,6 @@ from sklearn.preprocessing import OneHotEncoder
 import ast
 import math
 import argparse
-import tensorflow as tf
 import pickle
 
 import torch
@@ -31,12 +30,12 @@ import torch.optim as optim
 class MyModel(nn.Module):
     def __init__(self):
         super(MyModel, self).__init__()
-        self.fc1 = nn.Linear(17, 200)
-        self.fc2 = nn.Linear(200, 200)
-        self.fc3 = nn.Linear(200, 200)
-        self.fc4 = nn.Linear(200, 200)
-        self.fc5 = nn.Linear(200, 200)
-        self.fc6 = nn.Linear(200, 1)
+        self.fc1 = nn.Linear(17, 400)
+        self.fc2 = nn.Linear(400, 400)
+        self.fc3 = nn.Linear(400, 400)
+        self.fc4 = nn.Linear(400, 400)
+        self.fc5 = nn.Linear(400, 400)
+        self.fc6 = nn.Linear(400, 1)
         
     def forward(self, x):
         x = torch.tanh(self.fc1(x))
@@ -129,24 +128,24 @@ if __name__ == "__main__":
     one_hot = False
     NN = True
     #test_set_size = len(unique_maps) - 50
-    #train_sizes = [1, 8, 16, 25, 75, 100, 1000, 2000, 3000, 4000, 5000, 10000, 15000, 30000, 60000, 100000, 150000, 200000, 250000, 300000]
-    #train_sizes = train_sizes = list(range(10, 1000, 125)) + list(range(1000, 10000, 1000))
-    train_sizes = [1, 25, 100]
-    train_sizes = [1000, 2000]
-    fold = 1
-    n_epochs = 1000
+    # train_sizes = [1, 8, 16, 25, 75, 100, 1000, 2000, 3000, 4000, 5000, 10000, 15000, 30000, 60000, 100000, 150000, 200000, 250000, 300000]
+    # train_sizes = train_sizes = list(range(10, 1000, 125)) + list(range(1000, 10000, 1000))
+    # train_sizes = [1, 25, 100]
+    train_sizes = [80000]
+    fold = 3
+    n_epochs = 15000
     padding = 4
     
     # DATASET LOAD
     directory = file_dir("../datasets/FrozenLake-v1_m4-4_s1-100_t1_total-random/")
-    dataset = pd.read_csv(directory + "total.csv")
-    # dataset_names = os.listdir(directory)
-    # dataset = pd.DataFrame()
+    # dataset = pd.read_csv(directory + "total.csv")
+    dataset_names = os.listdir(directory)
+    dataset = pd.DataFrame()
 
-    # for dataset_name in dataset_names:
-    #     dataset = dataset.append(pd.read_csv(directory + dataset_name), ignore_index=True)
+    for dataset_name in dataset_names:
+        dataset = dataset.append(pd.read_csv(directory + dataset_name), ignore_index=True)
     
-    # dataset = dataset.rename(columns={'Simulations': 'Empty', 'Temperature': 'Simulations'})[0:10000]
+    dataset = dataset.rename(columns={'Simulations': 'Empty', 'Temperature': 'Simulations'})
 
     if 'Map' in dataset.columns:
         if padding > 0: 
