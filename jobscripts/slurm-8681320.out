@@ -1,0 +1,66 @@
+JobId=8681320 JobName=with_different_maps.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=23394833 Nice=0 Account=ewi-insy-ii-influence QOS=short
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:00 TimeLimit=00:20:00 TimeMin=N/A
+   SubmitTime=2023-09-26T16:40:45 EligibleTime=2023-09-26T16:40:45
+   AccrueTime=2023-09-26T16:40:45
+   StartTime=2023-09-26T16:40:45 EndTime=2023-09-26T17:00:45 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2023-09-26T16:40:45 Scheduler=Main
+   Partition=general AllocNode:Sid=login1:19282
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=awi24
+   BatchHost=awi24
+   NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=64,mem=8000M,node=1,billing=32
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=awi24 CPU_IDs=0-63 Mem=8000 GRES=
+   MinCPUsNode=64 MinMemoryNode=8000M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/with_different_maps.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8681320.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8681320.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+Finished epoch 1, latest loss 0.7647420763969421
+Finished epoch 1000, latest loss 0.06757201254367828
+Finished epoch 2000, latest loss 0.058347973972558975
+Finished epoch 3000, latest loss 0.04795130342245102
+Finished epoch 4000, latest loss 0.03386807069182396
+Finished epoch 5000, latest loss 0.017314059659838676
+Finished epoch 6000, latest loss 0.06945957243442535
+Finished epoch 7000, latest loss 0.04719759151339531
+Finished epoch 8000, latest loss 0.035799238830804825
+Finished epoch 9000, latest loss 0.027931561693549156
+Finished epoch 10000, latest loss 0.019893407821655273
+Finished epoch 11000, latest loss 0.01876704953610897
+Finished epoch 12000, latest loss 0.10937356948852539
+Finished epoch 13000, latest loss 0.021334532648324966
+Finished epoch 14000, latest loss 0.009438038803637028
+Finished epoch 15000, latest loss 0.013207568787038326
+Finished epoch 1, latest loss 0.6622403264045715
+Finished epoch 1000, latest loss 0.06527009606361389
+Finished epoch 2000, latest loss 0.05487200990319252
+Finished epoch 3000, latest loss 0.04493202641606331
+Finished epoch 4000, latest loss 0.05840744078159332
+Finished epoch 5000, latest loss 0.04811783507466316
+Finished epoch 6000, latest loss 0.03874192014336586
+Finished epoch 7000, latest loss 0.04364951699972153
+Finished epoch 8000, latest loss 0.026847323402762413
+Finished epoch 9000, latest loss 0.04123600944876671
+Finished epoch 10000, latest loss 0.05690472573041916
+Finished epoch 11000, latest loss 0.02446933649480343
+Finished epoch 12000, latest loss 0.0158422589302063
+Finished epoch 13000, latest loss 0.011334521695971489
+Finished epoch 14000, latest loss 0.011591171845793724
+slurmstepd: error: *** STEP 8681320.0 ON awi24 CANCELLED AT 2023-09-26T17:01:06 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 8681320 ON awi24 CANCELLED AT 2023-09-26T17:01:06 DUE TO TIME LIMIT ***

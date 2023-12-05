@@ -7,17 +7,17 @@
 #SBATCH --partition=general
 
 # The default Quality of Service is the 'short' QoS (maximum run time: 4 hours)
-#SBATCH --qos=short
+#SBATCH --qos=medium
 
 # The default run (wall-clock) time is 1 minute
-#SBATCH --time=20
+#SBATCH --time=360
 
 # The default number of parallel tasks per job is 1
 #SBATCH --ntasks=1
 
 # The default number of CPUs per task is 1 (note: CPUs are always allocated to jobs per 2)
 # Request 1 CPU per active thread of your program (assume 1 unless you specifically set this)
-#SBATCH --cpus-per-task=32
+#SBATCH --cpus-per-task=64
 
 # The default memory per node is 1024 megabytes (1GB) (for multiple tasks, specify --mem-per-cpu ins tead)
 #SBATCH --mem=8192
@@ -39,6 +39,6 @@ conda activate MCTS-Time-Management
 
 # Computations should be started with 'srun'. For example:
 
-srun python -u ../scripts/CartPole.py --experiment-code CartPole_pytorch_cluster_trial
+srun python -u ../scripts/CartPole.py --experiment-code CartPole-v1_nondefault_sim-poleangle_pytorch_01
 
 wait

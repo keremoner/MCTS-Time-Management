@@ -1,0 +1,169 @@
+JobId=8681312 JobName=d_cartpole.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=23468634 Nice=0 Account=ewi-insy-ii-influence QOS=short
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:01 TimeLimit=00:45:00 TimeMin=N/A
+   SubmitTime=2023-09-26T16:14:03 EligibleTime=2023-09-26T16:14:03
+   AccrueTime=2023-09-26T16:14:03
+   StartTime=2023-09-26T16:14:18 EndTime=2023-09-26T16:59:18 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2023-09-26T16:14:18 Scheduler=Backfill
+   Partition=general AllocNode:Sid=login1:19282
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=awi23
+   BatchHost=awi23
+   NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=64,mem=8G,node=1,billing=32
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=awi23 CPU_IDs=0-63 Mem=8192 GRES=
+   MinCPUsNode=64 MinMemoryNode=8G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/d_cartpole.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8681312.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-8681312.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+Dataset Loaded Successfully:  1053000
+Finished epoch 1, latest loss 49595.03515625
+Finished epoch 1000, latest loss 5984.359375
+Finished epoch 2000, latest loss 2796.75634765625
+Finished epoch 3000, latest loss 1961.630126953125
+Finished epoch 4000, latest loss 1963.8394775390625
+Finished epoch 5000, latest loss 1933.8544921875
+Finished epoch 6000, latest loss 1928.4893798828125
+Finished epoch 7000, latest loss 1924.749755859375
+Finished epoch 8000, latest loss 1473.1468505859375
+Finished epoch 9000, latest loss 1410.2457275390625
+Finished epoch 10000, latest loss 1358.3345947265625
+Finished epoch 11000, latest loss 1295.5836181640625
+Finished epoch 12000, latest loss 1253.2540283203125
+Finished epoch 13000, latest loss 1217.1783447265625
+Finished epoch 14000, latest loss 1195.6102294921875
+Finished epoch 15000, latest loss 1174.6859130859375
+Finished epoch 16000, latest loss 1164.3951416015625
+Finished epoch 17000, latest loss 1144.82421875
+Finished epoch 18000, latest loss 1140.19677734375
+Finished epoch 19000, latest loss 1124.779052734375
+Finished epoch 20000, latest loss 1118.59912109375
+Finished epoch 21000, latest loss 1112.4195556640625
+Finished epoch 22000, latest loss 1105.90478515625
+Finished epoch 23000, latest loss 1095.4625244140625
+Finished epoch 24000, latest loss 1093.944580078125
+Finished epoch 25000, latest loss 1086.2232666015625
+Finished epoch 26000, latest loss 1077.6370849609375
+Finished epoch 27000, latest loss 1096.529541015625
+Finished epoch 28000, latest loss 1064.0853271484375
+Finished epoch 29000, latest loss 1060.255615234375
+Finished epoch 30000, latest loss 1054.181396484375
+Finished epoch 31000, latest loss 1050.2762451171875
+Finished epoch 32000, latest loss 1090.5357666015625
+Finished epoch 33000, latest loss 1043.34912109375
+Finished epoch 34000, latest loss 1039.7899169921875
+Finished epoch 35000, latest loss 1040.0732421875
+Finished epoch 36000, latest loss 1041.386474609375
+Finished epoch 37000, latest loss 1031.28759765625
+Finished epoch 38000, latest loss 1028.58251953125
+Finished epoch 39000, latest loss 1027.4022216796875
+Finished epoch 40000, latest loss 1030.419921875
+Finished epoch 41000, latest loss 1046.235595703125
+Finished epoch 42000, latest loss 1018.827880859375
+Finished epoch 43000, latest loss 1016.530517578125
+Finished epoch 44000, latest loss 1072.1190185546875
+Finished epoch 45000, latest loss 1011.3416137695312
+Finished epoch 46000, latest loss 1029.5985107421875
+Finished epoch 47000, latest loss 1006.170166015625
+Finished epoch 48000, latest loss 1007.9141235351562
+Finished epoch 49000, latest loss 1002.8101196289062
+Finished epoch 50000, latest loss 1001.9824829101562
+Finished epoch 51000, latest loss 998.787841796875
+Finished epoch 52000, latest loss 1042.8116455078125
+Finished epoch 53000, latest loss 1004.9625244140625
+Finished epoch 54000, latest loss 1053.5771484375
+Finished epoch 55000, latest loss 1070.423583984375
+Finished epoch 56000, latest loss 1003.873779296875
+Finished epoch 57000, latest loss 998.701416015625
+Finished epoch 58000, latest loss 995.6615600585938
+Finished epoch 59000, latest loss 993.7611694335938
+Finished epoch 60000, latest loss 997.3265380859375
+Finished epoch 61000, latest loss 994.3848876953125
+Finished epoch 62000, latest loss 991.7927856445312
+Finished epoch 63000, latest loss 990.4086303710938
+Finished epoch 64000, latest loss 988.7490234375
+Finished epoch 65000, latest loss 989.2647705078125
+Finished epoch 66000, latest loss 986.1138916015625
+Finished epoch 67000, latest loss 989.993896484375
+Finished epoch 68000, latest loss 997.0123901367188
+Finished epoch 69000, latest loss 982.7495727539062
+Finished epoch 70000, latest loss 988.8949584960938
+Finished epoch 71000, latest loss 986.5593872070312
+Finished epoch 72000, latest loss 982.9058837890625
+Finished epoch 73000, latest loss 988.0726318359375
+Finished epoch 74000, latest loss 1007.4751586914062
+Finished epoch 75000, latest loss 1007.7579956054688
+Finished epoch 76000, latest loss 1007.4730224609375
+Finished epoch 77000, latest loss 1106.8140869140625
+Finished epoch 78000, latest loss 987.1929321289062
+Finished epoch 79000, latest loss 986.1779174804688
+Finished epoch 80000, latest loss 1104.5281982421875
+Finished epoch 81000, latest loss 987.8721313476562
+Finished epoch 82000, latest loss 984.990478515625
+Finished epoch 83000, latest loss 1008.0280151367188
+Finished epoch 84000, latest loss 982.3902587890625
+Finished epoch 85000, latest loss 981.7540283203125
+Finished epoch 86000, latest loss 980.8330078125
+Finished epoch 87000, latest loss 986.94775390625
+Finished epoch 88000, latest loss 988.8963623046875
+Finished epoch 89000, latest loss 988.4620361328125
+Finished epoch 90000, latest loss 982.18017578125
+Finished epoch 91000, latest loss 979.3758544921875
+Finished epoch 92000, latest loss 977.86865234375
+Finished epoch 93000, latest loss 976.1300048828125
+Finished epoch 94000, latest loss 975.5889282226562
+Finished epoch 95000, latest loss 974.2255859375
+Finished epoch 96000, latest loss 1009.025146484375
+Finished epoch 97000, latest loss 985.44384765625
+Finished epoch 98000, latest loss 973.6224365234375
+Finished epoch 99000, latest loss 976.875
+Finished epoch 100000, latest loss 973.2705078125
+Finished epoch 101000, latest loss 975.2420654296875
+Finished epoch 102000, latest loss 1113.8134765625
+Finished epoch 103000, latest loss 1016.2023315429688
+Finished epoch 104000, latest loss 1039.25146484375
+Finished epoch 105000, latest loss 976.7103881835938
+Finished epoch 106000, latest loss 975.2876586914062
+Finished epoch 107000, latest loss 978.7797241210938
+Finished epoch 108000, latest loss 974.8128662109375
+Finished epoch 109000, latest loss 1069.3265380859375
+Finished epoch 110000, latest loss 1066.7979736328125
+Finished epoch 111000, latest loss 976.4140014648438
+Finished epoch 112000, latest loss 972.3475341796875
+Finished epoch 113000, latest loss 971.8272705078125
+Finished epoch 114000, latest loss 971.1323852539062
+Finished epoch 115000, latest loss 974.55224609375
+Finished epoch 116000, latest loss 1087.5694580078125
+Finished epoch 117000, latest loss 971.2118530273438
+Finished epoch 118000, latest loss 970.925537109375
+Finished epoch 119000, latest loss 980.973876953125
+Finished epoch 120000, latest loss 977.1397094726562
+Finished epoch 121000, latest loss 975.317138671875
+Finished epoch 122000, latest loss 971.8113403320312
+Finished epoch 123000, latest loss 970.3761596679688
+Finished epoch 124000, latest loss 1004.2030029296875
+Finished epoch 125000, latest loss 1109.843017578125
+
+
+Saving final model
+
+
+Training set size: 2000
+Training error 1: 116.731612 ± 0.000000
+Training error 2: 1232.425586 ± 0.000000
+Test error: 1147.206931 ± 0.000000
+

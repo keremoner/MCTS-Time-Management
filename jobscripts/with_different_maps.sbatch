@@ -7,10 +7,10 @@
 #SBATCH --partition=general
 
 # The default Quality of Service is the 'short' QoS (maximum run time: 4 hours)
-#SBATCH --qos=short
+#SBATCH --qos=medium
 
 # The default run (wall-clock) time is 1 minute
-#SBATCH --time=150
+#SBATCH --time=360
 
 # The default number of parallel tasks per job is 1
 #SBATCH --ntasks=1
@@ -20,7 +20,7 @@
 #SBATCH --cpus-per-task=64
 
 # The default memory per node is 1024 megabytes (1GB) (for multiple tasks, specify --mem-per-cpu ins tead)
-#SBATCH --mem=16384
+#SBATCH --mem=16000
 
 # Set mail type to 'END' to receive a mail when the job finishes
 # Do not enable mails when submitting large numbers (>20) of jobs at once

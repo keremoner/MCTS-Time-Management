@@ -30,11 +30,11 @@ import torch.optim as optim
 class MyModel(nn.Module):
     def __init__(self, input_size=2):
         super(MyModel, self).__init__()
-        self.fc1 = nn.Linear(input_size, 200)
-        self.fc2 = nn.Linear(200, 200)
-        self.fc3 = nn.Linear(200, 200)
-        self.fc4 = nn.Linear(200, 200)
-        self.fc5 = nn.Linear(200, 1)
+        self.fc1 = nn.Linear(input_size, 128)
+        self.fc2 = nn.Linear(128, 128)
+        self.fc3 = nn.Linear(128, 128)
+        self.fc4 = nn.Linear(128, 128)
+        self.fc5 = nn.Linear(128, 1)
         
     def forward(self, x):
         x = torch.tanh(self.fc1(x))
@@ -135,13 +135,14 @@ if __name__ == "__main__":
     # PARAMETERS
     padding = 4
     NN = True
-    n_epochs = 125000
-    fold = 1
+    n_epochs = 100000
+    fold = 3
     test_sims = [ 3, 5, 9, 13, 14, 18, 21, 25, 26, 27, 29, 38, 41, 43, 47, 48, 53, 55, 59, 60, 65, 67, 69, 70, 75, 78, 84, 85, 86, 89, 90, 96, 98]
     #test_sims = np.sort(np.random.choice(np.arange(sim_min, sim_max + 1), size=math.ceil((sim_max - sim_min + 1) * 0.33), replace=False))
     #train_sizes = [100, 200, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 128000, 256000, 512000, 750000]
-    train_sizes = [600]
-    
+    #train_sizes = [600]
+    train_sizes = [100, 200, 400, 800, 1600, 3200, 6400, 1280]    
+
     if 'Map' in dataset.columns:
         if padding > 0: 
             dataset['List_Map'] = dataset['Map'].apply(ast.literal_eval).apply(lambda x: add_padding(x, padding))
@@ -235,7 +236,7 @@ if __name__ == "__main__":
             if NN:
                 model = MyModel(input_size=len(features))
                 loss_fn = nn.MSELoss()
-                optimizer = optim.Adam(model.parameters())
+                optimizer = optim.Adam(model.parameters(), weight_decay=1e-4)
                 batch_size = len(training_set_x)
                 
                 for epoch in range(n_epochs):
