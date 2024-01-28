@@ -30,11 +30,11 @@ import torch.optim as optim
 class MyModel(nn.Module):
     def __init__(self, input_size=2):
         super(MyModel, self).__init__()
-        self.fc1 = nn.Linear(input_size, 128)
-        self.fc2 = nn.Linear(128, 128)
-        self.fc3 = nn.Linear(128, 128)
-        self.fc4 = nn.Linear(128, 128)
-        self.fc5 = nn.Linear(128, 1)
+        self.fc1 = nn.Linear(input_size, 256)
+        self.fc2 = nn.Linear(256, 256)
+        self.fc3 = nn.Linear(256, 256)
+        self.fc4 = nn.Linear(256, 256)
+        self.fc5 = nn.Linear(256, 1)
         
     def forward(self, x):
         x = torch.tanh(self.fc1(x))
@@ -141,7 +141,7 @@ if __name__ == "__main__":
     #test_sims = np.sort(np.random.choice(np.arange(sim_min, sim_max + 1), size=math.ceil((sim_max - sim_min + 1) * 0.33), replace=False))
     #train_sizes = [100, 200, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 128000, 256000, 512000, 750000]
     #train_sizes = [600]
-    train_sizes = [100, 200, 400, 800, 1600, 3200, 6400, 1280]    
+    train_sizes = [100, 200, 400, 800, 1600, 3200, 6400, 12800, 25600]    
 
     if 'Map' in dataset.columns:
         if padding > 0: 
@@ -321,5 +321,5 @@ if __name__ == "__main__":
     plt.ylabel('MSE')
     plt.title('Learning Curve')
     plt.legend(loc='best')
-    plt.ylim([-5, 1000])
+    plt.ylim([-5, 2000])
     plt.savefig(file_dir("./../results/" + args.experiment_code + ".png"))

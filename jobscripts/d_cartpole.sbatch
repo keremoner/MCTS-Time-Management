@@ -10,7 +10,7 @@
 #SBATCH --qos=medium
 
 # The default run (wall-clock) time is 1 minute
-#SBATCH --time=360
+#SBATCH --time=720
 
 # The default number of parallel tasks per job is 1
 #SBATCH --ntasks=1
@@ -39,6 +39,6 @@ conda activate MCTS-Time-Management
 
 # Computations should be started with 'srun'. For example:
 
-srun python -u ../scripts/CartPole.py --experiment-code CartPole-v1_nondefault_sim-poleangle_pytorch_01
+srun python -u ../scripts/CartPole.py --experiment-code CartPole-v1_nondefault_sim-poleangle_pytorch_02
 
 wait
