@@ -10,7 +10,7 @@
 #SBATCH --qos=medium
 
 # The default run (wall-clock) time is 1 minute
-#SBATCH --time=360
+#SBATCH --time=1440
 
 # The default number of parallel tasks per job is 1
 #SBATCH --ntasks=1
@@ -39,6 +39,6 @@ conda activate MCTS-Time-Management
 
 # Computations should be started with 'srun'. For example:
 
-srun python -u ../scripts/WithDifferentMaps.py --experiment-code FrozenLake-v1_m4-4_total-random_pytorch_02
+srun python -u ../scripts/WithDifferentMaps.py --experiment-code FrozenLake-v1_m4-4_total-random_pytorch_03
 
 wait

@@ -30,20 +30,18 @@ import torch.optim as optim
 class MyModel(nn.Module):
     def __init__(self):
         super(MyModel, self).__init__()
-        self.fc1 = nn.Linear(17, 400)
-        self.fc2 = nn.Linear(400, 400)
-        self.fc3 = nn.Linear(400, 400)
-        self.fc4 = nn.Linear(400, 400)
-        self.fc5 = nn.Linear(400, 400)
-        self.fc6 = nn.Linear(400, 1)
+        self.fc1 = nn.Linear(17, 512)
+        self.fc2 = nn.Linear(512, 512)
+        self.fc3 = nn.Linear(512, 512)
+        self.fc4 = nn.Linear(512, 512)
+        self.fc5 = nn.Linear(512, 1)
         
     def forward(self, x):
         x = torch.tanh(self.fc1(x))
         x = torch.tanh(self.fc2(x))
         x = torch.tanh(self.fc3(x))
         x = torch.tanh(self.fc4(x))
-        x = torch.tanh(self.fc5(x))
-        x = self.fc6(x)
+        x = self.fc5(x)
         return x
     
     def predict(self, x):
@@ -131,9 +129,9 @@ if __name__ == "__main__":
     # train_sizes = [1, 8, 16, 25, 75, 100, 1000, 2000, 3000, 4000, 5000, 10000, 15000, 30000, 60000, 100000, 150000, 200000, 250000, 300000]
     # train_sizes = train_sizes = list(range(10, 1000, 125)) + list(range(1000, 10000, 1000))
     # train_sizes = [1, 25, 100]
-    train_sizes = [80000]
+    train_sizes = [1000, 2000, 4000, 8000, 16000, 32000, 64000]
     fold = 3
-    n_epochs = 15000
+    n_epochs = 10000
     padding = 4
     
     # DATASET LOAD
