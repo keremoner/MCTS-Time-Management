@@ -124,7 +124,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     # DATASET LOAD
-    directory = "../datasets/CartPole-v1_disc-default_s1-100_t500/"
+    directory = "../datasets/CartPole-v1_disc-0.20_s1-100_t500/"
     dataset_names = os.listdir(directory)
     dataset = pd.DataFrame()
     
@@ -171,7 +171,7 @@ if __name__ == "__main__":
     sim_max = dataset['Simulations'].max()
 
     #Features to be used in the model
-    features = ['Simulations', 'Pole Angle']
+    features = ['Simulations']
 
     #Creating test set by taking average for test set simulations
     test_set = dataset[dataset['Simulations'].isin(test_sims)].groupby(features)['Discounted Return'].mean()
@@ -276,7 +276,7 @@ if __name__ == "__main__":
             train_scores2[-1].append(train_score2)
             train_score2_abs = mean_absolute_error(training_score_set2_y, y_pred)
             train_scores2_abs[-1].append(train_score2_abs)
-            if training_set_size == train_sizes[-1] and i == fold - 1:
+            if training_set_size == train_sizes[-1] and i == (fold - 1):
                 print("\n\nSaving final model\n\n")
                 if NN:
                     torch.save(model.state_dict(), '../results/' + args.experiment_code + '_model.pt')

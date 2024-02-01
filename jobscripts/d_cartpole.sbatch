@@ -39,6 +39,6 @@ conda activate MCTS-Time-Management
 
 # Computations should be started with 'srun'. For example:
 
-srun python -u ../scripts/CartPole.py --experiment-code CartPole-v1_default_sim-poleangle_pytorch_03
+srun python -u ../scripts/CartPole.py --experiment-code CartPole-v1_non-default_pytorch_06
 
 wait
