@@ -1,0 +1,37 @@
+Training set size: 100
+Training error 1: 69.083398 ± 17.558879
+Training error 2: 1988.318669 ± 111.906493
+Test error: 1850.125756 ± 98.460266
+Training set size: 200
+Training error 1: 28.738165 ± 14.056606
+Training error 2: 1652.887391 ± 35.490134
+Test error: 1584.236551 ± 75.675068
+Training set size: 400
+Training error 1: 46.590682 ± 20.442563
+Training error 2: 1649.218889 ± 23.093149
+Test error: 1633.719660 ± 43.221139
+Training set size: 800
+Training error 1: 95.078558 ± 41.282637
+Training error 2: 1478.984642 ± 68.076264
+Test error: 1461.596566 ± 77.042794
+Training set size: 1600
+Training error 1: 59.180238 ± 11.990768
+Training error 2: 1211.550525 ± 9.669172
+Test error: 1155.999885 ± 31.179978
+Training set size: 3200
+Training error 1: 17.213826 ± 3.197779
+Training error 2: 914.875371 ± 15.727685
+Test error: 869.241964 ± 5.372920
+Training set size: 6400
+Training error 1: 7.756856 ± 1.474824
+Training error 2: 710.433847 ± 6.896514
+Test error: 742.354864 ± 3.697056
+Training set size: 12800
+Training error 1: 9.302816 ± 3.791273
+Training error 2: 633.800153 ± 8.186453
+Test error: 617.693446 ± 12.533732
+Training set size: 25600
+Training error 1: 13.106436 ± 4.125786
+Training error 2: 592.342597 ± 6.292085
+Test error: 586.947105 ± 1.708038
+

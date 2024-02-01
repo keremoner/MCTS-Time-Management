@@ -1,0 +1,303 @@
+JobId=9269054 JobName=with_different_maps.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=29112651 Nice=0 Account=ewi-insy-ii-influence QOS=medium
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:07 TimeLimit=1-00:00:00 TimeMin=N/A
+   SubmitTime=2024-01-28T12:23:36 EligibleTime=2024-01-28T12:23:36
+   AccrueTime=2024-01-28T12:23:36
+   StartTime=2024-01-28T12:23:36 EndTime=2024-01-29T12:23:36 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2024-01-28T12:23:36 Scheduler=Main
+   Partition=general AllocNode:Sid=login1:16041
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=3dgi2
+   BatchHost=3dgi2
+   NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=64,mem=16000M,node=1,billing=33
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=3dgi2 CPU_IDs=0-63 Mem=16000 GRES=
+   MinCPUsNode=64 MinMemoryNode=16000M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/with_different_maps.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9269054.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9269054.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+Finished epoch 1, latest loss 0.6506857872009277
+Finished epoch 1000, latest loss 0.0497460775077343
+Finished epoch 2000, latest loss 0.02301790937781334
+Finished epoch 3000, latest loss 0.009686649776995182
+Finished epoch 4000, latest loss 0.104093536734581
+Finished epoch 5000, latest loss 0.002485761884599924
+Finished epoch 6000, latest loss 0.1160600557923317
+Finished epoch 7000, latest loss 0.0021764927078038454
+Finished epoch 8000, latest loss 0.00947218481451273
+Finished epoch 9000, latest loss 0.0014637154527008533
+Finished epoch 10000, latest loss 0.0005793157033622265
+Finished epoch 1, latest loss 0.6714006066322327
+Finished epoch 1000, latest loss 0.05946465954184532
+Finished epoch 2000, latest loss 0.024320632219314575
+Finished epoch 3000, latest loss 0.09734025597572327
+Finished epoch 4000, latest loss 0.07191628217697144
+Finished epoch 5000, latest loss 0.003872913308441639
+Finished epoch 6000, latest loss 0.0014101500855758786
+Finished epoch 7000, latest loss 0.0013709641061723232
+Finished epoch 8000, latest loss 0.0034985188394784927
+Finished epoch 9000, latest loss 0.0010712717194110155
+Finished epoch 10000, latest loss 0.0004737164417747408
+Finished epoch 1, latest loss 0.5466577410697937
+Finished epoch 1000, latest loss 0.05968401953577995
+Finished epoch 2000, latest loss 0.03917526453733444
+Finished epoch 3000, latest loss 0.007094298955053091
+Finished epoch 4000, latest loss 0.013914463110268116
+Finished epoch 5000, latest loss 0.016823632642626762
+Finished epoch 6000, latest loss 0.024603702127933502
+Finished epoch 7000, latest loss 0.0017911923350766301
+Finished epoch 8000, latest loss 0.0010604100534692407
+Finished epoch 9000, latest loss 0.0013611378381028771
+Finished epoch 10000, latest loss 0.06813175976276398
+Training set size: 1000
+Training error 1: 0.024719 ± 0.019909
+\Training error 2: 0.055550 ± 0.001322
+Test error: 0.058362 ± 0.001557
+
+Finished epoch 1, latest loss 0.622117280960083
+Finished epoch 1000, latest loss 0.05398638918995857
+Finished epoch 2000, latest loss 0.042125944048166275
+Finished epoch 3000, latest loss 0.014852088876068592
+Finished epoch 4000, latest loss 0.036345474421978
+Finished epoch 5000, latest loss 0.003078391309827566
+Finished epoch 6000, latest loss 0.001273801550269127
+Finished epoch 7000, latest loss 0.0003195093013346195
+Finished epoch 8000, latest loss 0.04185474291443825
+Finished epoch 9000, latest loss 0.002123009180650115
+Finished epoch 10000, latest loss 0.0013698665425181389
+Finished epoch 1, latest loss 0.6858974695205688
+Finished epoch 1000, latest loss 0.05714641511440277
+Finished epoch 2000, latest loss 0.03323790803551674
+Finished epoch 3000, latest loss 0.10804497450590134
+Finished epoch 4000, latest loss 0.04661671444773674
+Finished epoch 5000, latest loss 0.023277772590517998
+Finished epoch 6000, latest loss 0.06359115242958069
+Finished epoch 7000, latest loss 0.01118373405188322
+Finished epoch 8000, latest loss 0.01215459406375885
+Finished epoch 9000, latest loss 0.055921800434589386
+Finished epoch 10000, latest loss 0.00583474338054657
+Finished epoch 1, latest loss 0.5753837823867798
+Finished epoch 1000, latest loss 0.06835777312517166
+Finished epoch 2000, latest loss 0.05419572442770004
+Finished epoch 3000, latest loss 0.02242555283010006
+Finished epoch 4000, latest loss 0.08377000689506531
+Finished epoch 5000, latest loss 0.021601567044854164
+Finished epoch 6000, latest loss 0.009428231976926327
+Finished epoch 7000, latest loss 0.008277593180537224
+Finished epoch 8000, latest loss 0.0072249132208526134
+Finished epoch 9000, latest loss 0.0064612869173288345
+Finished epoch 10000, latest loss 0.03215339034795761
+Training set size: 2000
+Training error 1: 0.011188 ± 0.006288
+\Training error 2: 0.044259 ± 0.003135
+Test error: 0.047938 ± 0.003550
+
+Finished epoch 1, latest loss 0.7448968291282654
+Finished epoch 1000, latest loss 0.0717456042766571
+Finished epoch 2000, latest loss 0.058345817029476166
+Finished epoch 3000, latest loss 0.052490234375
+Finished epoch 4000, latest loss 0.028640586882829666
+Finished epoch 5000, latest loss 0.012149334885179996
+Finished epoch 6000, latest loss 0.006404467858374119
+Finished epoch 7000, latest loss 0.007152659352868795
+Finished epoch 8000, latest loss 0.004062591586261988
+Finished epoch 9000, latest loss 0.1022699847817421
+Finished epoch 10000, latest loss 0.006238662172108889
+Finished epoch 1, latest loss 0.672435998916626
+Finished epoch 1000, latest loss 0.06754285097122192
+Finished epoch 2000, latest loss 0.0545625202357769
+Finished epoch 3000, latest loss 0.03458981215953827
+Finished epoch 4000, latest loss 0.010593232698738575
+Finished epoch 5000, latest loss 0.0033658496104180813
+Finished epoch 6000, latest loss 0.025966113433241844
+Finished epoch 7000, latest loss 0.0013437559828162193
+Finished epoch 8000, latest loss 0.009848245419561863
+Finished epoch 9000, latest loss 0.010765718296170235
+Finished epoch 10000, latest loss 0.023661568760871887
+Finished epoch 1, latest loss 0.45486342906951904
+Finished epoch 1000, latest loss 0.06644856184720993
+Finished epoch 2000, latest loss 0.055042121559381485
+Finished epoch 3000, latest loss 0.044408101588487625
+Finished epoch 4000, latest loss 0.02362714894115925
+Finished epoch 5000, latest loss 0.029881156980991364
+Finished epoch 6000, latest loss 0.023763081058859825
+Finished epoch 7000, latest loss 0.0073446473106741905
+Finished epoch 8000, latest loss 0.004887567367404699
+Finished epoch 9000, latest loss 0.00569459842517972
+Finished epoch 10000, latest loss 0.0032845735549926758
+Training set size: 4000
+Training error 1: 0.005721 ± 0.001206
+\Training error 2: 0.046060 ± 0.001100
+Test error: 0.048464 ± 0.001231
+
+Finished epoch 1, latest loss 0.600873589515686
+Finished epoch 1000, latest loss 0.07524798065423965
+Finished epoch 2000, latest loss 0.06131253018975258
+Finished epoch 3000, latest loss 0.051624417304992676
+Finished epoch 4000, latest loss 0.05902611091732979
+Finished epoch 5000, latest loss 0.038378916680812836
+Finished epoch 6000, latest loss 0.026211805641651154
+Finished epoch 7000, latest loss 0.021061863750219345
+Finished epoch 8000, latest loss 0.013060501776635647
+Finished epoch 9000, latest loss 0.008326072245836258
+Finished epoch 10000, latest loss 0.012649632059037685
+Finished epoch 1, latest loss 0.5834298729896545
+Finished epoch 1000, latest loss 0.09501512348651886
+Finished epoch 2000, latest loss 0.0608460009098053
+Finished epoch 3000, latest loss 0.09081882983446121
+Finished epoch 4000, latest loss 0.05107755959033966
+Finished epoch 5000, latest loss 0.037180397659540176
+Finished epoch 6000, latest loss 0.028662987053394318
+Finished epoch 7000, latest loss 0.01868177019059658
+Finished epoch 8000, latest loss 0.01433883048593998
+Finished epoch 9000, latest loss 0.010130882263183594
+Finished epoch 10000, latest loss 0.019497260451316833
+Finished epoch 1, latest loss 0.8361462950706482
+Finished epoch 1000, latest loss 0.0711970180273056
+Finished epoch 2000, latest loss 0.05622856318950653
+Finished epoch 3000, latest loss 0.051294755190610886
+Finished epoch 4000, latest loss 0.07327032834291458
+Finished epoch 5000, latest loss 0.05100139603018761
+Finished epoch 6000, latest loss 0.03913076967000961
+Finished epoch 7000, latest loss 0.029267996549606323
+Finished epoch 8000, latest loss 0.02283800020813942
+Finished epoch 9000, latest loss 0.017351550981402397
+Finished epoch 10000, latest loss 0.012894184328615665
+Training set size: 8000
+Training error 1: 0.028865 ± 0.013821
+\Training error 2: 0.052303 ± 0.006834
+Test error: 0.056438 ± 0.007950
+
+Finished epoch 1, latest loss 0.7000179886817932
+Finished epoch 1000, latest loss 0.06901074200868607
+Finished epoch 2000, latest loss 0.060334060341119766
+Finished epoch 3000, latest loss 0.05123060941696167
+Finished epoch 4000, latest loss 0.06667502224445343
+Finished epoch 5000, latest loss 0.05258550867438316
+Finished epoch 6000, latest loss 0.050438832491636276
+Finished epoch 7000, latest loss 0.04704670608043671
+Finished epoch 8000, latest loss 0.03731374442577362
+Finished epoch 9000, latest loss 0.032629240304231644
+Finished epoch 10000, latest loss 0.0403384231030941
+Finished epoch 1, latest loss 0.6725108027458191
+Finished epoch 1000, latest loss 0.0695333257317543
+Finished epoch 2000, latest loss 0.06223505735397339
+Finished epoch 3000, latest loss 0.05320145934820175
+Finished epoch 4000, latest loss 0.10422026365995407
+Finished epoch 5000, latest loss 0.05587869882583618
+Finished epoch 6000, latest loss 0.04866749048233032
+Finished epoch 7000, latest loss 0.04034526273608208
+Finished epoch 8000, latest loss 0.03615130856633186
+Finished epoch 9000, latest loss 0.028628667816519737
+Finished epoch 10000, latest loss 0.022884514182806015
+Finished epoch 1, latest loss 0.6299708485603333
+Finished epoch 1000, latest loss 0.07197624444961548
+Finished epoch 2000, latest loss 0.06256382167339325
+Finished epoch 3000, latest loss 0.055471815168857574
+Finished epoch 4000, latest loss 0.049111466854810715
+Finished epoch 5000, latest loss 0.058835990726947784
+Finished epoch 6000, latest loss 0.04955200478434563
+Finished epoch 7000, latest loss 0.043426331132650375
+Finished epoch 8000, latest loss 0.03196300193667412
+Finished epoch 9000, latest loss 0.02758088707923889
+Finished epoch 10000, latest loss 0.022115370258688927
+Training set size: 16000
+Training error 1: 0.028238 ± 0.005673
+\Training error 2: 0.030538 ± 0.001089
+Test error: 0.032013 ± 0.001158
+
+Finished epoch 1, latest loss 0.6543706059455872
+Finished epoch 1000, latest loss 0.06994027644395828
+Finished epoch 2000, latest loss 0.0660988911986351
+Finished epoch 3000, latest loss 0.08621857315301895
+Finished epoch 4000, latest loss 0.059048160910606384
+Finished epoch 5000, latest loss 0.05401863157749176
+Finished epoch 6000, latest loss 0.05088471248745918
+Finished epoch 7000, latest loss 0.04365350306034088
+Finished epoch 8000, latest loss 0.0376497358083725
+Finished epoch 9000, latest loss 0.030271319672465324
+Finished epoch 10000, latest loss 0.025088433176279068
+Finished epoch 1, latest loss 0.6116088628768921
+Finished epoch 1000, latest loss 0.0839087963104248
+Finished epoch 2000, latest loss 0.05972007289528847
+Finished epoch 3000, latest loss 0.052216704934835434
+Finished epoch 4000, latest loss 0.06566569209098816
+Finished epoch 5000, latest loss 0.05587413161993027
+Finished epoch 6000, latest loss 0.05210935324430466
+Finished epoch 7000, latest loss 0.05385695770382881
+Finished epoch 8000, latest loss 0.050489988178014755
+Finished epoch 9000, latest loss 0.045182060450315475
+Finished epoch 10000, latest loss 0.04489244893193245
+Finished epoch 1, latest loss 0.6655563712120056
+Finished epoch 1000, latest loss 0.06962744891643524
+Finished epoch 2000, latest loss 0.05785375460982323
+Finished epoch 3000, latest loss 0.055659420788288116
+Finished epoch 4000, latest loss 0.07529653608798981
+Finished epoch 5000, latest loss 0.05134288966655731
+Finished epoch 6000, latest loss 0.05011213198304176
+Finished epoch 7000, latest loss 0.04427076131105423
+Finished epoch 8000, latest loss 0.040873169898986816
+Finished epoch 9000, latest loss 0.035492006689310074
+Finished epoch 10000, latest loss 0.024464713409543037
+Training set size: 32000
+Training error 1: 0.029764 ± 0.004631
+\Training error 2: 0.023446 ± 0.004014
+Test error: 0.025724 ± 0.004611
+
+Finished epoch 1, latest loss 0.626984715461731
+Finished epoch 1000, latest loss 0.07301857322454453
+Finished epoch 2000, latest loss 0.05922112241387367
+Finished epoch 3000, latest loss 0.054606568068265915
+Finished epoch 4000, latest loss 0.08647094666957855
+Finished epoch 5000, latest loss 0.05688254535198212
+Finished epoch 6000, latest loss 0.05661758780479431
+Finished epoch 7000, latest loss 0.05388129502534866
+Finished epoch 8000, latest loss 0.05177712067961693
+Finished epoch 9000, latest loss 0.05102941021323204
+Finished epoch 10000, latest loss 0.05211394652724266
+Finished epoch 1, latest loss 0.6314893364906311
+Finished epoch 1000, latest loss 0.07007018476724625
+Finished epoch 2000, latest loss 0.06370050460100174
+Finished epoch 3000, latest loss 0.05504079535603523
+Finished epoch 4000, latest loss 0.05233164131641388
+Finished epoch 5000, latest loss 0.05256134644150734
+Finished epoch 6000, latest loss 0.06749282777309418
+Finished epoch 7000, latest loss 0.05670340731739998
+Finished epoch 8000, latest loss 0.05349770188331604
+Finished epoch 9000, latest loss 0.05095825344324112
+Finished epoch 10000, latest loss 0.04915492236614227
+Finished epoch 1, latest loss 0.6630489230155945
+Finished epoch 1000, latest loss 0.07222958654165268
+Finished epoch 2000, latest loss 0.06289303302764893
+Finished epoch 3000, latest loss 0.057251520454883575
+Finished epoch 4000, latest loss 0.0528370663523674
+Finished epoch 5000, latest loss 0.05901988223195076
+Finished epoch 6000, latest loss 0.05463111028075218
+Finished epoch 7000, latest loss 0.05238994583487511
+Finished epoch 8000, latest loss 0.05861823260784149
+Finished epoch 9000, latest loss 0.050394751131534576
+Finished epoch 10000, latest loss 0.048052627593278885
+
+
+Saving final model
+
+
+Training set size: 64000
+Training error 1: 0.046227 ± 0.000647
+\Training error 2: 0.008427 ± 0.000495
+Test error: 0.009099 ± 0.000655
+

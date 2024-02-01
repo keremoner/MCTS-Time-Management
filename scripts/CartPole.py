@@ -124,7 +124,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     # DATASET LOAD
-    directory = "../datasets/CartPole-v1_disc-0.20_s1-100_t500/"
+    directory = "../datasets/CartPole-v1_disc-default_s1-100_t500/"
     dataset_names = os.listdir(directory)
     dataset = pd.DataFrame()
     
