@@ -129,10 +129,13 @@ if __name__ == "__main__":
     # train_sizes = [1, 8, 16, 25, 75, 100, 1000, 2000, 3000, 4000, 5000, 10000, 15000, 30000, 60000, 100000, 150000, 200000, 250000, 300000]
     # train_sizes = train_sizes = list(range(10, 1000, 125)) + list(range(1000, 10000, 1000))
     # train_sizes = [1, 25, 100]
-    train_sizes = [1000, 2000, 4000, 8000, 16000, 32000, 64000]
+    train_sizes = [1000, 2000, 4000, 8000]
     fold = 3
     n_epochs = 10000
+    batch_size = 32
+    n_train = 20000
     padding = 4
+    
     
     # DATASET LOAD
     directory = file_dir("../datasets/FrozenLake-v1_m4-4_s1-100_t1_total-random/")
@@ -237,19 +240,18 @@ if __name__ == "__main__":
                 model = MyModel()
                 loss_fn = nn.MSELoss()
                 optimizer = optim.Adam(model.parameters())
-                batch_size = len(training_set_x)
-                
-                for epoch in range(n_epochs):
-                    for i in range(0, len(training_set_x), batch_size):
-                        Xbatch = torch.tensor(training_set_x[i:i+batch_size], dtype=torch.float32)
-                        y_pred = model(Xbatch)
-                        ybatch = torch.tensor(training_set_y[i:i+batch_size], dtype=torch.float32).reshape(-1, 1)
-                        loss = loss_fn(y_pred, ybatch)
-                        optimizer.zero_grad()
-                        loss.backward()
-                        optimizer.step()
-                    if epoch == 0 or (epoch + 1) % 1000 == 0:
-                        print(f'Finished epoch {epoch + 1}, latest loss {loss}')
+                for iter in range(n_train):
+                    indices = list(range(len(training_set_x)))
+                    sample_indices = np.random.choice(indices, batch_size, replace=False)
+                    Xbatch = torch.tensor(training_set_x[sample_indices], dtype=torch.float32)
+                    y_pred = model(Xbatch)
+                    ybatch = torch.tensor(training_set_y[sample_indices], dtype=torch.float32).reshape(-1, 1)
+                    loss = loss_fn(y_pred, ybatch)
+                    optimizer.zero_grad()
+                    loss.backward()
+                    optimizer.step()
+                    if iter == 0 or (iter + 1) % 1000 == 0:
+                        print(f'Finished epoch {iter + 1}, latest loss {loss}')
             else: 
                 model = GradientBoostingRegressor(n_estimators=200, max_depth=20)
                 model.fit(np.asarray(training_set_x).astype('float32'), training_set_y)
