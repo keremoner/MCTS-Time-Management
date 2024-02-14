@@ -129,8 +129,8 @@ if __name__ == "__main__":
     # train_sizes = [1, 8, 16, 25, 75, 100, 1000, 2000, 3000, 4000, 5000, 10000, 15000, 30000, 60000, 100000, 150000, 200000, 250000, 300000]
     # train_sizes = train_sizes = list(range(10, 1000, 125)) + list(range(1000, 10000, 1000))
     # train_sizes = [1, 25, 100]
-    train_sizes = [1000, 2000, 4000, 8000]
-    fold = 3
+    train_sizes = [1000, 1500, 2000, 3000, 4000, 8000]
+    fold = 8
     n_epochs = 10000
     batch_size = 32
     n_train = 20000
