@@ -1,0 +1,225 @@
+JobId=9349461 JobName=cartpole_dataset.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=25485714 Nice=0 Account=ewi-insy-ii-influence QOS=short
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:00 TimeLimit=03:59:00 TimeMin=N/A
+   SubmitTime=2024-02-14T18:13:58 EligibleTime=2024-02-14T18:13:58
+   AccrueTime=2024-02-14T18:13:58
+   StartTime=2024-02-14T18:13:59 EndTime=2024-02-14T22:12:59 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2024-02-14T18:13:59 Scheduler=Main
+   Partition=general AllocNode:Sid=login1:19957
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=3dgi1,awi[20-25],grs[1-4],tbm5
+   BatchHost=3dgi1
+   NumNodes=12 NumCPUs=200 NumTasks=100 CPUs/Task=2 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=200,mem=50000M,node=12,billing=104
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=3dgi1 CPU_IDs=44-51 Mem=2000 GRES=
+     Nodes=awi20 CPU_IDs=46-55 Mem=2500 GRES=
+     Nodes=awi21 CPU_IDs=14-27,40-55 Mem=7500 GRES=
+     Nodes=awi22 CPU_IDs=40-45,50-55 Mem=3000 GRES=
+     Nodes=awi[23-24] CPU_IDs=16-35,50-71 Mem=10500 GRES=
+     Nodes=awi25 CPU_IDs=68-69 Mem=500 GRES=
+     Nodes=grs1 CPU_IDs=20-23,28-31 Mem=2000 GRES=
+     Nodes=grs2 CPU_IDs=14-15 Mem=500 GRES=
+     Nodes=grs3 CPU_IDs=8-13 Mem=1500 GRES=
+     Nodes=grs4 CPU_IDs=28-31 Mem=1000 GRES=
+     Nodes=tbm5 CPU_IDs=0-1,20-21,24-25,34-61 Mem=8500 GRES=
+   MinCPUsNode=2 MinMemoryCPU=250M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/cartpole_dataset.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9349461.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9349461.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 9349461.8 ON grs2 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.35 ON awi22 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.34 ON awi22 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.10 ON grs4 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.83 ON grs4 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** JOB 9349461 ON 3dgi1 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.18 ON awi20 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.33 ON awi22 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.15 ON awi20 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.37 ON awi22 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.16 ON awi20 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.3 ON awi22 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.9 ON grs3 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.79 ON grs1 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.82 ON grs3 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.14 ON 3dgi1 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.12 ON 3dgi1 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.7 ON grs1 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.13 ON 3dgi1 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.36 ON awi22 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.78 ON grs1 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.1 ON awi20 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.17 ON awi20 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.80 ON grs1 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.6 ON awi25 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.81 ON grs3 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.0 ON 3dgi1 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.40 ON awi23 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.31 ON awi21 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.30 ON awi21 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.39 ON awi23 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.44 ON awi23 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.27 ON awi21 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.48 ON awi23 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.56 ON awi23 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.25 ON awi21 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.54 ON awi23 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.2 ON awi21 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.23 ON awi21 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.26 ON awi21 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.55 ON awi23 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.19 ON awi21 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.38 ON awi23 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.32 ON awi21 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.28 ON awi21 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.41 ON awi23 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.24 ON awi21 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.47 ON awi23 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.86 ON tbm5 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.49 ON awi23 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.88 ON tbm5 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.29 ON awi21 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.51 ON awi23 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.20 ON awi21 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.93 ON tbm5 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.53 ON awi23 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.21 ON awi21 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.22 ON awi21 CANCELLED AT 2024-02-14T18:15:06 ***
+slurmstepd: error: *** STEP 9349461.42 ON awi23 CANCELLED AT 2024-02-14T18:15:06 ***

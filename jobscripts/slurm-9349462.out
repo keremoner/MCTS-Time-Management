@@ -1,0 +1,142 @@
+JobId=9349462 JobName=cartpole_dataset.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=19447619 Nice=0 Account=ewi-insy-ii-influence QOS=medium
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A
+   SubmitTime=2024-02-14T18:16:15 EligibleTime=2024-02-14T18:16:15
+   AccrueTime=2024-02-14T18:16:15
+   StartTime=2024-02-14T18:16:29 EndTime=2024-02-15T00:16:29 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2024-02-14T18:16:29 Scheduler=Backfill
+   Partition=general AllocNode:Sid=login1:19957
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=3dgi1,awi[20-25],grs[1-4],influ4
+   BatchHost=3dgi1
+   NumNodes=12 NumCPUs=200 NumTasks=100 CPUs/Task=2 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=200,mem=50000M,node=12,billing=104
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=3dgi1 CPU_IDs=44-51 Mem=2000 GRES=
+     Nodes=awi20 CPU_IDs=46-55 Mem=2500 GRES=
+     Nodes=awi21 CPU_IDs=14-27,40-55 Mem=7500 GRES=
+     Nodes=awi22 CPU_IDs=40-45,50-55 Mem=3000 GRES=
+     Nodes=awi[23-24] CPU_IDs=16-35,50-71 Mem=10500 GRES=
+     Nodes=awi25 CPU_IDs=68-69 Mem=500 GRES=
+     Nodes=grs1 CPU_IDs=20-23,28-31 Mem=2000 GRES=
+     Nodes=grs2 CPU_IDs=14-15 Mem=500 GRES=
+     Nodes=grs3 CPU_IDs=8-13 Mem=1500 GRES=
+     Nodes=grs4 CPU_IDs=28-31 Mem=1000 GRES=
+     Nodes=influ4 CPU_IDs=0-1,12-43 Mem=8500 GRES=
+   MinCPUsNode=2 MinMemoryCPU=250M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/cartpole_dataset.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9349462.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9349462.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 12 nodes, setting nnodes to 1

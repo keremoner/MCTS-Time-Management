@@ -1,0 +1,134 @@
+JobId=9349463 JobName=cartpole_dataset.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=19447619 Nice=0 Account=ewi-insy-ii-influence QOS=medium
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A
+   SubmitTime=2024-02-14T18:17:18 EligibleTime=2024-02-14T18:17:18
+   AccrueTime=2024-02-14T18:17:18
+   StartTime=2024-02-14T18:17:29 EndTime=2024-02-15T00:17:29 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2024-02-14T18:17:29 Scheduler=Backfill
+   Partition=general AllocNode:Sid=login1:19957
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=3dgi1,influ[4,6]
+   BatchHost=3dgi1
+   NumNodes=3 NumCPUs=200 NumTasks=100 CPUs/Task=2 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=200,mem=50000M,node=3,billing=104
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=3dgi1 CPU_IDs=0-31 Mem=8000 GRES=
+     Nodes=influ4 CPU_IDs=44-127 Mem=21000 GRES=
+     Nodes=influ6 CPU_IDs=12-13,20-21,24-103 Mem=21000 GRES=
+   MinCPUsNode=2 MinMemoryCPU=250M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/cartpole_dataset.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9349463.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9349463.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
+srun: Warning: can't run 1 processes on 3 nodes, setting nnodes to 1
