@@ -138,7 +138,10 @@ class CustomCartPole(CustomAbstractEnv):
         if not self.initial_state_default:
             state = self.get_state()
             actual_state, elapsed_steps, steps_beyond_done, has_reset = state
-            s = np.random.choice(self.arange, size=4)
+            if self.step_size > 0:
+                s = np.random.choice(self.arange, size=4)
+            else:
+                s = np.random.uniform(low=self.low, high=self.high, size=4)
             self.set_state((s, elapsed_steps, steps_beyond_done, has_reset))
         return s
         
