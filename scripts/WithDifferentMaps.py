@@ -129,11 +129,11 @@ if __name__ == "__main__":
     # train_sizes = [1, 8, 16, 25, 75, 100, 1000, 2000, 3000, 4000, 5000, 10000, 15000, 30000, 60000, 100000, 150000, 200000, 250000, 300000]
     # train_sizes = train_sizes = list(range(10, 1000, 125)) + list(range(1000, 10000, 1000))
     # train_sizes = [1, 25, 100]
-    train_sizes = [96000, 128000, 192000, 256000]
+    train_sizes = [1000, 2000, 4000, 8000, 16000, 32000, 64000]
     fold = 8
     n_epochs = 10000
     batch_size = 32
-    n_train = 20000
+    n_train = 64000
     padding = 4
     
     
@@ -179,6 +179,10 @@ if __name__ == "__main__":
 
     categories = encode_map(dataset['List_Map'].iloc[0])[1]
     test_maps = np.random.default_rng().choice(unique_maps, size=test_set_size, replace=False)
+    print("Data set loaded\n\n")
+    with open('./../results/' + args.experiment_code + '_test-maps.txt', 'w') as f:
+        print(test_maps, file=f)
+    
     
     for training_set_size in  train_sizes:
         train_scores1.append([])
@@ -252,6 +256,8 @@ if __name__ == "__main__":
                     optimizer.step()
                     if iter == 0 or (iter + 1) % 1000 == 0:
                         print(f'Finished epoch {iter + 1}, latest loss {loss}')
+                    if loss < 0.005 and iter > n_train / 2:
+                        break
             else: 
                 model = GradientBoostingRegressor(n_estimators=200, max_depth=20)
                 model.fit(np.asarray(training_set_x).astype('float32'), training_set_y)
