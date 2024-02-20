@@ -7,10 +7,10 @@
 #SBATCH --partition=general
 
 # The default Quality of Service is the 'short' QoS (maximum run time: 4 hours)
-#SBATCH --qos=medium
+#SBATCH --qos=short
 
 # The default run (wall-clock) time is 1 minute
-#SBATCH --time=360
+#SBATCH --time=150
 
 # The default number of parallel tasks per job is 1
 #SBATCH --ntasks=1
@@ -39,6 +39,6 @@ conda activate MCTS-Time-Management
 
 # Computations should be started with 'srun'. For example:
 
-srun python -u ../scripts/WithDifferentMaps.py --experiment-code FrozenLake-v1_m4-4_total-random_pytorch_07
+srun python -u ../scripts/WithDifferentMaps.py --experiment-code FrozenLake-v1_m4-4_total-random_pytorch_08
 
 wait
