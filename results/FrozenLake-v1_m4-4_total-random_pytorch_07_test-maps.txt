@@ -1,0 +1,3 @@
+["['SFFF', 'FHHF', 'FFFF', 'HHHG']" "['SFHH', 'FFHF', 'HFFF', 'FFFG']"
+ "['SHFH', 'FFFH', 'FFHH', 'HFFG']" ... "['SFFF', 'FHFF', 'HFHF', 'HHHG']"
+ "['SFFF', 'FFFF', 'HHFF', 'FHHG']" "['SHFF', 'FFHF', 'HFFF', 'HFHG']"]

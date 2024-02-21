@@ -1,0 +1,35 @@
+JobId=9498282 JobName=with_different_maps.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=19502846 Nice=0 Account=ewi-insy-ii-influence QOS=medium
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:01 TimeLimit=1-12:00:00 TimeMin=N/A
+   SubmitTime=2024-02-20T17:45:41 EligibleTime=2024-02-20T17:45:41
+   AccrueTime=2024-02-20T17:45:41
+   StartTime=2024-02-20T17:46:41 EndTime=2024-02-22T05:46:41 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2024-02-20T17:46:41 Scheduler=Backfill
+   Partition=general AllocNode:Sid=login1:31300
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=awi23
+   BatchHost=awi23
+   NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=64,mem=16000M,node=1,billing=33
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=awi23 CPU_IDs=0-63 Mem=16000 GRES=
+   MinCPUsNode=64 MinMemoryNode=16000M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/with_different_maps.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9498282.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9498282.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+slurmstepd: error: *** JOB 9498282 ON awi23 CANCELLED AT 2024-02-20T17:48:58 ***
+slurmstepd: error: *** STEP 9498282.0 ON awi23 CANCELLED AT 2024-02-20T17:48:58 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
