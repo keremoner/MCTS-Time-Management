@@ -136,7 +136,7 @@ if __name__ == "__main__":
     padding = 4
     NN = True
     n_epochs = 100000
-    n_iter = 1000000
+    n_train = 1000000
     fold = 4
     test_sims = [ 3, 5, 9, 13, 14, 18, 21, 25, 26, 27, 29, 38, 41, 43, 47, 48, 53, 55, 59, 60, 65, 67, 69, 70, 75, 78, 84, 85, 86, 89, 90, 96, 98]
     #test_sims = np.sort(np.random.choice(np.arange(sim_min, sim_max + 1), size=math.ceil((sim_max - sim_min + 1) * 0.33), replace=False))
