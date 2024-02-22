@@ -173,7 +173,8 @@ if __name__ == "__main__":
     sim_max = dataset['Simulations'].max()
 
     #Features to be used in the model
-    features = ['Simulations', 'Cart Velocity']
+    features = ['Simulations', 'Cart Velocity', 'Cart Position', 'Pole Angle', 'Pole Angular Velocity']
+    #features = ['Simulations']
 
     #Creating test set by taking average for test set simulations
     test_set = dataset[dataset['Simulations'].isin(test_sims)].groupby(features)['Discounted Return'].mean()
@@ -323,4 +324,4 @@ if __name__ == "__main__":
     plt.title('Learning Curve')
     plt.legend(loc='best')
     plt.ylim([-5, 2000])
-    plt.savefig(file_dir("../results/" + args.experiment_code + "/curve.png"))
+    plt.savefig("../results/" + args.experiment_code + "/curve.png")
