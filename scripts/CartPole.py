@@ -136,12 +136,13 @@ if __name__ == "__main__":
     padding = 4
     NN = True
     n_epochs = 100000
-    fold = 3
+    n_iter = 1000000
+    fold = 4
     test_sims = [ 3, 5, 9, 13, 14, 18, 21, 25, 26, 27, 29, 38, 41, 43, 47, 48, 53, 55, 59, 60, 65, 67, 69, 70, 75, 78, 84, 85, 86, 89, 90, 96, 98]
     #test_sims = np.sort(np.random.choice(np.arange(sim_min, sim_max + 1), size=math.ceil((sim_max - sim_min + 1) * 0.33), replace=False))
     #train_sizes = [100, 200, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 128000, 256000, 512000, 750000]
     #train_sizes = [600]
-    train_sizes = [100, 200, 400, 800, 1600, 3200, 6400, 12800, 25600]    
+    train_sizes = [6400]    
 
     if 'Map' in dataset.columns:
         if padding > 0: 
@@ -239,17 +240,18 @@ if __name__ == "__main__":
                 optimizer = optim.Adam(model.parameters(), weight_decay=1e-4)
                 batch_size = len(training_set_x)
                 
-                for epoch in range(n_epochs):
-                    for i in range(0, len(training_set_x), batch_size):
-                        Xbatch = torch.tensor(training_set_x[i:i+batch_size], dtype=torch.float32)
-                        y_pred = model(Xbatch)
-                        ybatch = torch.tensor(training_set_y[i:i+batch_size], dtype=torch.float32).reshape(-1, 1)
-                        loss = loss_fn(y_pred, ybatch)
-                        optimizer.zero_grad()
-                        loss.backward()
-                        optimizer.step()
-                    if epoch == 0 or (epoch + 1) % 1000 == 0:
-                        print(f'Finished epoch {epoch + 1}, latest loss {loss}')
+                for iter in range(n_train):
+                    indices = list(range(len(training_set_x)))
+                    sample_indices = np.random.choice(indices, batch_size, replace=False)
+                    Xbatch = torch.tensor(training_set_x[sample_indices], dtype=torch.float32)
+                    y_pred = model(Xbatch)
+                    ybatch = torch.tensor(training_set_y[sample_indices], dtype=torch.float32).reshape(-1, 1)
+                    loss = loss_fn(y_pred, ybatch)
+                    optimizer.zero_grad()
+                    loss.backward()
+                    optimizer.step()
+                    if iter == 0 or (iter + 1) % 1000 == 0:
+                        print(f'Finished epoch {iter + 1}, latest loss {loss}')
             else: 
                 model = GradientBoostingRegressor(n_estimators=200, max_depth=20)
                 model.fit(np.asarray(training_set_x).astype('float32'), training_set_y)
