@@ -280,7 +280,7 @@ if __name__ == "__main__":
             if training_set_size == train_sizes[-1]:
                 print("\n\nSaving model\n\n")
                 if NN:
-                    torch.save(model.state_dict(), '../results/' + args.experiment_code + '_model_' + current_fold + '.pt')
+                    torch.save(model.state_dict(), '../results/' + args.experiment_code + '_model_' + str(current_fold) + '.pt')
                 else:
                     pickle.dump(model, '../results/' + args.experiment_code + '_model.sav')
                 
