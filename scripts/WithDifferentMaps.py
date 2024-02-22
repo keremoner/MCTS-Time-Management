@@ -181,7 +181,8 @@ if __name__ == "__main__":
     test_maps = np.random.default_rng().choice(unique_maps, size=test_set_size, replace=False)
     print("Data set loaded\n\n")
     with open('./../results/' + args.experiment_code + '_test-maps.txt', 'w') as f:
-        print(test_maps, file=f)
+        with np.printoptions(threshold=np.inf):
+            print(test_maps, file=f)
     
     
     for training_set_size in  train_sizes:
