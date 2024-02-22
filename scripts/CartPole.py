@@ -122,7 +122,8 @@ if __name__ == "__main__":
     # Add arguments to the parser
     parser.add_argument('--experiment-code')
     args = parser.parse_args()
-    
+    os.mkdir('../results/' + args.experiment_code + '/')
+    print("Experiment code: ", args.experiment_code)
     # DATASET LOAD
     directory = "../datasets/CartPole-v1_disc-0.20_s1-100_t500/"
     dataset_names = os.listdir(directory)
@@ -195,8 +196,6 @@ if __name__ == "__main__":
     train_scores_abs = []
     train_scores2_abs = []
     test_scores_abs = []
-    
-    os.mkdir('../results/' + args.experiment_code + '/')
     
     for training_set_size in  train_sizes:
         train_scores.append([])
