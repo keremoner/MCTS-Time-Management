@@ -277,10 +277,10 @@ if __name__ == "__main__":
             y_pred = model.predict(np.asarray(training_score2_set_x).astype('float32'))
             train_score2 = mean_squared_error(training_score2_set_y, y_pred)
             train_scores2[-1].append(train_score2)
-            if training_set_size == train_sizes[-1] and current_fold == (fold - 1):
-                print("\n\nSaving final model\n\n")
+            if training_set_size == train_sizes[-1]:
+                print("\n\nSaving model\n\n")
                 if NN:
-                    torch.save(model.state_dict(), '../results/' + args.experiment_code + '_model.pt')
+                    torch.save(model.state_dict(), '../results/' + args.experiment_code + '_model_' + current_fold + '.pt')
                 else:
                     pickle.dump(model, '../results/' + args.experiment_code + '_model.sav')
                 

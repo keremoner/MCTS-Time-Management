@@ -137,13 +137,13 @@ if __name__ == "__main__":
     padding = 4
     NN = True
     n_epochs = 100000
-    n_train = 1000000
+    n_train = 10000
     fold = 4
     test_sims = [ 3, 5, 9, 13, 14, 18, 21, 25, 26, 27, 29, 38, 41, 43, 47, 48, 53, 55, 59, 60, 65, 67, 69, 70, 75, 78, 84, 85, 86, 89, 90, 96, 98]
     #test_sims = np.sort(np.random.choice(np.arange(sim_min, sim_max + 1), size=math.ceil((sim_max - sim_min + 1) * 0.33), replace=False))
     #train_sizes = [100, 200, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 128000, 256000, 512000, 750000]
     #train_sizes = [600]
-    train_sizes = [6400]    
+    train_sizes = [3200, 6400]    
 
     if 'Map' in dataset.columns:
         if padding > 0: 
@@ -173,7 +173,7 @@ if __name__ == "__main__":
     sim_max = dataset['Simulations'].max()
 
     #Features to be used in the model
-    features = ['Simulations']
+    features = ['Simulations', 'Cart Velocity']
 
     #Creating test set by taking average for test set simulations
     test_set = dataset[dataset['Simulations'].isin(test_sims)].groupby(features)['Discounted Return'].mean()

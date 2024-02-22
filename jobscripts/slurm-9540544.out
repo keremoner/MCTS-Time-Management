@@ -1,0 +1,51 @@
+JobId=9540544 JobName=d_cartpole.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=25199240 Nice=0 Account=ewi-insy-ii-influence QOS=short
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A
+   SubmitTime=2024-02-22T17:08:20 EligibleTime=2024-02-22T17:08:20
+   AccrueTime=2024-02-22T17:08:20
+   StartTime=2024-02-22T17:09:20 EndTime=2024-02-22T17:39:20 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2024-02-22T17:09:20 Scheduler=Backfill
+   Partition=general AllocNode:Sid=login1:12878
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=awi23
+   BatchHost=awi23
+   NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=64,mem=8G,node=1,billing=32
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=awi23 CPU_IDs=0-63 Mem=8192 GRES=
+   MinCPUsNode=64 MinMemoryNode=8G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/d_cartpole.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9540544.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9540544.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+Experiment code:  CartPole-v1_non-default_pytorch_trial_2
+Dataset Loaded Successfully:  1053000
+Finished epoch 1, latest loss 48559.7109375
+Finished epoch 1000, latest loss 3838.017578125
+Finished epoch 2000, latest loss 2793.037109375
+Finished epoch 3000, latest loss 2017.857177734375
+Finished epoch 4000, latest loss 2001.700927734375
+Finished epoch 5000, latest loss 1986.939697265625
+Finished epoch 6000, latest loss 1941.7777099609375
+Finished epoch 7000, latest loss 1872.09765625
+Finished epoch 8000, latest loss 1799.154052734375
+Finished epoch 9000, latest loss 1744.8287353515625
+Finished epoch 10000, latest loss 1701.3023681640625
+
+
+Saving model
+
+
+Finished epoch 1, latest loss 49337.46875
