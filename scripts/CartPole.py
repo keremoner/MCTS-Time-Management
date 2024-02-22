@@ -287,10 +287,10 @@ if __name__ == "__main__":
         result_string += "Training set size: %d\nTraining error 1: %f ± %f\nTraining error 2: %f ± %f\nTest error: %f ± %f\n" % (training_set_size, np.mean(train_scores[-1]), np.std(train_scores[-1]) / (fold ** 0.5), np.mean(train_scores2[-1]), np.std(train_scores2[-1]) / (fold ** 0.5), np.mean(test_scores[-1]), np.std(test_scores[-1]) / (fold ** 0.5))
         print(result_string)
     
-    with open('./../results/' + args.experiment_code + '/result-string.txt', 'w') as f:
+    with open(file_dir('./../results/' + args.experiment_code + '/result-string.txt'), 'w') as f:
         print(result_string, file=f)
     
-    with open('./../results/' + args.experiment_code + '/arrays.txt', 'w') as f:
+    with open(file_dir('./../results/' + args.experiment_code + '/arrays.txt'), 'w') as f:
         print(test_scores, file=f)
         print(train_scores, file=f)
         print(train_scores2, file=f)
