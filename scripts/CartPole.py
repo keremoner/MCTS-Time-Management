@@ -177,7 +177,7 @@ if __name__ == "__main__":
     #Creating test set by taking average for test set simulations
     test_set = dataset[dataset['Simulations'].isin(test_sims)].groupby(features)['Discounted Return'].mean()
     data = test_set.index.values
-
+    test_set.to_csv('../results/' + args.experiment_code + '/test_set.csv')
     if len(features) > 1:
         test_set_x = [[i for i in x] for x in data]
     else: 
@@ -196,7 +196,8 @@ if __name__ == "__main__":
     train_scores2_abs = []
     test_scores_abs = []
     
-
+    os.mkdir('../results/' + args.experiment_code + '/')
+    
     for training_set_size in  train_sizes:
         train_scores.append([])
         train_scores2.append([])
@@ -211,7 +212,7 @@ if __name__ == "__main__":
             
             #Creating training set by sampling sim numbers for training set from the remainnig datapoints
             training_set = dataset[dataset['Simulations'].isin(training_sims)].sample(n=training_set_size, replace=True)
-            
+            training_set.to_csv('../results/' + args.experiment_code + '/training_set_' + str(training_set_size) + '_' + str(i) + '.csv')
             training_set_x = training_set[features].values.reshape(-1, len(features))
             training_set_y = training_set['Discounted Return'].values
             
@@ -278,20 +279,19 @@ if __name__ == "__main__":
             train_scores2[-1].append(train_score2)
             train_score2_abs = mean_absolute_error(training_score_set2_y, y_pred)
             train_scores2_abs[-1].append(train_score2_abs)
-            if training_set_size == train_sizes[-1] and i == (fold - 1):
-                print("\n\nSaving final model\n\n")
-                if NN:
-                    torch.save(model.state_dict(), '../results/' + args.experiment_code + '_model.pt')
-                else:
-                    pickle.dump(model, '../results/' + args.experiment_code + '_model.sav')  
+            print("\n\nSaving model\n\n")
+            if NN:
+                torch.save(model.state_dict(), '../results/' + args.experiment_code + '/model.pt')
+            else:
+                pickle.dump(model, '../results/' + args.experiment_code + '/model.sav')  
                     
         result_string += "Training set size: %d\nTraining error 1: %f ± %f\nTraining error 2: %f ± %f\nTest error: %f ± %f\n" % (training_set_size, np.mean(train_scores[-1]), np.std(train_scores[-1]) / (fold ** 0.5), np.mean(train_scores2[-1]), np.std(train_scores2[-1]) / (fold ** 0.5), np.mean(test_scores[-1]), np.std(test_scores[-1]) / (fold ** 0.5))
         print(result_string)
     
-    with open('./../results/' + args.experiment_code + '_result-string.txt', 'w') as f:
+    with open('./../results/' + args.experiment_code + '/result-string.txt', 'w') as f:
         print(result_string, file=f)
     
-    with open('./../results/' + args.experiment_code + '_arrays.txt', 'w') as f:
+    with open('./../results/' + args.experiment_code + '/arrays.txt', 'w') as f:
         print(test_scores, file=f)
         print(train_scores, file=f)
         print(train_scores2, file=f)
@@ -324,4 +324,4 @@ if __name__ == "__main__":
     plt.title('Learning Curve')
     plt.legend(loc='best')
     plt.ylim([-5, 2000])
-    plt.savefig(file_dir("./../results/" + args.experiment_code + ".png"))
+    plt.savefig(file_dir("./../results/" + args.experiment_code + "/curve.png"))
