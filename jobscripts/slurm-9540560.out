@@ -1,0 +1,109 @@
+JobId=9540560 JobName=d_cartpole.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=25199240 Nice=0 Account=ewi-insy-ii-influence QOS=short
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:01 TimeLimit=00:30:00 TimeMin=N/A
+   SubmitTime=2024-02-22T17:16:58 EligibleTime=2024-02-22T17:16:58
+   AccrueTime=2024-02-22T17:16:58
+   StartTime=2024-02-22T17:17:23 EndTime=2024-02-22T17:47:23 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2024-02-22T17:17:23 Scheduler=Backfill
+   Partition=general AllocNode:Sid=login1:12878
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=influ5
+   BatchHost=influ5
+   NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=64,mem=8G,node=1,billing=32
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=influ5 CPU_IDs=20-21,26-87 Mem=8192 GRES=
+   MinCPUsNode=64 MinMemoryNode=8G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/d_cartpole.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9540560.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9540560.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+Experiment code:  CartPole-v1_non-default_pytorch_trial_3
+Dataset Loaded Successfully:  1053000
+Finished epoch 1, latest loss 49035.08984375
+Finished epoch 1000, latest loss 3848.47216796875
+Finished epoch 2000, latest loss 2784.477294921875
+Finished epoch 3000, latest loss 2783.862548828125
+Finished epoch 4000, latest loss 1991.1529541015625
+Finished epoch 5000, latest loss 1969.443603515625
+Finished epoch 6000, latest loss 1957.7171630859375
+Finished epoch 7000, latest loss 1905.189208984375
+Finished epoch 8000, latest loss 1880.10986328125
+Finished epoch 9000, latest loss 1856.2694091796875
+Finished epoch 10000, latest loss 1832.0262451171875
+
+
+Saving model
+
+
+Finished epoch 1, latest loss 49291.625
+Finished epoch 1000, latest loss 3812.019775390625
+Finished epoch 2000, latest loss 2681.765380859375
+Finished epoch 3000, latest loss 1949.7613525390625
+Finished epoch 4000, latest loss 1939.888916015625
+Finished epoch 5000, latest loss 1923.21728515625
+Finished epoch 6000, latest loss 1893.5257568359375
+Finished epoch 7000, latest loss 1859.9351806640625
+Finished epoch 8000, latest loss 1780.362548828125
+Finished epoch 9000, latest loss 1736.1903076171875
+Finished epoch 10000, latest loss 1712.54150390625
+
+
+Saving model
+
+
+Finished epoch 1, latest loss 49115.875
+Finished epoch 1000, latest loss 3726.5029296875
+Finished epoch 2000, latest loss 2638.43994140625
+Finished epoch 3000, latest loss 1958.057373046875
+Finished epoch 4000, latest loss 1949.74609375
+Finished epoch 5000, latest loss 1929.62890625
+Finished epoch 6000, latest loss 1872.1121826171875
+Finished epoch 7000, latest loss 1768.60791015625
+Finished epoch 8000, latest loss 1717.5240478515625
+Finished epoch 9000, latest loss 1681.97607421875
+Finished epoch 10000, latest loss 1663.6282958984375
+
+
+Saving model
+
+
+Finished epoch 1, latest loss 48931.89453125
+Finished epoch 1000, latest loss 3733.1044921875
+Finished epoch 2000, latest loss 2634.23095703125
+Finished epoch 3000, latest loss 1955.9224853515625
+Finished epoch 4000, latest loss 1941.856201171875
+Finished epoch 5000, latest loss 1930.4815673828125
+Finished epoch 6000, latest loss 1913.2900390625
+Finished epoch 7000, latest loss 1809.1956787109375
+Finished epoch 8000, latest loss 1756.1031494140625
+Finished epoch 9000, latest loss 1706.5865478515625
+Finished epoch 10000, latest loss 1693.539794921875
+
+
+Saving model
+
+
+Training set size: 3200
+Training error 1: 320.189646 ± 59.330646
+Training error 2: 879.033372 ± 33.970079
+Test error: 1009.548389 ± 49.503495
+
+Finished epoch 1, latest loss 48998.359375
+Finished epoch 1000, latest loss 3822.877197265625
+Finished epoch 2000, latest loss 2729.023193359375
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 9540560 ON influ5 CANCELLED AT 2024-02-22T17:32:41 ***
+slurmstepd: error: *** STEP 9540560.0 ON influ5 CANCELLED AT 2024-02-22T17:32:41 ***

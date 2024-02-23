@@ -1248,3 +1248,80 @@ Finished epoch 1211000, latest loss 0.0772763043642044
 Finished epoch 1212000, latest loss 0.09330804646015167
 Finished epoch 1213000, latest loss 0.04595499858260155
 Finished epoch 1214000, latest loss 0.09231866896152496
+Finished epoch 1215000, latest loss 0.14636944234371185
+Finished epoch 1216000, latest loss 0.05402893200516701
+Finished epoch 1217000, latest loss 0.06987623125314713
+Finished epoch 1218000, latest loss 0.10616816580295563
+Finished epoch 1219000, latest loss 0.023220939561724663
+Finished epoch 1220000, latest loss 0.06556486338376999
+Finished epoch 1221000, latest loss 0.047355178743600845
+Finished epoch 1222000, latest loss 0.0703449621796608
+Finished epoch 1223000, latest loss 0.07467594742774963
+Finished epoch 1224000, latest loss 0.09750758111476898
+Finished epoch 1225000, latest loss 0.11702319979667664
+Finished epoch 1226000, latest loss 0.09602458029985428
+Finished epoch 1227000, latest loss 0.07017754018306732
+Finished epoch 1228000, latest loss 0.11266553401947021
+Finished epoch 1229000, latest loss 0.07330524176359177
+Finished epoch 1230000, latest loss 0.07575485110282898
+Finished epoch 1231000, latest loss 0.06535977870225906
+Finished epoch 1232000, latest loss 0.08161351084709167
+Finished epoch 1233000, latest loss 0.06341445446014404
+Finished epoch 1234000, latest loss 0.08943284302949905
+Finished epoch 1235000, latest loss 0.09136699140071869
+Finished epoch 1236000, latest loss 0.06827831268310547
+Finished epoch 1237000, latest loss 0.07755077630281448
+Finished epoch 1238000, latest loss 0.0488177128136158
+Finished epoch 1239000, latest loss 0.013289402239024639
+Finished epoch 1240000, latest loss 0.0873241275548935
+Finished epoch 1241000, latest loss 0.07182405143976212
+Finished epoch 1242000, latest loss 0.05611523985862732
+Finished epoch 1243000, latest loss 0.06446907669305801
+Finished epoch 1244000, latest loss 0.14564254879951477
+Finished epoch 1245000, latest loss 0.05204932764172554
+Finished epoch 1246000, latest loss 0.1254148781299591
+Finished epoch 1247000, latest loss 0.08746135979890823
+Finished epoch 1248000, latest loss 0.039980411529541016
+Finished epoch 1249000, latest loss 0.10056836903095245
+Finished epoch 1250000, latest loss 0.1432504951953888
+Finished epoch 1251000, latest loss 0.08980961889028549
+Finished epoch 1252000, latest loss 0.12717707455158234
+Finished epoch 1253000, latest loss 0.06005227193236351
+Finished epoch 1254000, latest loss 0.09051539748907089
+Finished epoch 1255000, latest loss 0.054677169770002365
+Finished epoch 1256000, latest loss 0.05253900587558746
+Finished epoch 1257000, latest loss 0.062372226268053055
+Finished epoch 1258000, latest loss 0.0603535957634449
+Finished epoch 1259000, latest loss 0.06333347409963608
+Finished epoch 1260000, latest loss 0.1272086799144745
+Finished epoch 1261000, latest loss 0.09197571128606796
+Finished epoch 1262000, latest loss 0.0603117011487484
+Finished epoch 1263000, latest loss 0.05318782106041908
+Finished epoch 1264000, latest loss 0.1167718693614006
+Finished epoch 1265000, latest loss 0.07196971029043198
+Finished epoch 1266000, latest loss 0.08146585524082184
+Finished epoch 1267000, latest loss 0.12344270199537277
+Finished epoch 1268000, latest loss 0.09456391632556915
+Finished epoch 1269000, latest loss 0.04695923253893852
+Finished epoch 1270000, latest loss 0.04119672253727913
+Finished epoch 1271000, latest loss 0.052231598645448685
+Finished epoch 1272000, latest loss 0.0723506286740303
+Finished epoch 1273000, latest loss 0.12260512262582779
+Finished epoch 1274000, latest loss 0.06320393085479736
+Finished epoch 1275000, latest loss 0.047767553478479385
+Finished epoch 1276000, latest loss 0.1214967891573906
+Finished epoch 1277000, latest loss 0.0840112715959549
+Finished epoch 1278000, latest loss 0.11528538912534714
+Finished epoch 1279000, latest loss 0.07403482496738434
+Finished epoch 1280000, latest loss 0.05582601577043533
+
+
+Saving model
+
+
+Traceback (most recent call last):
+  File "../scripts/WithDifferentMaps.py", line 283, in <module>
+    torch.save(model.state_dict(), '../results/' + args.experiment_code + '_model_' + current_fold + '.pt')
+TypeError: can only concatenate str (not "int") to str
+srun: error: gpu11: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=9530615.0
