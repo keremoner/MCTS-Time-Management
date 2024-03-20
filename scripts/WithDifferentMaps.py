@@ -130,7 +130,7 @@ if __name__ == "__main__":
     # train_sizes = train_sizes = list(range(10, 1000, 125)) + list(range(1000, 10000, 1000))
     # train_sizes = [1, 25, 100]
     train_sizes = [1000]
-    fold = 8
+    fold = 1
     n_epochs = 10000
     batch_size = 32
     n_train = 128000
@@ -257,6 +257,24 @@ if __name__ == "__main__":
                     optimizer.step()
                     if iter == 0 or (iter + 1) % 1000 == 0:
                         print(f'Finished epoch {iter + 1}, latest loss {loss}')
+                        #Predicting on test set
+                        y_pred = model.predict(np.asarray(test_set_x).astype('float32'))
+                        test_score = mean_squared_error(test_set_y, y_pred)
+                        
+                        #Predicting on training score 1 set
+                        y_pred = model.predict(np.asarray(training_score1_set_x).astype('float32'))
+                        train_score1 = mean_squared_error(training_score1_set_y, y_pred)
+                        
+                        #Predicting on training score 2 set
+                        y_pred = model.predict(np.asarray(training_score2_set_x).astype('float32'))
+                        train_score2 = mean_squared_error(training_score2_set_y, y_pred)
+                        
+                        print("Iter: %d\nTraining error 1: %f\n\Training error 2: %f\nTest error: %f\n" % (iter, train_score1, train_scores2, test_scores)
+                        print("\n\nSaving model\n\n")
+                        if NN:
+                            torch.save(model.state_dict(), '../results/' + args.experiment_code + '_model_i' + str(iter) + '.pt')
+                        else:
+                            pickle.dump(model, '../results/' + args.experiment_code + '_model.sav')
                     if loss < 0.000001 and iter > n_train / 2:
                         break
             else: 
