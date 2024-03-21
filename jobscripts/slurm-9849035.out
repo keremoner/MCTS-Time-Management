@@ -1,0 +1,38 @@
+JobId=9849035 JobName=with_different_maps.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=18407407 Nice=0 Account=ewi-insy-ii-influence QOS=medium
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:01 TimeLimit=01:30:00 TimeMin=N/A
+   SubmitTime=2024-03-20T21:08:06 EligibleTime=2024-03-20T21:08:06
+   AccrueTime=2024-03-20T21:08:06
+   StartTime=2024-03-20T21:08:29 EndTime=2024-03-20T22:38:29 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2024-03-20T21:08:29 Scheduler=Backfill
+   Partition=general AllocNode:Sid=login1:26696
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=influ6
+   BatchHost=influ6
+   NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=64,mem=16000M,node=1,billing=33
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=influ6 CPU_IDs=8-71 Mem=16000 GRES=
+   MinCPUsNode=64 MinMemoryNode=16000M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/with_different_maps.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9849035.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9849035.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+  File "../scripts/WithDifferentMaps.py", line 273
+    print("\n\nSaving model\n\n")
+        ^
+SyntaxError: invalid syntax
+srun: error: influ6: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=9849035.0

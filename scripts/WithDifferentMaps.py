@@ -129,11 +129,11 @@ if __name__ == "__main__":
     # train_sizes = [1, 8, 16, 25, 75, 100, 1000, 2000, 3000, 4000, 5000, 10000, 15000, 30000, 60000, 100000, 150000, 200000, 250000, 300000]
     # train_sizes = train_sizes = list(range(10, 1000, 125)) + list(range(1000, 10000, 1000))
     # train_sizes = [1, 25, 100]
-    train_sizes = [1000]
+    train_sizes = [64000]
     fold = 1
     n_epochs = 10000
     batch_size = 32
-    n_train = 128000
+    n_train = 1280000
     padding = 4
     
     
@@ -244,7 +244,7 @@ if __name__ == "__main__":
             if NN:
                 model = MyModel()
                 loss_fn = nn.MSELoss()
-                optimizer = optim.Adam(model.parameters(), lr=0.01)
+                optimizer = optim.Adam(model.parameters(), lr=0.001)
                 for iter in range(n_train):
                     indices = list(range(len(training_set_x)))
                     sample_indices = np.random.choice(indices, batch_size, replace=False)
@@ -255,7 +255,7 @@ if __name__ == "__main__":
                     optimizer.zero_grad()
                     loss.backward()
                     optimizer.step()
-                    if iter == 0 or (iter + 1) % 1000 == 0:
+                    if iter == 0 or (iter + 1) % 10000 == 0:
                         print(f'Finished epoch {iter + 1}, latest loss {loss}')
                         #Predicting on test set
                         y_pred = model.predict(np.asarray(test_set_x).astype('float32'))
@@ -269,7 +269,7 @@ if __name__ == "__main__":
                         y_pred = model.predict(np.asarray(training_score2_set_x).astype('float32'))
                         train_score2 = mean_squared_error(training_score2_set_y, y_pred)
                         
-                        print("Iter: %d\nTraining error 1: %f\n\Training error 2: %f\nTest error: %f\n" % (iter, train_score1, train_scores2, test_scores)
+                        print("Iter: %d\nTraining error 1: %f\n\Training error 2: %f\nTest error: %f\n" % (iter, train_score1, train_score2, test_score))
                         print("\n\nSaving model\n\n")
                         if NN:
                             torch.save(model.state_dict(), '../results/' + args.experiment_code + '_model_i' + str(iter) + '.pt')

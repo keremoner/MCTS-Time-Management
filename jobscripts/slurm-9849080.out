@@ -1,0 +1,1464 @@
+JobId=9849080 JobName=with_different_maps.sbatch
+   UserId=koner(565562) GroupId=domain users(100513) MCS_label=N/A
+   Priority=18259259 Nice=0 Account=ewi-insy-ii-influence QOS=medium
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:01 TimeLimit=06:00:00 TimeMin=N/A
+   SubmitTime=2024-03-21T00:01:45 EligibleTime=2024-03-21T00:01:45
+   AccrueTime=2024-03-21T00:01:45
+   StartTime=2024-03-21T00:02:17 EndTime=2024-03-21T06:02:17 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2024-03-21T00:02:17 Scheduler=Backfill
+   Partition=general AllocNode:Sid=login1:10995
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=3dgi1
+   BatchHost=3dgi1
+   NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=64,mem=16000M,node=1,billing=33
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=3dgi1 CPU_IDs=0-63 Mem=16000 GRES=
+   MinCPUsNode=64 MinMemoryNode=16000M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/with_different_maps.sbatch
+   WorkDir=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts
+   StdErr=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9849080.out
+   StdIn=/dev/null
+   StdOut=/winhome/koner/Desktop/MCTS-Time-Management/jobscripts/slurm-9849080.out
+   Power=
+   MailUser=koner MailType=END
+   
+
+Data set loaded
+
+
+Finished epoch 1, latest loss 0.8477351665496826
+Iter: 0
+Training error 1: 3.201358
+\Training error 2: 3.157549
+Test error: 3.099799
+
+
+
+Saving model
+
+
+Finished epoch 10000, latest loss 0.05572642385959625
+Iter: 9999
+Training error 1: 0.061188
+\Training error 2: 0.016145
+Test error: 0.017216
+
+
+
+Saving model
+
+
+Finished epoch 20000, latest loss 0.05538269877433777
+Iter: 19999
+Training error 1: 0.065454
+\Training error 2: 0.020188
+Test error: 0.020362
+
+
+
+Saving model
+
+
+Finished epoch 30000, latest loss 0.119404137134552
+Iter: 29999
+Training error 1: 0.065486
+\Training error 2: 0.020869
+Test error: 0.021661
+
+
+
+Saving model
+
+
+Finished epoch 40000, latest loss 0.06814701855182648
+Iter: 39999
+Training error 1: 0.073747
+\Training error 2: 0.028882
+Test error: 0.030098
+
+
+
+Saving model
+
+
+Finished epoch 50000, latest loss 0.03590703383088112
+Iter: 49999
+Training error 1: 0.094429
+\Training error 2: 0.049387
+Test error: 0.049018
+
+
+
+Saving model
+
+
+Finished epoch 60000, latest loss 0.0997462123632431
+Iter: 59999
+Training error 1: 0.065188
+\Training error 2: 0.020236
+Test error: 0.020640
+
+
+
+Saving model
+
+
+Finished epoch 70000, latest loss 0.0829266682267189
+Iter: 69999
+Training error 1: 0.071549
+\Training error 2: 0.027027
+Test error: 0.027334
+
+
+
+Saving model
+
+
+Finished epoch 80000, latest loss 0.09159230440855026
+Iter: 79999
+Training error 1: 0.107949
+\Training error 2: 0.063167
+Test error: 0.064714
+
+
+
+Saving model
+
+
+Finished epoch 90000, latest loss 0.07014338672161102
+Iter: 89999
+Training error 1: 0.065660
+\Training error 2: 0.021007
+Test error: 0.021355
+
+
+
+Saving model
+
+
+Finished epoch 100000, latest loss 0.09431706368923187
+Iter: 99999
+Training error 1: 0.101186
+\Training error 2: 0.055502
+Test error: 0.055381
+
+
+
+Saving model
+
+
+Finished epoch 110000, latest loss 0.07676635682582855
+Iter: 109999
+Training error 1: 0.066321
+\Training error 2: 0.021308
+Test error: 0.021888
+
+
+
+Saving model
+
+
+Finished epoch 120000, latest loss 0.08623968064785004
+Iter: 119999
+Training error 1: 0.062484
+\Training error 2: 0.017524
+Test error: 0.018278
+
+
+
+Saving model
+
+
+Finished epoch 130000, latest loss 0.04500711336731911
+Iter: 129999
+Training error 1: 0.058360
+\Training error 2: 0.013330
+Test error: 0.013483
+
+
+
+Saving model
+
+
+Finished epoch 140000, latest loss 0.0639660656452179
+Iter: 139999
+Training error 1: 0.072005
+\Training error 2: 0.027517
+Test error: 0.028276
+
+
+
+Saving model
+
+
+Finished epoch 150000, latest loss 0.08383297920227051
+Iter: 149999
+Training error 1: 0.058856
+\Training error 2: 0.013891
+Test error: 0.014131
+
+
+
+Saving model
+
+
+Finished epoch 160000, latest loss 0.05799131840467453
+Iter: 159999
+Training error 1: 0.061058
+\Training error 2: 0.016018
+Test error: 0.015793
+
+
+
+Saving model
+
+
+Finished epoch 170000, latest loss 0.011241862550377846
+Iter: 169999
+Training error 1: 0.080671
+\Training error 2: 0.036274
+Test error: 0.035582
+
+
+
+Saving model
+
+
+Finished epoch 180000, latest loss 0.0866941437125206
+Iter: 179999
+Training error 1: 0.056129
+\Training error 2: 0.011682
+Test error: 0.012059
+
+
+
+Saving model
+
+
+Finished epoch 190000, latest loss 0.039183564484119415
+Iter: 189999
+Training error 1: 0.056839
+\Training error 2: 0.012127
+Test error: 0.012506
+
+
+
+Saving model
+
+
+Finished epoch 200000, latest loss 0.09295029193162918
+Iter: 199999
+Training error 1: 0.069732
+\Training error 2: 0.025428
+Test error: 0.025424
+
+
+
+Saving model
+
+
+Finished epoch 210000, latest loss 0.2133268117904663
+Iter: 209999
+Training error 1: 0.075512
+\Training error 2: 0.030652
+Test error: 0.030975
+
+
+
+Saving model
+
+
+Finished epoch 220000, latest loss 0.053495634347200394
+Iter: 219999
+Training error 1: 0.059617
+\Training error 2: 0.014835
+Test error: 0.015087
+
+
+
+Saving model
+
+
+Finished epoch 230000, latest loss 0.060684703290462494
+Iter: 229999
+Training error 1: 0.057158
+\Training error 2: 0.012703
+Test error: 0.013165
+
+
+
+Saving model
+
+
+Finished epoch 240000, latest loss 0.08909359574317932
+Iter: 239999
+Training error 1: 0.064060
+\Training error 2: 0.019200
+Test error: 0.019295
+
+
+
+Saving model
+
+
+Finished epoch 250000, latest loss 0.078860342502594
+Iter: 249999
+Training error 1: 0.081204
+\Training error 2: 0.036675
+Test error: 0.037901
+
+
+
+Saving model
+
+
+Finished epoch 260000, latest loss 0.10053367167711258
+Iter: 259999
+Training error 1: 0.056676
+\Training error 2: 0.012126
+Test error: 0.013078
+
+
+
+Saving model
+
+
+Finished epoch 270000, latest loss 0.016410935670137405
+Iter: 269999
+Training error 1: 0.058686
+\Training error 2: 0.014129
+Test error: 0.014745
+
+
+
+Saving model
+
+
+Finished epoch 280000, latest loss 0.045803919434547424
+Iter: 279999
+Training error 1: 0.061864
+\Training error 2: 0.018077
+Test error: 0.018233
+
+
+
+Saving model
+
+
+Finished epoch 290000, latest loss 0.050615958869457245
+Iter: 289999
+Training error 1: 0.060604
+\Training error 2: 0.016708
+Test error: 0.016697
+
+
+
+Saving model
+
+
+Finished epoch 300000, latest loss 0.057328615337610245
+Iter: 299999
+Training error 1: 0.055458
+\Training error 2: 0.010783
+Test error: 0.010835
+
+
+
+Saving model
+
+
+Finished epoch 310000, latest loss 0.04100370407104492
+Iter: 309999
+Training error 1: 0.060945
+\Training error 2: 0.016957
+Test error: 0.017210
+
+
+
+Saving model
+
+
+Finished epoch 320000, latest loss 0.06528779864311218
+Iter: 319999
+Training error 1: 0.061274
+\Training error 2: 0.016911
+Test error: 0.016959
+
+
+
+Saving model
+
+
+Finished epoch 330000, latest loss 0.05072227120399475
+Iter: 329999
+Training error 1: 0.059787
+\Training error 2: 0.015670
+Test error: 0.016110
+
+
+
+Saving model
+
+
+Finished epoch 340000, latest loss 0.031061366200447083
+Iter: 339999
+Training error 1: 0.070224
+\Training error 2: 0.025570
+Test error: 0.025723
+
+
+
+Saving model
+
+
+Finished epoch 350000, latest loss 0.06534599512815475
+Iter: 349999
+Training error 1: 0.068319
+\Training error 2: 0.023935
+Test error: 0.024250
+
+
+
+Saving model
+
+
+Finished epoch 360000, latest loss 0.061619315296411514
+Iter: 359999
+Training error 1: 0.058808
+\Training error 2: 0.014859
+Test error: 0.015764
+
+
+
+Saving model
+
+
+Finished epoch 370000, latest loss 0.022266974672675133
+Iter: 369999
+Training error 1: 0.055081
+\Training error 2: 0.010925
+Test error: 0.011367
+
+
+
+Saving model
+
+
+Finished epoch 380000, latest loss 0.07249031215906143
+Iter: 379999
+Training error 1: 0.060554
+\Training error 2: 0.016101
+Test error: 0.016671
+
+
+
+Saving model
+
+
+Finished epoch 390000, latest loss 0.09299805015325546
+Iter: 389999
+Training error 1: 0.062009
+\Training error 2: 0.017724
+Test error: 0.018543
+
+
+
+Saving model
+
+
+Finished epoch 400000, latest loss 0.12354306131601334
+Iter: 399999
+Training error 1: 0.073481
+\Training error 2: 0.029291
+Test error: 0.029544
+
+
+
+Saving model
+
+
+Finished epoch 410000, latest loss 0.024153709411621094
+Iter: 409999
+Training error 1: 0.060507
+\Training error 2: 0.016246
+Test error: 0.016051
+
+
+
+Saving model
+
+
+Finished epoch 420000, latest loss 0.07829868793487549
+Iter: 419999
+Training error 1: 0.058443
+\Training error 2: 0.014218
+Test error: 0.015114
+
+
+
+Saving model
+
+
+Finished epoch 430000, latest loss 0.05132922902703285
+Iter: 429999
+Training error 1: 0.063419
+\Training error 2: 0.018602
+Test error: 0.019049
+
+
+
+Saving model
+
+
+Finished epoch 440000, latest loss 0.09625168144702911
+Iter: 439999
+Training error 1: 0.064841
+\Training error 2: 0.020655
+Test error: 0.020397
+
+
+
+Saving model
+
+
+Finished epoch 450000, latest loss 0.07163576036691666
+Iter: 449999
+Training error 1: 0.058213
+\Training error 2: 0.014055
+Test error: 0.014635
+
+
+
+Saving model
+
+
+Finished epoch 460000, latest loss 0.09443560987710953
+Iter: 459999
+Training error 1: 0.058403
+\Training error 2: 0.014029
+Test error: 0.014144
+
+
+
+Saving model
+
+
+Finished epoch 470000, latest loss 0.017216293141245842
+Iter: 469999
+Training error 1: 0.063125
+\Training error 2: 0.018670
+Test error: 0.019332
+
+
+
+Saving model
+
+
+Finished epoch 480000, latest loss 0.07927766442298889
+Iter: 479999
+Training error 1: 0.064339
+\Training error 2: 0.019665
+Test error: 0.019668
+
+
+
+Saving model
+
+
+Finished epoch 490000, latest loss 0.05030439794063568
+Iter: 489999
+Training error 1: 0.062951
+\Training error 2: 0.018282
+Test error: 0.018951
+
+
+
+Saving model
+
+
+Finished epoch 500000, latest loss 0.0682578757405281
+Iter: 499999
+Training error 1: 0.072891
+\Training error 2: 0.028376
+Test error: 0.027732
+
+
+
+Saving model
+
+
+Finished epoch 510000, latest loss 0.07333706319332123
+Iter: 509999
+Training error 1: 0.057513
+\Training error 2: 0.012954
+Test error: 0.013796
+
+
+
+Saving model
+
+
+Finished epoch 520000, latest loss 0.08713925629854202
+Iter: 519999
+Training error 1: 0.063839
+\Training error 2: 0.019762
+Test error: 0.020442
+
+
+
+Saving model
+
+
+Finished epoch 530000, latest loss 0.047147054225206375
+Iter: 529999
+Training error 1: 0.055985
+\Training error 2: 0.012124
+Test error: 0.012868
+
+
+
+Saving model
+
+
+Finished epoch 540000, latest loss 0.018560921773314476
+Iter: 539999
+Training error 1: 0.056776
+\Training error 2: 0.012398
+Test error: 0.013123
+
+
+
+Saving model
+
+
+Finished epoch 550000, latest loss 0.13523462414741516
+Iter: 549999
+Training error 1: 0.059611
+\Training error 2: 0.015377
+Test error: 0.016334
+
+
+
+Saving model
+
+
+Finished epoch 560000, latest loss 0.07947216928005219
+Iter: 559999
+Training error 1: 0.059683
+\Training error 2: 0.015442
+Test error: 0.015650
+
+
+
+Saving model
+
+
+Finished epoch 570000, latest loss 0.056001752614974976
+Iter: 569999
+Training error 1: 0.058021
+\Training error 2: 0.013420
+Test error: 0.014251
+
+
+
+Saving model
+
+
+Finished epoch 580000, latest loss 0.08548953384160995
+Iter: 579999
+Training error 1: 0.056926
+\Training error 2: 0.012200
+Test error: 0.013161
+
+
+
+Saving model
+
+
+Finished epoch 590000, latest loss 0.0656050592660904
+Iter: 589999
+Training error 1: 0.059694
+\Training error 2: 0.015687
+Test error: 0.016270
+
+
+
+Saving model
+
+
+Finished epoch 600000, latest loss 0.040671683847904205
+Iter: 599999
+Training error 1: 0.061310
+\Training error 2: 0.016578
+Test error: 0.017842
+
+
+
+Saving model
+
+
+Finished epoch 610000, latest loss 0.04787846654653549
+Iter: 609999
+Training error 1: 0.056921
+\Training error 2: 0.012322
+Test error: 0.013019
+
+
+
+Saving model
+
+
+Finished epoch 620000, latest loss 0.015825824812054634
+Iter: 619999
+Training error 1: 0.060074
+\Training error 2: 0.015691
+Test error: 0.015833
+
+
+
+Saving model
+
+
+Finished epoch 630000, latest loss 0.061917372047901154
+Iter: 629999
+Training error 1: 0.057227
+\Training error 2: 0.012952
+Test error: 0.013148
+
+
+
+Saving model
+
+
+Finished epoch 640000, latest loss 0.06870587915182114
+Iter: 639999
+Training error 1: 0.062513
+\Training error 2: 0.017772
+Test error: 0.017773
+
+
+
+Saving model
+
+
+Finished epoch 650000, latest loss 0.047881629317998886
+Iter: 649999
+Training error 1: 0.068885
+\Training error 2: 0.024234
+Test error: 0.024953
+
+
+
+Saving model
+
+
+Finished epoch 660000, latest loss 0.04978642612695694
+Iter: 659999
+Training error 1: 0.075642
+\Training error 2: 0.030702
+Test error: 0.032639
+
+
+
+Saving model
+
+
+Finished epoch 670000, latest loss 0.009951775893568993
+Iter: 669999
+Training error 1: 0.059003
+\Training error 2: 0.014399
+Test error: 0.015962
+
+
+
+Saving model
+
+
+Finished epoch 680000, latest loss 0.03167477622628212
+Iter: 679999
+Training error 1: 0.061323
+\Training error 2: 0.017311
+Test error: 0.017915
+
+
+
+Saving model
+
+
+Finished epoch 690000, latest loss 0.023807106539607048
+Iter: 689999
+Training error 1: 0.065861
+\Training error 2: 0.021326
+Test error: 0.021811
+
+
+
+Saving model
+
+
+Finished epoch 700000, latest loss 0.03110361471772194
+Iter: 699999
+Training error 1: 0.065009
+\Training error 2: 0.020514
+Test error: 0.021019
+
+
+
+Saving model
+
+
+Finished epoch 710000, latest loss 0.09078666567802429
+Iter: 709999
+Training error 1: 0.060983
+\Training error 2: 0.016821
+Test error: 0.017488
+
+
+
+Saving model
+
+
+Finished epoch 720000, latest loss 0.05655156075954437
+Iter: 719999
+Training error 1: 0.057467
+\Training error 2: 0.013015
+Test error: 0.013305
+
+
+
+Saving model
+
+
+Finished epoch 730000, latest loss 0.08863303065299988
+Iter: 729999
+Training error 1: 0.079047
+\Training error 2: 0.035145
+Test error: 0.035310
+
+
+
+Saving model
+
+
+Finished epoch 740000, latest loss 0.049414053559303284
+Iter: 739999
+Training error 1: 0.094418
+\Training error 2: 0.050477
+Test error: 0.051593
+
+
+
+Saving model
+
+
+Finished epoch 750000, latest loss 0.05481211468577385
+Iter: 749999
+Training error 1: 0.058411
+\Training error 2: 0.013737
+Test error: 0.014463
+
+
+
+Saving model
+
+
+Finished epoch 760000, latest loss 0.03977242484688759
+Iter: 759999
+Training error 1: 0.058075
+\Training error 2: 0.013715
+Test error: 0.014075
+
+
+
+Saving model
+
+
+Finished epoch 770000, latest loss 0.08921566605567932
+Iter: 769999
+Training error 1: 0.082879
+\Training error 2: 0.038111
+Test error: 0.038757
+
+
+
+Saving model
+
+
+Finished epoch 780000, latest loss 0.05309230089187622
+Iter: 779999
+Training error 1: 0.068217
+\Training error 2: 0.023830
+Test error: 0.024777
+
+
+
+Saving model
+
+
+Finished epoch 790000, latest loss 0.06874418258666992
+Iter: 789999
+Training error 1: 0.059102
+\Training error 2: 0.014519
+Test error: 0.015128
+
+
+
+Saving model
+
+
+Finished epoch 800000, latest loss 0.05518901348114014
+Iter: 799999
+Training error 1: 0.058256
+\Training error 2: 0.013750
+Test error: 0.014270
+
+
+
+Saving model
+
+
+Finished epoch 810000, latest loss 0.10565564781427383
+Iter: 809999
+Training error 1: 0.062853
+\Training error 2: 0.018396
+Test error: 0.019492
+
+
+
+Saving model
+
+
+Finished epoch 820000, latest loss 0.04495560750365257
+Iter: 819999
+Training error 1: 0.062298
+\Training error 2: 0.017405
+Test error: 0.018374
+
+
+
+Saving model
+
+
+Finished epoch 830000, latest loss 0.06450846046209335
+Iter: 829999
+Training error 1: 0.063992
+\Training error 2: 0.018693
+Test error: 0.018497
+
+
+
+Saving model
+
+
+Finished epoch 840000, latest loss 0.09985709935426712
+Iter: 839999
+Training error 1: 0.086081
+\Training error 2: 0.041221
+Test error: 0.042405
+
+
+
+Saving model
+
+
+Finished epoch 850000, latest loss 0.05045154690742493
+Iter: 849999
+Training error 1: 0.064013
+\Training error 2: 0.018766
+Test error: 0.018955
+
+
+
+Saving model
+
+
+Finished epoch 860000, latest loss 0.1130053699016571
+Iter: 859999
+Training error 1: 0.063504
+\Training error 2: 0.018806
+Test error: 0.019997
+
+
+
+Saving model
+
+
+Finished epoch 870000, latest loss 0.03407875448465347
+Iter: 869999
+Training error 1: 0.060871
+\Training error 2: 0.016577
+Test error: 0.017770
+
+
+
+Saving model
+
+
+Finished epoch 880000, latest loss 0.055161140859127045
+Iter: 879999
+Training error 1: 0.065665
+\Training error 2: 0.021283
+Test error: 0.021673
+
+
+
+Saving model
+
+
+Finished epoch 890000, latest loss 0.09096123278141022
+Iter: 889999
+Training error 1: 0.076212
+\Training error 2: 0.031332
+Test error: 0.031821
+
+
+
+Saving model
+
+
+Finished epoch 900000, latest loss 0.10238119214773178
+Iter: 899999
+Training error 1: 0.081869
+\Training error 2: 0.036848
+Test error: 0.037602
+
+
+
+Saving model
+
+
+Finished epoch 910000, latest loss 0.05196147784590721
+Iter: 909999
+Training error 1: 0.064351
+\Training error 2: 0.019724
+Test error: 0.020656
+
+
+
+Saving model
+
+
+Finished epoch 920000, latest loss 0.07271470874547958
+Iter: 919999
+Training error 1: 0.080505
+\Training error 2: 0.035809
+Test error: 0.036924
+
+
+
+Saving model
+
+
+Finished epoch 930000, latest loss 0.08377023041248322
+Iter: 929999
+Training error 1: 0.068742
+\Training error 2: 0.023196
+Test error: 0.024366
+
+
+
+Saving model
+
+
+Finished epoch 940000, latest loss 0.06343033909797668
+Iter: 939999
+Training error 1: 0.064365
+\Training error 2: 0.019509
+Test error: 0.020250
+
+
+
+Saving model
+
+
+Finished epoch 950000, latest loss 0.05470789223909378
+Iter: 949999
+Training error 1: 0.061353
+\Training error 2: 0.016396
+Test error: 0.017127
+
+
+
+Saving model
+
+
+Finished epoch 960000, latest loss 0.061787623912096024
+Iter: 959999
+Training error 1: 0.069028
+\Training error 2: 0.024054
+Test error: 0.024630
+
+
+
+Saving model
+
+
+Finished epoch 970000, latest loss 0.08713594824075699
+Iter: 969999
+Training error 1: 0.079204
+\Training error 2: 0.034309
+Test error: 0.034852
+
+
+
+Saving model
+
+
+Finished epoch 980000, latest loss 0.04424084722995758
+Iter: 979999
+Training error 1: 0.074608
+\Training error 2: 0.029274
+Test error: 0.030050
+
+
+
+Saving model
+
+
+Finished epoch 990000, latest loss 0.048779767006635666
+Iter: 989999
+Training error 1: 0.065722
+\Training error 2: 0.020888
+Test error: 0.022172
+
+
+
+Saving model
+
+
+Finished epoch 1000000, latest loss 0.07796850055456161
+Iter: 999999
+Training error 1: 0.062732
+\Training error 2: 0.018439
+Test error: 0.018977
+
+
+
+Saving model
+
+
+Finished epoch 1010000, latest loss 0.044480133801698685
+Iter: 1009999
+Training error 1: 0.065689
+\Training error 2: 0.020802
+Test error: 0.021397
+
+
+
+Saving model
+
+
+Finished epoch 1020000, latest loss 0.08908453583717346
+Iter: 1019999
+Training error 1: 0.083506
+\Training error 2: 0.038295
+Test error: 0.038054
+
+
+
+Saving model
+
+
+Finished epoch 1030000, latest loss 0.049068883061409
+Iter: 1029999
+Training error 1: 0.067866
+\Training error 2: 0.023178
+Test error: 0.023865
+
+
+
+Saving model
+
+
+Finished epoch 1040000, latest loss 0.05515933036804199
+Iter: 1039999
+Training error 1: 0.064204
+\Training error 2: 0.020180
+Test error: 0.020767
+
+
+
+Saving model
+
+
+Finished epoch 1050000, latest loss 0.08217613399028778
+Iter: 1049999
+Training error 1: 0.077885
+\Training error 2: 0.032551
+Test error: 0.032622
+
+
+
+Saving model
+
+
+Finished epoch 1060000, latest loss 0.08433962613344193
+Iter: 1059999
+Training error 1: 0.062150
+\Training error 2: 0.017296
+Test error: 0.017410
+
+
+
+Saving model
+
+
+Finished epoch 1070000, latest loss 0.04940963163971901
+Iter: 1069999
+Training error 1: 0.067872
+\Training error 2: 0.022444
+Test error: 0.023236
+
+
+
+Saving model
+
+
+Finished epoch 1080000, latest loss 0.06299638003110886
+Iter: 1079999
+Training error 1: 0.068190
+\Training error 2: 0.023091
+Test error: 0.024016
+
+
+
+Saving model
+
+
+Finished epoch 1090000, latest loss 0.054944172501564026
+Iter: 1089999
+Training error 1: 0.069480
+\Training error 2: 0.024583
+Test error: 0.025422
+
+
+
+Saving model
+
+
+Finished epoch 1100000, latest loss 0.1175834983587265
+Iter: 1099999
+Training error 1: 0.074549
+\Training error 2: 0.029486
+Test error: 0.028488
+
+
+
+Saving model
+
+
+Finished epoch 1110000, latest loss 0.16240151226520538
+Iter: 1109999
+Training error 1: 0.086776
+\Training error 2: 0.041527
+Test error: 0.041125
+
+
+
+Saving model
+
+
+Finished epoch 1120000, latest loss 0.09529745578765869
+Iter: 1119999
+Training error 1: 0.072421
+\Training error 2: 0.027155
+Test error: 0.027313
+
+
+
+Saving model
+
+
+Finished epoch 1130000, latest loss 0.028902268037199974
+Iter: 1129999
+Training error 1: 0.074382
+\Training error 2: 0.029534
+Test error: 0.031186
+
+
+
+Saving model
+
+
+Finished epoch 1140000, latest loss 0.090198814868927
+Iter: 1139999
+Training error 1: 0.079244
+\Training error 2: 0.033966
+Test error: 0.033310
+
+
+
+Saving model
+
+
+Finished epoch 1150000, latest loss 0.03536048159003258
+Iter: 1149999
+Training error 1: 0.078929
+\Training error 2: 0.033872
+Test error: 0.034398
+
+
+
+Saving model
+
+
+Finished epoch 1160000, latest loss 0.09425017237663269
+Iter: 1159999
+Training error 1: 0.069854
+\Training error 2: 0.024823
+Test error: 0.025365
+
+
+
+Saving model
+
+
+Finished epoch 1170000, latest loss 0.12348566949367523
+Iter: 1169999
+Training error 1: 0.107329
+\Training error 2: 0.062032
+Test error: 0.063601
+
+
+
+Saving model
+
+
+Finished epoch 1180000, latest loss 0.06053163856267929
+Iter: 1179999
+Training error 1: 0.066643
+\Training error 2: 0.021468
+Test error: 0.021967
+
+
+
+Saving model
+
+
+Finished epoch 1190000, latest loss 0.045478496700525284
+Iter: 1189999
+Training error 1: 0.129837
+\Training error 2: 0.084863
+Test error: 0.084791
+
+
+
+Saving model
+
+
+Finished epoch 1200000, latest loss 0.07151582837104797
+Iter: 1199999
+Training error 1: 0.072546
+\Training error 2: 0.027355
+Test error: 0.026842
+
+
+
+Saving model
+
+
+Finished epoch 1210000, latest loss 0.1031302958726883
+Iter: 1209999
+Training error 1: 0.086432
+\Training error 2: 0.041323
+Test error: 0.041924
+
+
+
+Saving model
+
+
+Finished epoch 1220000, latest loss 0.03598638251423836
+Iter: 1219999
+Training error 1: 0.086960
+\Training error 2: 0.041676
+Test error: 0.041231
+
+
+
+Saving model
+
+
+Finished epoch 1230000, latest loss 0.06583931297063828
+Iter: 1229999
+Training error 1: 0.089336
+\Training error 2: 0.044535
+Test error: 0.045302
+
+
+
+Saving model
+
+
+Finished epoch 1240000, latest loss 0.02815801464021206
+Iter: 1239999
+Training error 1: 0.071438
+\Training error 2: 0.026004
+Test error: 0.025810
+
+
+
+Saving model
+
+
+Finished epoch 1250000, latest loss 0.12598422169685364
+Iter: 1249999
+Training error 1: 0.074119
+\Training error 2: 0.028884
+Test error: 0.028750
+
+
+
+Saving model
+
+
+Finished epoch 1260000, latest loss 0.08559098839759827
+Iter: 1259999
+Training error 1: 0.075331
+\Training error 2: 0.030696
+Test error: 0.030323
+
+
+
+Saving model
+
+
+Finished epoch 1270000, latest loss 0.04396788030862808
+Iter: 1269999
+Training error 1: 0.093756
+\Training error 2: 0.048920
+Test error: 0.049479
+
+
+
+Saving model
+
+
+Finished epoch 1280000, latest loss 0.12928055226802826
+Iter: 1279999
+Training error 1: 0.071876
+\Training error 2: 0.026572
+Test error: 0.026738
+
+
+
+Saving model
+
+
+
+
+Saving model
+
+
+Training set size: 64000
+Training error 1: 0.071876 ± 0.000000
+\Training error 2: 0.026572 ± 0.000000
+Test error: 0.026738 ± 0.000000
+

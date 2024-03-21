@@ -10,14 +10,14 @@
 #SBATCH --qos=medium
 
 # The default run (wall-clock) time is 1 minute
-#SBATCH --time=900
+#SBATCH --time=360
 
 # The default number of parallel tasks per job is 1
 #SBATCH --ntasks=1
 
 # The default number of CPUs per task is 1 (note: CPUs are always allocated to jobs per 2)
 # Request 1 CPU per active thread of your program (assume 1 unless you specifically set this)
-#SBATCH --cpus-per-task=100
+#SBATCH --cpus-per-task=64
 
 # The default memory per node is 1024 megabytes (1GB) (for multiple tasks, specify --mem-per-cpu ins tead)
 #SBATCH --mem=16000
@@ -39,6 +39,6 @@ conda activate MCTS-Time-Management
 
 # Computations should be started with 'srun'. For example:
 
-srun python -u ../scripts/WithDifferentMaps.py --experiment-code FrozenLake-v1_m4-4_total-random_pytorch_09
+srun python -u ../scripts/WithDifferentMaps.py --experiment-code FrozenLake-v1_m4-4_fortestcases
 
 wait
